@@ -5,6 +5,11 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Smartfony from "./components/SmartfonyPage";
 import AccessoriesPage from "./components/AccessoriesPage";
+import ServicePage from "./components/ServicePage";
+import AboutMePage from "./components/AboutMePage";
+import FAQPage from "./components/FAQPage";
+import ContactPage from "./components/ContactPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +20,11 @@ function App() {
         <Header />
         <Smartfony />
         <AccessoriesPage />
+        <ServicePage />
+        <AboutMePage />
+        <FAQPage />
+        <ContactPage />
+        <Footer />
       </Router>
     </div>
   );

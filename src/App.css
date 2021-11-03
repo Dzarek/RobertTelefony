@@ -1,13 +1,20 @@
 /* Root */
 @import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@400;700&display=swap');
 
-.App {
+* {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
   background: #eee;
   min-height: 100vh;
   overflow-x: hidden;
@@ -17,6 +24,7 @@
 .main-section {
   min-height: 100vh;
   width: 100vw;
+  margin: 10vh auto;
 }
 
 
@@ -25,7 +33,7 @@
   text-align: center;
   font-size: 4rem;
   font-family: "Stick No Bills", sans-serif;
-  margin: 10vh auto 5vh;
+  /* margin: 10vh auto 5vh; */
   color: rgb(70, 2, 2);
 }
 
@@ -134,4 +142,16 @@ span {
   100% {
     left: 20%;
   }
+}
+
+/* FAQ */
+.singleQuestion {
+  background-color: #fff;
+  border: rgb(70, 2, 2) 2px solid;
+  border-radius: 10px;
+  /* margin: 3vh auto; */
+  padding: 0px 20px;
+  width: 40vw;
+  transition: 1s;
+
 }

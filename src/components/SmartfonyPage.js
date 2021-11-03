@@ -14,6 +14,7 @@ import mobileMarks from "../images/MobileMarks.png";
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
+  const [showBuyNowMobile, setShowBuyNowMobile] = useState(false);
   return (
     <Wrapper>
       <div className="main-section smartfon-section">
@@ -62,29 +63,43 @@ const Smartfony = () => {
           </button>
           <div className="modal-content">
             <h1>SPRZEDAŻ</h1>
-            <section>
-              <div className="modal-marks">
-                <p>Różnorodność marek telefonów.</p>
-                <img src={mobileMarks} alt="" />
+            {!showBuyNowMobile ? (
+              <>
+                <section>
+                  <div className="modal-marks">
+                    <p>Różnorodność marek telefonów.</p>
+                    <img src={mobileMarks} alt="" />
+                  </div>
+                  <div className="modal-info">
+                    <p>
+                      W mojej ofercie znajdują się zarówno telefony nowe jak i
+                      używane, z wyższych i niższych półek cenowych, a więc
+                      każdy znajdzie coś dla siebie.
+                    </p>
+                  </div>
+                  <div className="modal-contact">
+                    <p>Odwiedź mój sklep i wybierz swój nowy telefon!</p>
+                    <h4>
+                      <FaMapMarkerAlt className="modalIcon" />
+                      Adama Mickiewicza 3, <br /> 38-300 Gorlice
+                    </h4>
+                    <h4>
+                      <ImMobile className="modalIcon" /> 791 838 332
+                    </h4>
+                  </div>
+                </section>
+                <button
+                  onClick={() => setShowBuyNowMobile(true)}
+                  className="buyNowBtn"
+                >
+                  Zobacz aktualne perełki
+                </button>
+              </>
+            ) : (
+              <div className="buyNowMobile">
+                <h3>TUTAJ BĘDĄ TELEFONY KTÓRE SĄ NAJCZĘŚĆIEJ SPRZEDAWANE</h3>
               </div>
-              <div className="modal-info">
-                <p>
-                  W mojej ofercie znajdują się zarówno telefony nowe jak i
-                  używane, z wyższych i niższych półek cenowych, a więc każdy
-                  znajdzie coś dla siebie.
-                </p>
-              </div>
-              <div className="modal-contact">
-                <p>Odwiedź mój sklep i wybierz swój nowy telefon!</p>
-                <h4>
-                  <FaMapMarkerAlt className="modalIcon" />
-                  Adama Mickiewicza 3, <br /> 38-300 Gorlice
-                </h4>
-                <h4>
-                  <ImMobile className="modalIcon" /> 791 838 332
-                </h4>
-              </div>
-            </section>
+            )}
           </div>
         </div>
         <div
@@ -96,6 +111,10 @@ const Smartfony = () => {
           <button onClick={() => setShowModal2(false)} className="btn-exit2">
             <GiExitDoor />
           </button>
+          <div className="modal-content">
+            <h1>SKUP</h1>
+            <section></section>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -103,6 +122,16 @@ const Smartfony = () => {
 };
 
 const Wrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 10vh;
+  .buyNowMobile {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+  }
   .no-modal1 {
     transform: translateX(-100vw);
     opacity: 0;
@@ -195,7 +224,7 @@ const Wrapper = styled.div`
       background: rgba(3, 31, 63, 0.8);
       color: white;
       position: absolute;
-      font-family: "Bebas Neue";
+      font-family: "Bebas Neue", sans-serif;
       cursor: pointer;
       border: 4px solid white;
       transition: 0.5s;

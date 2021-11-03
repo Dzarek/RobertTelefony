@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
-import { AiFillSmile } from "react-icons/ai";
 
 import headerBg3 from "../images/headerBg3.jpg";
 
@@ -28,7 +27,6 @@ const Header = () => {
           </h1>
           <h1>
             Pęknięta szybka? <br /> Spokojnie, dopasuje i założę Ci nową ;)
-            {/* <AiFillSmile className="icon" /> */}
           </h1>
           <h1>
             Twój telefon wymaga serwisu ? <br /> Postaram się Ci pomóc !

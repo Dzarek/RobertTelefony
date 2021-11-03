@@ -1,3 +1,20 @@
+import ładowarka1 from "./images/accessories/ładowarka1.jpg";
+import ładowarka2 from "./images/accessories/ładowarka2.jpg";
+import ładowarka3 from "./images/accessories/ładowarka3.jpg";
+import szybka1 from "./images/accessories/szybka1.jpg";
+import szybka2 from "./images/accessories/szybka2.jpg";
+import powerbank1 from "./images/accessories/powerbank1.png";
+import powerbank2 from "./images/accessories/powerbank2.jpg";
+import powerbank3 from "./images/accessories/powerbank3.jpg";
+import głośnik1 from "./images/accessories/głośnik1.jpg";
+import głośnik2 from "./images/accessories/głośnik2.jpg";
+import głośnik3 from "./images/accessories/głośnik3.jpg";
+import memory1 from "./images/accessories/memory1.jpg";
+import memory2 from "./images/accessories/memory2.jpg";
+import memory3 from "./images/accessories/memory3.jpg";
+import słuchawki1 from "./images/accessories/słuchawki1.jpg";
+import słuchawki2 from "./images/accessories/słuchawki2.jpg";
+
 export const questionsData = [
   {
     id: 1,
@@ -25,3 +42,98 @@ export const questionsData = [
     info: "Locavore franzen fashion axe live-edge neutra irony synth af tilde shabby chic man braid chillwave waistcoat copper mug messenger bag. Banjo snackwave blog, microdosing thundercats migas vaporware viral lo-fi seitan ",
   },
 ];
+
+export const accessoriesData = {
+  ładowarki: [
+    {
+      id: 1,
+      name: "usb",
+      img: ładowarka1,
+    },
+    {
+      id: 2,
+      name: "usb-C",
+      img: ładowarka2,
+    },
+    {
+      id: 3,
+      name: "usb-iOS",
+      img: ładowarka3,
+    },
+  ],
+  szkła: [
+    {
+      id: 1,
+      name: "h7",
+      img: szybka1,
+    },
+    {
+      id: 2,
+      name: "h9",
+      img: szybka2,
+    },
+  ],
+  powerbanki: [
+    {
+      id: 1,
+      name: "XA",
+      img: powerbank1,
+    },
+    {
+      id: 2,
+      name: "XB",
+      img: powerbank2,
+    },
+    {
+      id: 3,
+      name: "XC",
+      img: powerbank3,
+    },
+  ],
+  głośniki: [
+    {
+      id: 1,
+      name: "XA",
+      img: głośnik1,
+    },
+    {
+      id: 2,
+      name: "XB",
+      img: głośnik2,
+    },
+    {
+      id: 3,
+      name: "XC",
+      img: głośnik3,
+    },
+  ],
+  memoriesCard: [
+    {
+      id: 1,
+      name: "XA",
+      img: memory1,
+    },
+    {
+      id: 2,
+      name: "XB",
+      img: memory2,
+    },
+    {
+      id: 3,
+      name: "XC",
+      img: memory3,
+    },
+  ],
+  słuchawki: [
+    {
+      id: 1,
+      name: "XA",
+      img: słuchawki1,
+    },
+    {
+      id: 2,
+      name: "XB",
+      img: słuchawki2,
+    },
+  ],
+};

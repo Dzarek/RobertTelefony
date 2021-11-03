@@ -1,21 +1,83 @@
 import styled from "styled-components";
+import { TiArrowRightOutline } from "react-icons/ti";
+import { useState } from "react";
+import { accessoriesData } from "../data";
 
 const AccessoriesPage = () => {
+  const ładowarki = accessoriesData.ładowarki;
+  const szkła = accessoriesData.szkła;
+  const powerbanki = accessoriesData.powerbanki;
+  const głośniki = accessoriesData.głośniki;
+  const memoriesCard = accessoriesData.memoriesCard;
+  const słuchawki = accessoriesData.słuchawki;
+  const [showAccessories, setShowAccessories] = useState([]);
+
   return (
     <Wrapper>
       <div className="main-section">
         <h2 className="title">Akcesoria</h2>
         <h3>Duży wybór akcesoriów do Twojego smartfona</h3>
         <div className="accessoriesWrapper">
-          <section className="accessoriesList">
-            <li>Ładowarki</li>
-            <li>Szkła</li>
-            <li>Power Banki</li>
-            <li>Głośniki Bluetooth</li>
-            <li>Karty Pamięci</li>
-            <li>Inne</li>
+          <ul className="accessoriesList">
+            <li
+              className={showAccessories === ładowarki && "activeItem"}
+              onClick={() => setShowAccessories(ładowarki)}
+            >
+              <TiArrowRightOutline className="icon" />
+              Ładowarki
+            </li>
+            <li
+              className={showAccessories === szkła && "activeItem"}
+              onClick={() => setShowAccessories(szkła)}
+            >
+              <TiArrowRightOutline className="icon" />
+              Szkła
+            </li>
+            <li
+              className={showAccessories === powerbanki && "activeItem"}
+              onClick={() => setShowAccessories(powerbanki)}
+            >
+              {" "}
+              <TiArrowRightOutline className="icon" />
+              Power Banki
+            </li>
+            <li
+              className={showAccessories === głośniki && "activeItem"}
+              onClick={() => setShowAccessories(głośniki)}
+            >
+              {" "}
+              <TiArrowRightOutline className="icon" />
+              Głośniki Bluetooth
+            </li>
+            <li
+              className={showAccessories === memoriesCard && "activeItem"}
+              onClick={() => setShowAccessories(memoriesCard)}
+            >
+              {" "}
+              <TiArrowRightOutline className="icon" />
+              Karty Pamięci
+            </li>
+            <li
+              className={showAccessories === słuchawki && "activeItem"}
+              onClick={() => setShowAccessories(słuchawki)}
+            >
+              {" "}
+              <TiArrowRightOutline className="icon" />
+              Inne
+            </li>
+          </ul>
+          <div className="borderAccessories"></div>
+          <section className="accessoriesItems">
+            {showAccessories.map((item) => {
+              const { id, name, img } = item;
+              return (
+                <div className="oneItem" key={id}>
+                  <img src={img} alt={name} />
+                  <h5>{name}</h5>
+                </div>
+              );
+            })}
           </section>
-          <section className="accessoriesItems"></section>
         </div>
       </div>
     </Wrapper>
@@ -32,29 +94,93 @@ const Wrapper = styled.div`
       text-align: center;
       margin: 3vh auto;
       font-size: 1.8rem;
+      font-family: "Lemonada", sans-serif;
     }
+  }
+  .icon {
+    margin-right: 10px;
   }
   .accessoriesWrapper {
     margin: 10vh auto;
-    width: 70vw;
+    width: 75vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    section {
-      width: 50%;
+    section,
+    ul {
+      width: 48%;
+    }
+    @keyframes showItemA {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .accessoriesItems {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      animation: showItemA 1s 1 forwards;
+      .oneItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+          border: 2px solid rgb(70, 2, 2);
+          border-radius: 10px;
+          width: 10vw;
+          height: 10vw;
+          margin-bottom: 2vh;
+          box-shadow: 0 0 10px 2px rgb(70, 2, 2);
+        }
+        h5 {
+          font-family: "Bebas Neue", sans-serif;
+          letter-spacing: 2px;
+          color: rgb(120, 2, 2);
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          text-align: center;
+        }
+      }
     }
     .accessoriesList {
-      border-right: 5px solid rgb(70, 2, 2);
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      align-items: center;
+      padding-left: 10vw;
       min-height: 40vh;
       li {
-        font-size: 1.5rem;
-        letter-spacing: 2px;
-        margin: 2vh auto;
-        text-align: center;
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        font-family: "Bebas Neue", sans-serif;
+        cursor: pointer;
+        transition: 0.5s;
+        :hover {
+          color: rgb(120, 2, 2);
+          margin-left: 2vw;
+        }
+      }
+      .activeItem {
+        color: rgb(120, 2, 2);
+        margin-left: 2vw;
+      }
+    }
+    .borderAccessories {
+      background-color: rgb(70, 2, 2);
+      width: 5px;
+      height: 40vh;
+      animation: borderBig 2s infinite alternate;
+    }
+    @keyframes borderBig {
+      100% {
+        height: 10vh;
       }
     }
   }

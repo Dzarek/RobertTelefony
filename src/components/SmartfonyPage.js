@@ -12,12 +12,15 @@ import arrowSmartfonR from "../images/arrowSmartfoneR.png";
 import shakingHands from "../images/shaking-hands.jpg";
 import mobileMarks from "../images/MobileMarks.png";
 
+import { smartphonesData } from "../data";
+
 // import BuySmartfony from "./BuySmartfony";
 
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showBuyNowMobile, setShowBuyNowMobile] = useState(false);
+  // console.log(smartphonesData);
   return (
     <Wrapper>
       <div className="main-section smartfon-section">
@@ -114,11 +117,39 @@ const Smartfony = () => {
                 Zobacz aktualne promocje
               </button>
             </div>
-            {/* ) : ( */}
+
             <div className="buyNowMobile">
-              <h3>TUTAJ BĘDĄ TELEFONY KTÓRE SĄ NAJCZĘŚĆIEJ SPRZEDAWANE</h3>
+              {/* <h3>TUTAJ BĘDĄ TELEFONY KTÓRE SĄ NAJCZĘŚĆIEJ SPRZEDAWANE</h3> */}
+              {smartphonesData.map((item) => {
+                const {
+                  id,
+                  name,
+                  img,
+                  screen,
+                  proccessor,
+                  system,
+                  ram,
+                  memory,
+                  price,
+                } = item;
+                return (
+                  <div key={id} className="oneMobilePhone">
+                    <div className="mobilePhoneImg">
+                      <img src={img[0]} alt="" />
+                    </div>
+                    <div className="mobilePhoneDetails">
+                      <h3>{name}</h3>
+                      <h5>{screen}</h5>
+                      <h5>{proccessor}</h5>
+                      <h5>{system}</h5>
+                      <h5>{ram}</h5>
+                      <h5>{memory}</h5>
+                      <h5>{price}</h5>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-            {/* )} */}
           </div>
         </div>
         <div
@@ -145,6 +176,27 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   margin-top: 10vh;
+  .oneMobilePhone {
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid rgb(120, 2, 2);
+    width: 40vh;
+    height: 50vh;
+    .mobilePhoneImg {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .mobilePhoneDetails {
+      width: 50%;
+      height: 100%;
+    }
+  }
   .modalContentTitle {
     font-family: "Stick No Bills", sans-serif;
     font-size: 3rem;

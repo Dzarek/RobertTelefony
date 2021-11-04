@@ -15,6 +15,22 @@ import memory3 from "./images/accessories/memory3.jpg";
 import słuchawki1 from "./images/accessories/słuchawki1.jpg";
 import słuchawki2 from "./images/accessories/słuchawki2.jpg";
 
+import samsungGalaxyS20_1 from "./images/smartphones/samsungGalaxyS20-1.jpg";
+import samsungGalaxyS20_2 from "./images/smartphones/samsungGalaxyS20-2.jpg";
+import samsungGalaxyS20_3 from "./images/smartphones/samsungGalaxyS20-3.jpg";
+import iPhone12Pro_1 from "./images/smartphones/iPhone12Pro-1.jpg";
+import iPhone12Pro_2 from "./images/smartphones/iPhone12Pro-2.jpg";
+import iPhone12Pro_3 from "./images/smartphones/iPhone12Pro-3.jpg";
+import motorolaMotoG60s_1 from "./images/smartphones/motorolaMotoG60s-1.jpg";
+import motorolaMotoG60s_2 from "./images/smartphones/motorolaMotoG60s-2.jpg";
+import motorolaMotoG60s_3 from "./images/smartphones/motorolaMotoG60s-3.jpg";
+import oppoReno6Pro_1 from "./images/smartphones/oppoReno6Pro-1.jpg";
+import oppoReno6Pro_2 from "./images/smartphones/oppoReno6Pro-2.jpg";
+import oppoReno6Pro_3 from "./images/smartphones/oppoReno6Pro-3.jpg";
+import smartfonXIAOMI11Lite_1 from "./images/smartphones/smartfonXIAOMI11Lite-1.jpg";
+import smartfonXIAOMI11Lite_2 from "./images/smartphones/smartfonXIAOMI11Lite-2.jpg";
+import smartfonXIAOMI11Lite_3 from "./images/smartphones/smartfonXIAOMI11Lite-3.jpg";
+
 export const questionsData = [
   {
     id: 1,
@@ -155,3 +171,65 @@ export const accessoriesData = {
     info: "Słuchawki... lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sed illum quos, quo, adipisci nostrum, cupiditate dolore commodi nisi magni labore odit tempore ullam autem tenetur. ",
   },
 };
+
+export const smartphonesData = [
+  {
+    id: 1,
+    name: "Samsung Galaxy S20",
+    img: [samsungGalaxyS20_1, samsungGalaxyS20_2, samsungGalaxyS20_3],
+    screen: '6.5", 2400 x 1080px, Super AMOLED',
+    proccessor: "Qualcomm Snapdragon 865, Ośmiordzeniowy",
+    system: "Android 10",
+    ram: "6 GB",
+    memory: "128 GB",
+    price: "2900,00 zł",
+  },
+  // {
+  //   id: 2,
+  //   name: "XIAOMI 11 Lite",
+  //   img: [
+  //     smartfonXIAOMI11Lite_1,
+  //     smartfonXIAOMI11Lite_2,
+  //     smartfonXIAOMI11Lite_3,
+  //   ],
+  //   screen: '6.5", 2400 x 1080px, AMOLED',
+  //   proccessor: "Qualcomm Snapdragon 778G 5G, Ośmiordzeniowy",
+  //   system: "Android 11",
+  //   ram: "6 GB",
+  //   memory: "128 GB",
+  //   price: "1649,00 zł",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Oppo Reno 6 Pro",
+  //   img: [oppoReno6Pro_1, oppoReno6Pro_2, oppoReno6Pro_3],
+  //   screen: '6.55", 2400 x 1080px, AMOLED',
+  //   proccessor: "Snapdragon 870, Ośmiordzeniowy",
+  //   system: "Android 11",
+  //   ram: "12 GB",
+  //   memory: "256 GB",
+  //   price: "3699,00 zł",
+  // },
+  // {
+  //   id: 4,
+  //   name: "iPhone 12 Pro",
+  //   img: [iPhone12Pro_1, iPhone12Pro_2, iPhone12Pro_3],
+  //   screen: '6.1", 2532 x 1170px, OLED Super Retina XDR',
+  //   proccessor: "Apple A14 Bionic, Sześciordzeniowy",
+  //   system: "iOS 14",
+  //   ram: "6 GB",
+  //   memory: "128 GB",
+  //   price: "4699,99 zł",
+  // },
+  // {
+  //   id: 5,
+  //   name: "Motorola Moto G60s",
+  //   img: [motorolaMotoG60s_1, motorolaMotoG60s_2, motorolaMotoG60s_3],
+  //   screen: '6.8", 2460 x 1080px, TFT',
+  //   proccessor: "MediaTek Helio G95, Ośmiordzeniowy",
+  //   system: "Android 11",
+  //   ram: "6 GB",
+  //   memory: "128 GB",
+  //   price: "1199,00 zł",
+  // },
+];

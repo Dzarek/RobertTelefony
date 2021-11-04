@@ -3,6 +3,7 @@ import { GiExitDoor } from "react-icons/gi";
 import { GiEntryDoor } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { ImMobile } from "react-icons/im";
+import { IoArrowUpCircle } from "react-icons/io5";
 import { useState } from "react";
 
 import smartfonCircle from "../images/smartphoneCircle.png";
@@ -10,6 +11,8 @@ import arrowSmartfon from "../images/arrowSmartfone.png";
 import arrowSmartfonR from "../images/arrowSmartfoneR.png";
 import shakingHands from "../images/shaking-hands.jpg";
 import mobileMarks from "../images/MobileMarks.png";
+
+// import BuySmartfony from "./BuySmartfony";
 
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
@@ -61,21 +64,36 @@ const Smartfony = () => {
           <button onClick={() => setShowModal1(false)} className="btn-exit">
             <GiExitDoor />
           </button>
-          <div className="modal-content">
-            <h1>SPRZEDAŻ</h1>
-            {!showBuyNowMobile ? (
-              <>
-                <section>
+          {showBuyNowMobile && (
+            <button
+              onClick={() => setShowBuyNowMobile(false)}
+              className="btn-exit2"
+            >
+              <IoArrowUpCircle />
+            </button>
+          )}
+          <h1 className="modalContentTitle">SPRZEDAŻ</h1>
+          <div
+            className={
+              !showBuyNowMobile
+                ? "modal-content modalWithButton"
+                : "modal-content noModalWithButton"
+            }
+          >
+            {/* {!showBuyNowMobile ? ( */}
+            <div className="modalWithButton">
+              <section className="modalContentOne">
+                <div className="modal-info">
+                  <p>
+                    W mojej ofercie znajdują się zarówno telefony nowe jak i
+                    używane, z wyższych i niższych półek cenowych, a więc każdy
+                    znajdzie coś dla siebie.
+                  </p>
+                </div>
+                <div className="marksAndContact">
                   <div className="modal-marks">
                     <p>Różnorodność marek telefonów.</p>
                     <img src={mobileMarks} alt="" />
-                  </div>
-                  <div className="modal-info">
-                    <p>
-                      W mojej ofercie znajdują się zarówno telefony nowe jak i
-                      używane, z wyższych i niższych półek cenowych, a więc
-                      każdy znajdzie coś dla siebie.
-                    </p>
                   </div>
                   <div className="modal-contact">
                     <p>Odwiedź mój sklep i wybierz swój nowy telefon!</p>
@@ -87,19 +105,20 @@ const Smartfony = () => {
                       <ImMobile className="modalIcon" /> 791 838 332
                     </h4>
                   </div>
-                </section>
-                <button
-                  onClick={() => setShowBuyNowMobile(true)}
-                  className="buyNowBtn"
-                >
-                  Zobacz aktualne perełki
-                </button>
-              </>
-            ) : (
-              <div className="buyNowMobile">
-                <h3>TUTAJ BĘDĄ TELEFONY KTÓRE SĄ NAJCZĘŚĆIEJ SPRZEDAWANE</h3>
-              </div>
-            )}
+                </div>
+              </section>
+              <button
+                onClick={() => setShowBuyNowMobile(true)}
+                className="buyNowBtn"
+              >
+                Zobacz aktualne promocje
+              </button>
+            </div>
+            {/* ) : ( */}
+            <div className="buyNowMobile">
+              <h3>TUTAJ BĘDĄ TELEFONY KTÓRE SĄ NAJCZĘŚĆIEJ SPRZEDAWANE</h3>
+            </div>
+            {/* )} */}
           </div>
         </div>
         <div
@@ -126,11 +145,51 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   margin-top: 10vh;
+  .modalContentTitle {
+    font-family: "Stick No Bills", sans-serif;
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    z-index: 999;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .modalWithButton {
+    transform: translateY(0);
+    height: 100vh;
+    /* opacity: 0; */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    animation: modalDown 1s linear 1 forwards;
+  }
+  .noModalWithButton {
+    top: 0;
+    animation: modalUp 1s linear 1 forwards;
+  }
+  @keyframes modalUp {
+    100% {
+      /* transform: translateY(-100vh); */
+      top: -100vh;
+    }
+  }
+  @keyframes modalDown {
+    100% {
+      top: 0%;
+      transform: translateY(0);
+    }
+  }
+
   .buyNowMobile {
     height: 100vh;
     width: 100vw;
-    margin: 0 auto;
+    margin: 10vh auto 0;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   .no-modal1 {
     transform: translateX(-100vw);
@@ -156,6 +215,7 @@ const Wrapper = styled.div`
   }
   .btn-exit {
     position: absolute;
+    z-index: 999;
     top: 5vh;
     left: 5vw;
     font-size: 5rem;
@@ -169,6 +229,7 @@ const Wrapper = styled.div`
   }
   .btn-exit2 {
     position: absolute;
+    z-index: 999;
     top: 5vh;
     right: 5vw;
     font-size: 5rem;
@@ -260,34 +321,64 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     color: white;
-    height: 100vh;
+    height: 200vh;
+    overflow: hidden;
+    position: relative;
 
-    section {
+    .modalContentOne {
+      margin-top: 30vh;
       display: flex;
+      flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      width: 80vw;
+      width: 100vw;
+      font-family: "Lemonada", sans-serif;
       div {
-        margin: 2vw;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
       .modal-info {
-        width: 30%;
-        margin-bottom: 30vh;
+        width: 60%;
+        margin-bottom: 10vh;
+      }
+      .marksAndContact {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
       .modal-contact,
       .modal-marks {
-        width: 35%;
+        width: 30%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        height: 40vh;
         img {
-          width: 15vw;
+          /* margin-top: 2vh; */
+          width: 20vw;
           height: 15vw;
         }
       }
+    }
+  }
+  .buyNowBtn {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.4rem;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(120, 2, 2);
+    box-shadow: 0 0 15px 2px white;
+    animation: buyBtnAnimation 1s linear infinite alternate;
+  }
+  @keyframes buyBtnAnimation {
+    100% {
+      box-shadow: none;
     }
   }
   .modalIcon {

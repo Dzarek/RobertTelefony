@@ -121,8 +121,9 @@ const Wrapper = styled.div`
     animation: moveBar 30s infinite linear;
     h5 {
       color: white;
-      font-size: 1.2rem;
-      /* width: 50vw; */
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      font-family: "Stick No Bills", sans-serif;
     }
   }
 

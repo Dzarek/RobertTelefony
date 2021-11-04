@@ -10,7 +10,7 @@ const AccessoriesPage = () => {
   const głośniki = accessoriesData.głośniki;
   const memoriesCard = accessoriesData.memoriesCard;
   const słuchawki = accessoriesData.słuchawki;
-  const [showAccessories, setShowAccessories] = useState([]);
+  const [showAccessories, setShowAccessories] = useState(false);
 
   return (
     <Wrapper>
@@ -67,17 +67,28 @@ const AccessoriesPage = () => {
             </li>
           </ul>
           <div className="borderAccessories"></div>
-          <section className="accessoriesItems">
-            {showAccessories.map((item) => {
-              const { id, name, img } = item;
-              return (
-                <div className="oneItem" key={id}>
-                  <img src={img} alt={name} />
-                  <h5>{name}</h5>
-                </div>
-              );
-            })}
-          </section>
+          {showAccessories ? (
+            <div className="accessoriesContent">
+              <section className="accessoriesItems">
+                {showAccessories.items.map((item) => {
+                  const { id, name, img } = item;
+                  return (
+                    <div className="oneItem" key={id}>
+                      <img src={img} alt={name} />
+                      <h5>{name}</h5>
+                    </div>
+                  );
+                })}
+              </section>
+              <p>{showAccessories.info}</p>
+            </div>
+          ) : (
+            <div className="accessoriesContent">
+              <section className="accessoriesItems">
+                <h3>WYBIERZ KATEGORIE</h3>
+              </section>
+            </div>
+          )}
         </div>
       </div>
     </Wrapper>
@@ -87,7 +98,7 @@ const AccessoriesPage = () => {
 const Wrapper = styled.div`
   .main-section {
     background: #fff;
-    padding: 5vh 0;
+    padding: 10vh 0;
     h3 {
       text-transform: uppercase;
       color: #222;
@@ -102,13 +113,15 @@ const Wrapper = styled.div`
   }
   .accessoriesWrapper {
     margin: 10vh auto;
-    width: 75vw;
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    section,
+    div {
+      width: 55%;
+    }
     ul {
-      width: 48%;
+      width: 40%;
     }
     @keyframes showItemA {
       0% {
@@ -118,11 +131,25 @@ const Wrapper = styled.div`
         opacity: 1;
       }
     }
+    .accessoriesContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      animation: showItemA 1s 1 forwards;
+      p {
+        margin-top: 7vh;
+        font-size: 0.9rem;
+        width: 90%;
+        font-family: "Lemonada", sans-serif;
+        text-align: justify;
+      }
+    }
     .accessoriesItems {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      animation: showItemA 1s 1 forwards;
+      width: 100%;
       .oneItem {
         display: flex;
         flex-direction: column;
@@ -146,16 +173,19 @@ const Wrapper = styled.div`
           text-align: center;
         }
       }
+      h3 {
+        color: rgb(120, 2, 2);
+      }
     }
     .accessoriesList {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       padding-left: 10vw;
-      min-height: 40vh;
+      min-height: 50vh;
       li {
         font-size: 1.8rem;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         list-style: none;
         display: flex;
         align-items: center;
@@ -168,14 +198,18 @@ const Wrapper = styled.div`
         }
       }
       .activeItem {
-        color: rgb(120, 2, 2);
-        margin-left: 2vw;
+        margin-left: 4vw;
+        color: rgb(2, 7, 70);
+        :hover {
+          color: rgb(2, 7, 70);
+          margin-left: 5vw;
+        }
       }
     }
     .borderAccessories {
       background-color: rgb(70, 2, 2);
       width: 5px;
-      height: 40vh;
+      height: 50vh;
       animation: borderBig 2s infinite alternate;
     }
     @keyframes borderBig {

@@ -50,6 +50,16 @@ const ServicePage = () => {
             <BsFillEmojiWinkFill className="serviceIcon" />
           </h3>
         </div>
+        <div className="infoBar">
+          <div className="infoBarContainer">
+            <h5>Wymiana Baterii</h5>
+            <h5>Wymiana Wyświetlacza</h5>
+            <h5>Naprawa Obudowy</h5>
+            <h5>Naprawa Głośnika</h5>
+            <h5>Naprawa Po Zalaniu</h5>
+            <h5>Odzyskiwanie Danych</h5>
+          </div>
+        </div>
         <h1 className="serviceStepsTitle">krok po kroku</h1>
         <div className="serviceSteps">
           <section>
@@ -90,6 +100,41 @@ const ServicePage = () => {
 };
 
 const Wrapper = styled.div`
+  .infoBar {
+    background-color: rgba(70, 2, 2, 0.8);
+    height: 10vh;
+    width: 100vw;
+    margin: 10vh auto;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .infoBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    animation: moveBar 30s infinite linear;
+    h5 {
+      color: white;
+      font-size: 1.2rem;
+      /* width: 50vw; */
+    }
+  }
+
+  @keyframes moveBar {
+    0% {
+      transform: translateX(100vw);
+    }
+
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
   .titleContainer {
     display: flex;
     justify-content: center;
@@ -189,6 +234,7 @@ const Wrapper = styled.div`
       padding: 10px;
       font-family: "Bebas Neue", sans-serif;
       letter-spacing: 1px;
+      transition: 0.3s;
       /* opacity: 0; */
       /* animation: serviceStepsAnimation 6s ease-in infinite alternate; */
       animation: serviceStepsAnimation 2s ease-in infinite alternate;
@@ -201,11 +247,11 @@ const Wrapper = styled.div`
         text-transform: uppercase;
       }
     }
-    :hover section {
+    /* :hover section {
       animation: none;
       background: rgba(0, 0, 0, 1);
       border: rgb(120, 2, 2) 4px solid;
-    }
+    } */
   }
 
   /* .serviceSteps section:nth-of-type(2) {

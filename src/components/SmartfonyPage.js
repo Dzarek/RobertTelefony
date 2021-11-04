@@ -227,11 +227,11 @@ const Wrapper = styled.div`
       font-family: "Bebas Neue", sans-serif;
       cursor: pointer;
       border: 4px solid white;
-      transition: 0.5s;
+      transition: 0.3s;
       letter-spacing: 1px;
     }
     button:hover {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       background: rgba(3, 31, 63, 1);
     }
 

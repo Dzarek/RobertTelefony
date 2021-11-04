@@ -44,96 +44,114 @@ export const questionsData = [
 ];
 
 export const accessoriesData = {
-  ładowarki: [
-    {
-      id: 1,
-      name: "usb",
-      img: ładowarka1,
-    },
-    {
-      id: 2,
-      name: "usb-C",
-      img: ładowarka2,
-    },
-    {
-      id: 3,
-      name: "usb-iOS",
-      img: ładowarka3,
-    },
-  ],
-  szkła: [
-    {
-      id: 1,
-      name: "h7",
-      img: szybka1,
-    },
-    {
-      id: 2,
-      name: "h9",
-      img: szybka2,
-    },
-  ],
-  powerbanki: [
-    {
-      id: 1,
-      name: "XA",
-      img: powerbank1,
-    },
-    {
-      id: 2,
-      name: "XB",
-      img: powerbank2,
-    },
-    {
-      id: 3,
-      name: "XC",
-      img: powerbank3,
-    },
-  ],
-  głośniki: [
-    {
-      id: 1,
-      name: "XA",
-      img: głośnik1,
-    },
-    {
-      id: 2,
-      name: "XB",
-      img: głośnik2,
-    },
-    {
-      id: 3,
-      name: "XC",
-      img: głośnik3,
-    },
-  ],
-  memoriesCard: [
-    {
-      id: 1,
-      name: "XA",
-      img: memory1,
-    },
-    {
-      id: 2,
-      name: "XB",
-      img: memory2,
-    },
-    {
-      id: 3,
-      name: "XC",
-      img: memory3,
-    },
-  ],
-  słuchawki: [
-    {
-      id: 1,
-      name: "XA",
-      img: słuchawki1,
-    },
-    {
-      id: 2,
-      name: "XB",
-      img: słuchawki2,
-    },
-  ],
+  ładowarki: {
+    items: [
+      {
+        id: 1,
+        name: "usb",
+        img: ładowarka1,
+      },
+      {
+        id: 2,
+        name: "usb-C",
+        img: ładowarka2,
+      },
+      {
+        id: 3,
+        name: "usb-iOS",
+        img: ładowarka3,
+      },
+    ],
+    info: "Ładowarki... lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sed illum quos, quo, adipisci nostrum, cupiditate dolore commodi nisi magni labore odit tempore ullam autem tenetur. ",
+  },
+  szkła: {
+    items: [
+      {
+        id: 1,
+        name: "h7",
+        img: szybka1,
+      },
+      {
+        id: 2,
+        name: "h9",
+        img: szybka2,
+      },
+    ],
+    info: "Szkła... lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sed illum quos, quo, adipisci nostrum, cupiditate dolore commodi nisi magni labore odit tempore ullam autem tenetur. ",
+  },
+  powerbanki: {
+    items: [
+      {
+        id: 1,
+        name: "XA",
+        img: powerbank1,
+      },
+      {
+        id: 2,
+        name: "XB",
+        img: powerbank2,
+      },
+      {
+        id: 3,
+        name: "XC",
+        img: powerbank3,
+      },
+    ],
+    info: "Powerbanki... lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sed illum quos, quo, adipisci nostrum, cupiditate dolore commodi nisi magni labore odit tempore ullam autem tenetur. ",
+  },
+  głośniki: {
+    items: [
+      {
+        id: 1,
+        name: "XA",
+        img: głośnik1,
+      },
+      {
+        id: 2,
+        name: "XB",
+        img: głośnik2,
+      },
+      {
+        id: 3,
+        name: "XC",
+        img: głośnik3,
+      },
+    ],
+    info: "Głośniki... lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sed illum quos, quo, adipisci nostrum, cupiditate dolore commodi nisi magni labore odit tempore ullam autem tenetur. ",
+  },
+  memoriesCard: {
+    items: [
+      {
+        id: 1,
+        name: "XA",
+        img: memory1,
+      },
+      {
+        id: 2,
+        name: "XB",
+        img: memory2,
+      },
+      {
+        id: 3,
+        name: "XC",
+        img: memory3,
+      },
+    ],
+    info: "Karty pamięci... lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sed illum quos, quo, adipisci nostrum, cupiditate dolore commodi nisi magni labore odit tempore ullam autem tenetur. ",
+  },
+  słuchawki: {
+    items: [
+      {
+        id: 1,
+        name: "XA",
+        img: słuchawki1,
+      },
+      {
+        id: 2,
+        name: "XB",
+        img: słuchawki2,
+      },
+    ],
+    info: "Słuchawki... lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sed illum quos, quo, adipisci nostrum, cupiditate dolore commodi nisi magni labore odit tempore ullam autem tenetur. ",
+  },
 };

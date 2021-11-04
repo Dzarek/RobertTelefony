@@ -10,6 +10,7 @@ import AboutMePage from "./components/AboutMePage";
 import FAQPage from "./components/FAQPage";
 import ContactPage from "./components/ContactPage";
 import Footer from "./components/Footer";
+import GeneralInfo from "./components/GeneralInfo";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <AccessoriesPage />
         <ServicePage />
         <AboutMePage />
+        <GeneralInfo />
         <FAQPage />
         <ContactPage />
         <Footer />

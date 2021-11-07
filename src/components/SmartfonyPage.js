@@ -1,10 +1,18 @@
 import styled from "styled-components";
+import { useState } from "react";
+import Carousel from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
+import { IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
+
+import { smartphonesData } from "../data";
+import OneMobilePhone from "./OneMobilePhone";
+
 import { GiExitDoor } from "react-icons/gi";
 import { GiEntryDoor } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { ImMobile } from "react-icons/im";
 import { IoArrowUpCircle } from "react-icons/io5";
-import { useState } from "react";
 
 import smartfonCircle from "../images/smartphoneCircle.png";
 import arrowSmartfon from "../images/arrowSmartfone.png";
@@ -12,15 +20,14 @@ import arrowSmartfonR from "../images/arrowSmartfoneR.png";
 import shakingHands from "../images/shaking-hands.jpg";
 import mobileMarks from "../images/MobileMarks.png";
 
-import { smartphonesData } from "../data";
-
 // import BuySmartfony from "./BuySmartfony";
 
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showBuyNowMobile, setShowBuyNowMobile] = useState(false);
-  // console.log(smartphonesData);
+  const [data, setData] = useState(smartphonesData);
+
   return (
     <Wrapper>
       <div className="main-section smartfon-section">
@@ -83,7 +90,6 @@ const Smartfony = () => {
                 : "modal-content noModalWithButton"
             }
           >
-            {/* {!showBuyNowMobile ? ( */}
             <div className="modalWithButton">
               <section className="modalContentOne">
                 <div className="modal-info">
@@ -117,38 +123,25 @@ const Smartfony = () => {
                 Zobacz aktualne promocje
               </button>
             </div>
-
             <div className="buyNowMobile">
-              {/* <h3>TUTAJ BĘDĄ TELEFONY KTÓRE SĄ NAJCZĘŚĆIEJ SPRZEDAWANE</h3> */}
-              {smartphonesData.map((item) => {
-                const {
-                  id,
-                  name,
-                  img,
-                  screen,
-                  proccessor,
-                  system,
-                  ram,
-                  memory,
-                  price,
-                } = item;
-                return (
-                  <div key={id} className="oneMobilePhone">
-                    <div className="mobilePhoneImg">
-                      <img src={img[0]} alt="" />
-                    </div>
-                    <div className="mobilePhoneDetails">
-                      <h3>{name}</h3>
-                      <h5>{screen}</h5>
-                      <h5>{proccessor}</h5>
-                      <h5>{system}</h5>
-                      <h5>{ram}</h5>
-                      <h5>{memory}</h5>
-                      <h5>{price}</h5>
-                    </div>
-                  </div>
-                );
-              })}
+              <Carousel
+                infinite
+                autoPlay={3000}
+                animationSpeed={2000}
+                slidesPerPage={3}
+                addArrowClickHandler
+                stopAutoPlayOnHover
+                arrowLeft={
+                  <IoIosArrowDropleftCircle className="arrowrRightLeftFeatures" />
+                }
+                arrowRight={
+                  <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
+                }
+              >
+                {data.map((item) => {
+                  return <OneMobilePhone key={item.id} {...item} />;
+                })}
+              </Carousel>
             </div>
           </div>
         </div>
@@ -176,27 +169,8 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   margin-top: 10vh;
-  .oneMobilePhone {
-    background: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid rgb(120, 2, 2);
-    width: 40vh;
-    height: 50vh;
-    .mobilePhoneImg {
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .mobilePhoneDetails {
-      width: 50%;
-      height: 100%;
-    }
-  }
+  font-family: "Francois One", sans-serif;
+
   .modalContentTitle {
     font-family: "Stick No Bills", sans-serif;
     font-size: 3rem;
@@ -210,7 +184,6 @@ const Wrapper = styled.div`
   .modalWithButton {
     transform: translateY(0);
     height: 100vh;
-    /* opacity: 0; */
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -236,10 +209,11 @@ const Wrapper = styled.div`
 
   .buyNowMobile {
     height: 100vh;
-    width: 100vw;
-    margin: 10vh auto 0;
+    width: 90vw;
+    margin: 20vh auto 0;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
   }

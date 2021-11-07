@@ -73,6 +73,9 @@ const Wrapper = styled.div`
     /* letter-spacing: 1px; */
     text-align: center;
     font-family: "Lemonada", cursive;
+    font-family: "Francois One", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
     text-shadow: 0px 0px 5px rgb(70, 2, 2);
     h1 {
       width: 70%;

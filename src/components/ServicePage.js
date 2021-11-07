@@ -118,7 +118,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    animation: moveBar 30s infinite linear;
+    animation: moveBar 15s infinite linear;
     h5 {
       color: white;
       font-size: 1.4rem;

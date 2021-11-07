@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
 
 * {
 
@@ -82,6 +85,7 @@ span {
 .smartphone-modal {
   background: rgba(0, 0, 0);
   position: fixed;
+  /* position: relative; */
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -155,4 +159,38 @@ span {
   width: 40vw;
   transition: 1s;
 
+}
+
+
+.arrowrRightLeftFeatures {
+  color: whitesmoke;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.arrowrRightLeftFeatures:hover {
+  color: white;
+}
+
+.arrowrLeftFeaturesO {
+  color: rgb(120, 2, 2);
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.arrowrRightFeaturesO {
+  z-index: 3;
+  color: rgb(120, 2, 2);
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }

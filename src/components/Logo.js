@@ -46,10 +46,15 @@ const Wrapper = styled.div`
     }
     .logo2 {
       font-size: 1.1rem;
+      font-size: 1.2rem;
       h2 {
-        text-shadow: 0px 0px 1px white;
-        font-family: "Lemonada", cursive;
+        /* text-shadow: 0px 0px 1px white; */
+        text-shadow: none;
+        /* font-family: "Lemonada"; */
+        font-family: "Bebas Neue", sans-serif;
+        font-family: "Francois One", sans-serif;
         color: rgb(140, 64, 64);
+        /* letter-spacing: 2px; */
       }
       span {
         color: #fff;

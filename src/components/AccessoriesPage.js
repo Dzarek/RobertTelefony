@@ -166,6 +166,7 @@ const Wrapper = styled.div`
         }
         h5 {
           font-family: "Bebas Neue", sans-serif;
+          font-family: "Francois One", sans-serif;
           letter-spacing: 2px;
           color: rgb(120, 2, 2);
           text-transform: uppercase;

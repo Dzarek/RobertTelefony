@@ -1,10 +1,13 @@
 /* Root */
 @import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 
 * {
 
@@ -13,9 +16,10 @@
   box-sizing: border-box;
 }
 
+/* 
 html {
   scroll-behavior: smooth;
-}
+} */
 
 .App {
   background: #eee;
@@ -47,9 +51,6 @@ a {
 
 /* LOGO */
 
-.logo-wrapper {
-  background: #000;
-}
 
 h2 {
   text-shadow: 0px 0px 5px white;
@@ -193,4 +194,14 @@ span {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+}
+
+.aaaa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background: red;
+  z-index: 999999;
 }

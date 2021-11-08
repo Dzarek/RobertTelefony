@@ -87,7 +87,7 @@ const Wrapper = styled.div`
       width: 35%;
       font-size: 1rem;
       padding: 1vh 0;
-      font-family: "Lemonada", sans-serif;
+      font-family: "Cairo", sans-serif;
       background: #333;
       color: white;
       letter-spacing: 1px;
@@ -103,8 +103,10 @@ const Wrapper = styled.div`
     h1 {
       text-align: center;
       color: rgb(120, 2, 2);
-      font-size: 1.5rem;
+      font-family: "Teko", sans-serif;
       margin: 0 auto 5vh;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
     }
     .inputs {
       width: 100%;
@@ -113,21 +115,21 @@ const Wrapper = styled.div`
       align-items: center;
       input {
         width: 46%;
-        font-size: 0.8rem;
+        font-size: 1rem;
         padding: 1vh 2%;
         border: 2px solid rgb(120, 2, 2);
         border-radius: 10px;
-        font-family: "Lemonada", sans-serif;
+        font-family: "Cairo", sans-serif;
       }
     }
     textarea {
       width: 100%;
       height: 25vh;
       padding: 2%;
-      font-size: 0.8rem;
+      font-size: 1rem;
       border: 2px solid rgb(120, 2, 2);
       border-radius: 10px;
-      font-family: "Lemonada", sans-serif;
+      font-family: "Cairo", sans-serif;
     }
     label {
       margin: 3vh auto;

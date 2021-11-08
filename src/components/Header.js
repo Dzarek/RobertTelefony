@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
-
 import headerBg3 from "../images/headerBg3.jpg";
 
 const Header = () => {
@@ -68,15 +67,13 @@ const Wrapper = styled.div`
     position: absolute;
     width: 100%;
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-size: 1.2rem;
     line-height: 3;
-    /* letter-spacing: 1px; */
     text-align: center;
-    font-family: "Lemonada", cursive;
-    font-family: "Francois One", sans-serif;
-    font-weight: 300;
+    font-family: "Cairo", sans-serif;
+    font-family: "Teko", sans-serif;
     letter-spacing: 2px;
-    text-shadow: 0px 0px 5px rgb(70, 2, 2);
     h1 {
       width: 70%;
     }

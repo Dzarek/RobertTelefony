@@ -7,6 +7,7 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 import { smartphonesData } from "../data";
 import OneMobilePhone from "./OneMobilePhone";
+import SellPhone from "./SellPhone";
 
 import { GiExitDoor } from "react-icons/gi";
 import { GiEntryDoor } from "react-icons/gi";
@@ -20,8 +21,6 @@ import arrowSmartfonR from "../images/arrowSmartfoneR.png";
 import shakingHands from "../images/shaking-hands.jpg";
 import mobileMarks from "../images/MobileMarks.png";
 
-// import BuySmartfony from "./BuySmartfony";
-
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
@@ -29,7 +28,7 @@ const Smartfony = () => {
   const [data, setData] = useState(smartphonesData);
 
   return (
-    <Wrapper>
+    <Wrapper id="smartfony">
       <div className="main-section smartfon-section">
         <h2 className="title">Smartfony</h2>
         <img
@@ -154,10 +153,9 @@ const Smartfony = () => {
           <button onClick={() => setShowModal2(false)} className="btn-exit2">
             <GiExitDoor />
           </button>
-          <div className="modal-content">
-            <h1>SKUP</h1>
-            <section></section>
-          </div>
+          {/* <div className="modal-content"> */}
+          <SellPhone />
+          {/* </div> */}
         </div>
       </div>
     </Wrapper>
@@ -169,7 +167,7 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   margin-top: 10vh;
-  font-family: "Francois One", sans-serif;
+  /* font-family: "Francois One", sans-serif; */
 
   .modalContentTitle {
     font-family: "Stick No Bills", sans-serif;
@@ -311,7 +309,8 @@ const Wrapper = styled.div`
       background: rgba(3, 31, 63, 0.8);
       color: white;
       position: absolute;
-      font-family: "Bebas Neue", sans-serif;
+      /* font-family: "Bebas Neue", sans-serif; */
+      font-family: "Teko", sans-serif;
       cursor: pointer;
       border: 4px solid white;
       transition: 0.3s;
@@ -350,7 +349,6 @@ const Wrapper = styled.div`
     height: 200vh;
     overflow: hidden;
     position: relative;
-
     .modalContentOne {
       margin-top: 30vh;
       display: flex;
@@ -358,10 +356,12 @@ const Wrapper = styled.div`
       justify-content: space-around;
       align-items: center;
       width: 100vw;
-      font-family: "Lemonada", sans-serif;
+
+      font-family: "Cairo", sans-serif;
+
       div {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
       }
       .modal-info {
         width: 60%;
@@ -394,7 +394,8 @@ const Wrapper = styled.div`
     top: 70%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
     font-size: 1.4rem;
     padding: 20px;
     border-radius: 10px;

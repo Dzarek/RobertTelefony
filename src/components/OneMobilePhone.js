@@ -91,7 +91,7 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   margin-top: 10vh;
-  font-family: "Francois One", sans-serif;
+  font-family: "Cairo", sans-serif;
 
   .oneMobilePhone {
     background: white;

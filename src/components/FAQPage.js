@@ -12,11 +12,13 @@ import {
 } from "react-accessible-accordion";
 import { questionsData } from "../data";
 import questionMark1 from "../images/questionMark1.jpg";
+import Girl from "../images/Girl.mp4";
+import Student from "../images/Student.mp4";
 
 const FAQPage = () => {
   const [questions, setQuestions] = useState(questionsData);
   return (
-    <Wrapper>
+    <Wrapper id="faq">
       <div className="main-section">
         <div className="titleContainer">
           <div className="titleLine"></div>
@@ -25,7 +27,7 @@ const FAQPage = () => {
         </div>
         <div className="faqContent">
           <video
-            src={FaqVideo}
+            src={Student}
             autoPlay
             muted
             loop
@@ -146,23 +148,26 @@ const Wrapper = styled.div`
   video {
     margin-top: 5vh;
     height: 40vh;
-    box-shadow: 0 0 10px 2px white;
+    border: 1px white black;
+    box-shadow: 0 0 10px 5px black;
+    opacity: 0.8;
+    border-radius: 10px;
   }
   .questions {
     color: rgb(70, 2, 2);
-    font-family: "Lemonada", sans-serif;
+    font-family: "Cairo", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 40%;
   }
   .singleQuestion {
     margin: 2vh auto;
     padding: 10px 20px;
     width: 90%;
-    background: #000;
+    background: rgba(0, 0, 0, 0.9);
     color: white;
     box-shadow: 0 0 5px 1px whitesmoke;
     p {

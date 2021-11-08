@@ -114,13 +114,14 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <button
+      {/* <button
+        className="upBtn"
         onClick={() => {
           window.scrollTo(0, 0);
         }}
       >
         <BsFillArrowUpSquareFill />
-      </button>
+      </button> */}
     </Wrapper>
   );
 };
@@ -128,8 +129,8 @@ const Footer = () => {
 const Wrapper = styled.div`
   position: relative;
 
-  button {
-    position: absolute;
+  /* .upBtn {
+    position: fixed;
     bottom: 3vh;
     right: 3vw;
     font-size: 2rem;
@@ -138,7 +139,7 @@ const Wrapper = styled.div`
     color: rgb(120, 2, 2);
     transition: 0.5s;
     cursor: pointer;
-  }
+  } */
   button:hover {
     color: white;
   }

@@ -13,7 +13,7 @@ const AccessoriesPage = () => {
   const [showAccessories, setShowAccessories] = useState(false);
 
   return (
-    <Wrapper>
+    <Wrapper id="akcesoria">
       <div className="main-section">
         <h2 className="title">Akcesoria</h2>
         <h3>Duży wybór akcesoriów do Twojego smartfona</h3>
@@ -104,8 +104,9 @@ const Wrapper = styled.div`
       color: #222;
       text-align: center;
       margin: 3vh auto;
-      font-size: 1.8rem;
-      font-family: "Lemonada", sans-serif;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      font-family: "Teko", sans-serif;
     }
   }
   .icon {
@@ -139,9 +140,10 @@ const Wrapper = styled.div`
       animation: showItemA 1s 1 forwards;
       p {
         margin-top: 7vh;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         width: 90%;
-        font-family: "Lemonada", sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-style: italic;
         text-align: justify;
       }
     }
@@ -162,11 +164,10 @@ const Wrapper = styled.div`
           width: 10vw;
           height: 10vw;
           margin-bottom: 2vh;
-          box-shadow: 0 0 10px 2px rgb(70, 2, 2);
+          box-shadow: 0 0 2px 1px rgb(70, 2, 2);
         }
         h5 {
-          font-family: "Bebas Neue", sans-serif;
-          font-family: "Francois One", sans-serif;
+          font-family: "Teko", sans-serif;
           letter-spacing: 2px;
           color: rgb(120, 2, 2);
           text-transform: uppercase;
@@ -186,11 +187,12 @@ const Wrapper = styled.div`
       min-height: 50vh;
       li {
         font-size: 1.8rem;
-        letter-spacing: 2px;
+        /* letter-spacing: 0px; */
         list-style: none;
         display: flex;
         align-items: center;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: "Teko", sans-serif;
+        text-transform: uppercase;
         cursor: pointer;
         transition: 0.5s;
         :hover {

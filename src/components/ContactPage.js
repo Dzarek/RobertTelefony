@@ -3,7 +3,7 @@ import MyForm from "./MyForm";
 
 const ContactPage = () => {
   return (
-    <Wrapper className="main-section">
+    <Wrapper className="main-section" id="kontakt">
       <h2 className="title">Kontakt</h2>
       <div className="contactContainer">
         <div className="formik">
@@ -64,7 +64,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: "Lemonada", sans-serif;
+    font-family: "Cairo", sans-serif;
+    /* letter-spacing: 2px; */
+    font-size: 1.2rem;
     width: 100vw;
     margin-top: -3vh;
   }
@@ -91,13 +93,15 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
     h1 {
+      font-family: "Teko", sans-serif;
       text-align: center;
       color: rgb(120, 2, 2);
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin: 5vh auto;
+      letter-spacing: 2px;
     }
     h3 {
-      margin-bottom: 2vh;
+      /* margin-bottom: 1vh; */
     }
     span {
       color: rgb(120, 2, 2);
@@ -109,10 +113,11 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 80%;
     /* border-top: 2px solid rgb(120, 2, 2); */
 
     .mapContact {
+      margin-top: 3vh;
       width: 100%;
       height: 40vh;
       border: rgb(120, 2, 2) 2px solid;

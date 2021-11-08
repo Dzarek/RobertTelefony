@@ -12,11 +12,11 @@ import service1 from "../images/service1.jpg";
 import service2 from "../images/service2.jpg";
 import service4 from "../images/service4.jpg";
 import service5 from "../images/service5.jpg";
-import serviceBg from "../images/serviceBg.png";
+import tech1 from "../images/tech1.jpg";
 
 const ServicePage = () => {
   return (
-    <Wrapper>
+    <Wrapper id="serwis">
       <div className="main-section">
         <div className="titleContainer">
           <div className="titleLine"></div>
@@ -101,12 +101,12 @@ const ServicePage = () => {
 
 const Wrapper = styled.div`
   .infoBar {
-    background-color: rgba(70, 2, 2, 0.8);
+    background-color: rgba(50, 2, 2, 0.9);
     height: 10vh;
     width: 100vw;
     margin: 10vh auto;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,21 +115,28 @@ const Wrapper = styled.div`
 
   .infoBarContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100vw;
-    animation: moveBar 15s infinite linear;
+    animation: moveBar 5s infinite linear;
     h5 {
       color: white;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       letter-spacing: 1px;
-      font-family: "Stick No Bills", sans-serif;
+      font-family: "Teko", sans-serif;
+      text-transform: uppercase;
     }
   }
 
   @keyframes moveBar {
     0% {
       transform: translateX(100vw);
+    }
+    15% {
+      transform: translateX(0vw);
+    }
+    85% {
+      transform: translateX(0vw);
     }
 
     100% {
@@ -143,7 +150,7 @@ const Wrapper = styled.div`
     padding: 10vh 0;
   }
   .title {
-    color: rgb(120, 2, 2);
+    color: white;
     margin: auto 3vw;
     text-shadow: 0 0 2px black;
   }
@@ -151,7 +158,7 @@ const Wrapper = styled.div`
   .titleLine {
     width: 5vw;
     height: 5px;
-    background: rgb(120, 2, 2);
+    background: white;
     animation: lineBigger 1s infinite alternate;
     border-bottom: 2px solid black;
   }
@@ -166,7 +173,7 @@ const Wrapper = styled.div`
     color: rgb(120, 2, 2);
   }
   .main-section {
-    background-image: url(${serviceBg});
+    background-image: url(${tech1});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -181,9 +188,9 @@ const Wrapper = styled.div`
       align-items: center;
       width: 80vw;
       margin: 0 auto;
-      font-family: "Lemonada", sans-serif;
+      font-family: "Cairo", sans-serif;
       background: rgba(0, 0, 0, 0.8);
-      border-radius: 20px;
+      border-radius: 3px;
       color: white;
       padding: 5vh 2vw;
       h3 {
@@ -196,8 +203,8 @@ const Wrapper = styled.div`
         img {
           height: 50vh;
           width: 90%;
-          border: 4px solid rgb(70, 2, 2);
-          border-radius: 20px;
+          border: 2px solid rgb(70, 2, 2);
+          border-radius: 10px;
         }
       }
     }
@@ -207,7 +214,7 @@ const Wrapper = styled.div`
     text-align: center;
     text-transform: uppercase;
     font-size: 2.5rem;
-    text-shadow: 0px 0px 5px rgb(70, 2, 2);
+    text-shadow: 0px 0px 3px rgb(70, 2, 2);
     margin: 15vh auto 5vh;
     font-style: italic;
     font-family: "Stick No Bills", sans-serif;
@@ -219,7 +226,6 @@ const Wrapper = styled.div`
     align-items: center;
     color: whitesmoke;
     text-align: center;
-    font-size: 1.1rem;
     width: 80vw;
     margin: 0 auto 5vh;
     section {
@@ -234,45 +240,21 @@ const Wrapper = styled.div`
       border-radius: 10px;
       padding: 10px;
       font-family: "Bebas Neue", sans-serif;
+      font-family: "Teko", sans-serif;
       letter-spacing: 1px;
       transition: 0.3s;
-      /* opacity: 0; */
-      /* animation: serviceStepsAnimation 6s ease-in infinite alternate; */
-      animation: serviceStepsAnimation 2s ease-in infinite alternate;
+      :hover {
+        background: rgba(0, 0, 0, 1);
+        border: white 2px solid;
+      }
 
       h1 {
         font-size: 2rem;
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         text-transform: uppercase;
       }
-    }
-    /* :hover section {
-      animation: none;
-      background: rgba(0, 0, 0, 1);
-      border: rgb(120, 2, 2) 4px solid;
-    } */
-  }
-
-  /* .serviceSteps section:nth-of-type(2) {
-    animation-delay: 2s;
-  }
-  .serviceSteps section:nth-of-type(3) {
-    animation-delay: 4s;
-  }
-  .serviceSteps section:nth-of-type(4) {
-    animation-delay: 6s;
-  } */
-  @keyframes serviceStepsAnimation {
-    0% {
-      opacity: 0;
-    }
-    30% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
     }
   }
 `;

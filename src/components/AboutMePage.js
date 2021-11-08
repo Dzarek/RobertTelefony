@@ -3,7 +3,7 @@ import robertImg from "../images/robertImg.jpg";
 
 const AboutMePage = () => {
   return (
-    <Wrapper>
+    <Wrapper id="o_mnie">
       <div className="main-section">
         <div className="titleContainer">
           <div className="titleLine"></div>
@@ -60,11 +60,12 @@ const Wrapper = styled.div`
     width: 80vw;
     margin: 0 auto 10vh;
     color: #222;
-    font-family: "Lemonada", sans-serif;
+    font-family: "Cairo", sans-serif;
     border-left: 3px solid rgb(70, 2, 2);
     border-right: 3px solid rgb(70, 2, 2);
     span {
       color: rgb(70, 2, 2);
+      text-shadow: 0 0 2px black;
     }
   }
   .aboutMeWrapper {

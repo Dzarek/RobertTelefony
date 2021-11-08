@@ -9,9 +9,9 @@ const Logo = () => {
         <div className="logo1">
           <img src={aktivGSMimg} alt="logo" />
         </div>
-        <div className="logoUsb">
+        {/* <div className="logoUsb">
           <img src={usbImg} alt="usb" />
-        </div>
+        </div> */}
         <div className="logo2">
           <h2>
             Robert Kamiński - <span>TELEFONY KOMÓRKOWE</span>
@@ -30,31 +30,29 @@ const Wrapper = styled.div`
   align-items: center;
   z-index: 10;
   opacity: 0.8;
+  background: #000;
   .logo-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 70%;
     height: 12vh;
     .logo1 {
       padding: 0vh 1vw 0vh 1vw;
       background: rgb(160, 64, 64, 0.5);
       height: 12vh;
       img {
-        margin-top: 3%;
+        margin: 3vh auto;
+        height: 5vh;
       }
     }
     .logo2 {
-      font-size: 1.1rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       h2 {
-        /* text-shadow: 0px 0px 1px white; */
         text-shadow: none;
-        /* font-family: "Lemonada"; */
-        font-family: "Bebas Neue", sans-serif;
-        font-family: "Francois One", sans-serif;
+        font-family: "Teko", sans-serif;
         color: rgb(140, 64, 64);
-        /* letter-spacing: 2px; */
+        letter-spacing: 2px;
       }
       span {
         color: #fff;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+// import { useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { BsFillQuestionOctagonFill } from "react-icons/bs";
 import {
@@ -15,7 +15,7 @@ import questionMark1 from "../images/questionMark1.jpg";
 import Student from "../images/Student.mp4";
 
 const FAQPage = () => {
-  const [questions, setQuestions] = useState(questionsData);
+  // const [questions, setQuestions] = useState(questionsData);
   return (
     <Wrapper id="faq">
       <div className="main-section">
@@ -35,7 +35,7 @@ const FAQPage = () => {
           ></video>
           <div className="questions">
             <Accordion allowZeroExpanded={true}>
-              {questions.map((question) => {
+              {questionsData.map((question) => {
                 const { title, info, id } = question;
                 return (
                   <AccordionItem key={id}>

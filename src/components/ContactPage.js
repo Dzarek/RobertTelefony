@@ -35,6 +35,7 @@ const ContactPage = () => {
               allowfullscreen=""
               loading="lazy"
               className="mapContact"
+              title="map"
             ></iframe>
           </div>
         </div>

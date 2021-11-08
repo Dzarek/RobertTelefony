@@ -25,7 +25,7 @@ const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showBuyNowMobile, setShowBuyNowMobile] = useState(false);
-  const [data, setData] = useState(smartphonesData);
+  // const [data, setData] = useState(smartphonesData);
 
   return (
     <Wrapper id="smartfony">
@@ -137,7 +137,7 @@ const Smartfony = () => {
                   <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
                 }
               >
-                {data.map((item) => {
+                {smartphonesData.map((item) => {
                   return <OneMobilePhone key={item.id} {...item} />;
                 })}
               </Carousel>

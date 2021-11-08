@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { ImMobile } from "react-icons/im";
 import { GoMail } from "react-icons/go";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { BiTime } from "react-icons/bi";
-import { BsFillArrowUpSquareFill } from "react-icons/bs";
+// import { BsFillArrowUpSquareFill } from "react-icons/bs";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -32,34 +32,20 @@ const Footer = () => {
           </section>
           <section className="footerNav">
             <h3>Oferta :</h3>
-            <Link to="/">
+            <Link to="smartfony" smooth={true} offset={-100} duration={1000}>
               <FaLongArrowAltRight className="icon" />
               Smartfony
             </Link>
-            <Link to="/">
+            <Link to="akcesoria" smooth={true} offset={-50} duration={1000}>
               {" "}
               <FaLongArrowAltRight className="icon" />
               Akcesoria
             </Link>
-            <Link to="/">
+            <Link to="serwis" smooth={true} offset={-50} duration={1500}>
               {" "}
               <FaLongArrowAltRight className="icon" />
               Serwis
             </Link>
-            {/* <Link to="/">
-              {" "}
-              <FaLongArrowAltRight className="icon" />O mnie
-            </Link>
-            <Link to="/">
-              {" "}
-              <FaLongArrowAltRight className="icon" />
-              FAQ
-            </Link>
-            <Link to="/">
-              {" "}
-              <FaLongArrowAltRight className="icon" />
-              Kontakt
-            </Link> */}
           </section>
           <section className="openHours">
             <h3>Godziny Otwarcia :</h3>
@@ -114,14 +100,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      {/* <button
-        className="upBtn"
-        onClick={() => {
-          window.scrollTo(0, 0);
-        }}
-      >
-        <BsFillArrowUpSquareFill />
-      </button> */}
     </Wrapper>
   );
 };
@@ -129,17 +107,6 @@ const Footer = () => {
 const Wrapper = styled.div`
   position: relative;
 
-  /* .upBtn {
-    position: fixed;
-    bottom: 3vh;
-    right: 3vw;
-    font-size: 2rem;
-    background: transparent;
-    border: none;
-    color: rgb(120, 2, 2);
-    transition: 0.5s;
-    cursor: pointer;
-  } */
   button:hover {
     color: white;
   }
@@ -159,6 +126,7 @@ const Wrapper = styled.div`
     color: white;
     transition: 0.5s;
     margin-top: 1vh;
+    cursor: pointer;
   }
   .contact p {
     margin-top: 3vh;

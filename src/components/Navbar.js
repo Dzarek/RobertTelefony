@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { TiArrowSortedDown } from "react-icons/ti";
+// import { TiArrowSortedDown } from "react-icons/ti";
 import video4 from "../images/video4.mp4";
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 import React, { useEffect, useState } from "react";
 import { BsFillArrowUpSquareFill } from "react-icons/bs";
-
 import Logo from "./Logo";
 
 const Navbar = () => {
@@ -31,27 +30,27 @@ const Navbar = () => {
             ></video>
           </div>
           <div className="nav-container">
-            <Link to="smartfony" smooth={true} offset={-50} duration={1000}>
+            <Link to="smartfony" smooth={true} offset={-100} duration={1000}>
               Smartfony
             </Link>
             <h2>|</h2>
-            <Link to="akcesoria" smooth={true} duration={1000}>
+            <Link to="akcesoria" smooth={true} offset={-50} duration={1000}>
               Akcesoria
             </Link>
             <h2>|</h2>
-            <Link to="serwis" smooth={true} duration={1500}>
+            <Link to="serwis" smooth={true} offset={-50} duration={1500}>
               Serwis
             </Link>
             <h2>|</h2>
-            <Link to="o_mnie" smooth={true} offset={-50} duration={1500}>
+            <Link to="o_mnie" smooth={true} offset={-100} duration={1500}>
               O mnie
             </Link>
             <h2>|</h2>
-            <Link to="faq" smooth={true} duration={2000}>
+            <Link to="faq" smooth={true} offset={-50} duration={2000}>
               FAQ
             </Link>
             <h2>|</h2>
-            <Link to="kontakt" smooth={true} duration={2000}>
+            <Link to="kontakt" smooth={true} offset={-100} duration={2000}>
               Kontakt
             </Link>
           </div>

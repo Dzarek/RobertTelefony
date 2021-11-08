@@ -32,7 +32,7 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 60vw;
-    margin-top: -15vh;
+    margin-top: -25vh;
     padding-bottom: 20vh;
     .oneGeneralInfo {
       display: flex;

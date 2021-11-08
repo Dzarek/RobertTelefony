@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import aktivGSMimg from "../images/logo_aktiv.png";
-import usbImg from "../images/usb.png";
+// import usbImg from "../images/usb.png";
 
 const Logo = () => {
   return (
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
     width: 70%;
     height: 12vh;
     .logo1 {
-      padding: 0vh 1vw 0vh 1vw;
+      padding: 0vh 2vw 0vh 2vw;
       background: rgb(160, 64, 64, 0.5);
       height: 12vh;
       img {

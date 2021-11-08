@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useState } from "react";
-import FaqVideo from "../images/FaqVideo.mp4";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { BsFillQuestionOctagonFill } from "react-icons/bs";
 import {
@@ -12,7 +11,7 @@ import {
 } from "react-accessible-accordion";
 import { questionsData } from "../data";
 import questionMark1 from "../images/questionMark1.jpg";
-import Girl from "../images/Girl.mp4";
+// import Girl from "../images/Girl.mp4";
 import Student from "../images/Student.mp4";
 
 const FAQPage = () => {

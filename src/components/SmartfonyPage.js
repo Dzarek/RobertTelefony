@@ -128,6 +128,11 @@ const Smartfony = () => {
                 autoPlay={3000}
                 animationSpeed={2000}
                 slidesPerPage={3}
+                breakpoints={{
+                  900: {
+                    slidesPerPage: 1,
+                  },
+                }}
                 addArrowClickHandler
                 stopAutoPlayOnHover
                 arrowLeft={
@@ -153,9 +158,7 @@ const Smartfony = () => {
           <button onClick={() => setShowModal2(false)} className="btn-exit2">
             <GiExitDoor />
           </button>
-          {/* <div className="modal-content"> */}
           <SellPhone />
-          {/* </div> */}
         </div>
       </div>
     </Wrapper>
@@ -167,7 +170,6 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   margin-top: 10vh;
-  /* font-family: "Francois One", sans-serif; */
 
   .modalContentTitle {
     font-family: "Stick No Bills", sans-serif;
@@ -178,6 +180,9 @@ const Wrapper = styled.div`
     top: 10vh;
     left: 50%;
     transform: translateX(-50%);
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 2.5rem;
+    }
   }
   .modalWithButton {
     transform: translateY(0);
@@ -194,7 +199,6 @@ const Wrapper = styled.div`
   }
   @keyframes modalUp {
     100% {
-      /* transform: translateY(-100vh); */
       top: -100vh;
     }
   }
@@ -214,6 +218,9 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+    }
   }
   .no-modal1 {
     transform: translateX(-100vw);
@@ -250,6 +257,9 @@ const Wrapper = styled.div`
     transition: 0.5s;
     transform: rotateY(180deg);
     animation: btnExit 1s infinite alternate;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 3rem;
+    }
   }
   .btn-exit2 {
     position: absolute;
@@ -263,6 +273,9 @@ const Wrapper = styled.div`
     cursor: pointer;
     transition: 0.5s;
     animation: btnExit 1s infinite alternate;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 3rem;
+    }
   }
   @keyframes btnExit {
     100% {
@@ -280,6 +293,12 @@ const Wrapper = styled.div`
     width: 15vw;
     transform: rotate(-30deg);
     animation: arrowColor 3s infinite alternate;
+    @media (orientation: portrait) and (max-width: 800px) {
+      top: 28%;
+      left: 15%;
+      width: 25vw;
+      transform: rotate(75deg);
+    }
   }
   .arrowSmartfonRight {
     position: absolute;
@@ -288,6 +307,12 @@ const Wrapper = styled.div`
     width: 15vw;
     transform: rotate(-30deg);
     animation: arrowColor 3s infinite alternate-reverse;
+    @media (orientation: portrait) and (max-width: 800px) {
+      bottom: 28%;
+      right: 15%;
+      width: 25vw;
+      transform: rotate(75deg);
+    }
   }
   @keyframes arrowColor {
     100% {
@@ -300,7 +325,6 @@ const Wrapper = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-
     button {
       width: 15vw;
       height: 8vw;
@@ -309,18 +333,26 @@ const Wrapper = styled.div`
       background: rgba(3, 31, 63, 0.8);
       color: white;
       position: absolute;
-      /* font-family: "Bebas Neue", sans-serif; */
       font-family: "Teko", sans-serif;
       cursor: pointer;
       border: 4px solid white;
       transition: 0.3s;
       letter-spacing: 1px;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 30vw;
+        height: 10vh;
+        border-radius: 10px;
+        border: 2px solid white;
+        font-size: 1.3rem;
+      }
     }
     button:hover {
       font-size: 2.2rem;
       background: rgba(3, 31, 63, 1);
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1.5rem;
+      }
     }
-
     .buy-section {
       width: 50%;
       height: 100%;
@@ -328,6 +360,10 @@ const Wrapper = styled.div`
         top: 60%;
         left: 80%;
         transform: translate(-50%, -50%);
+        @media (orientation: portrait) and (max-width: 800px) {
+          top: 75%;
+          left: 30%;
+        }
       }
     }
     .sell-section {
@@ -337,6 +373,10 @@ const Wrapper = styled.div`
         top: 40%;
         left: 20%;
         transform: translate(-50%, -50%);
+        @media (orientation: portrait) and (max-width: 800px) {
+          top: 25%;
+          left: 70%;
+        }
       }
     }
   }
@@ -356,22 +396,31 @@ const Wrapper = styled.div`
       justify-content: space-around;
       align-items: center;
       width: 100vw;
-
       font-family: "Cairo", sans-serif;
-
       div {
         text-align: center;
         font-size: 1.5rem;
+        @media (orientation: portrait) and (max-width: 800px) {
+          font-size: 1rem;
+        }
       }
       .modal-info {
         width: 60%;
         margin-bottom: 10vh;
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 90%;
+          margin-bottom: 2vh;
+        }
       }
       .marksAndContact {
         width: 80%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 90%;
+          flex-direction: column;
+        }
       }
       .modal-contact,
       .modal-marks {
@@ -381,10 +430,19 @@ const Wrapper = styled.div`
         justify-content: space-around;
         align-items: center;
         height: 40vh;
+        @media (orientation: portrait) and (max-width: 800px) {
+          margin-bottom: 3vh;
+          width: 90%;
+          height: 20vh;
+          font-size: 1rem;
+        }
         img {
-          /* margin-top: 2vh; */
           width: 20vw;
           height: 15vw;
+          @media (orientation: portrait) and (max-width: 800px) {
+            width: 40vw;
+            height: 20vw;
+          }
         }
       }
     }
@@ -402,6 +460,12 @@ const Wrapper = styled.div`
     color: rgb(120, 2, 2);
     box-shadow: 0 0 15px 2px white;
     animation: buyBtnAnimation 1s linear infinite alternate;
+    @media (orientation: portrait) and (max-width: 800px) {
+      top: 100%;
+      font-size: 1.1rem;
+      padding: 10px;
+      box-shadow: 0 0 5px 1px white;
+    }
   }
   @keyframes buyBtnAnimation {
     100% {

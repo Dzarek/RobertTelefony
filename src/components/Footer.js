@@ -120,6 +120,9 @@ const Wrapper = styled.div`
     font-family: "Stick No Bills", sans-serif;
     letter-spacing: 2px;
     font-size: 1.1rem;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 1rem;
+    }
   }
   p,
   a {
@@ -140,6 +143,9 @@ const Wrapper = styled.div`
     text-align: center;
     margin-bottom: 3vh;
     margin-top: 3vh;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 1.3rem;
+    }
   }
   .icon {
     margin-right: 10px;
@@ -151,12 +157,24 @@ const Wrapper = styled.div`
     align-items: flex-start;
     width: 80vw;
     padding: 3vh 0;
+    @media (orientation: portrait) and (max-width: 800px) {
+      flex-direction: column;
+    }
     section {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
       width: 25%;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 100%;
+        margin: 1vh auto;
+      }
+      h3 {
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 100%;
+        }
+      }
     }
   }
   .footerNav a {
@@ -186,6 +204,10 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 3vh 0;
+    @media (orientation: portrait) and (max-width: 800px) {
+      text-align: center;
+      font-size: 1rem;
+    }
   }
 `;
 

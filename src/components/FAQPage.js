@@ -11,7 +11,6 @@ import {
 } from "react-accessible-accordion";
 import { questionsData } from "../data";
 import questionMark1 from "../images/questionMark1.jpg";
-// import Girl from "../images/Girl.mp4";
 import Student from "../images/Student.mp4";
 
 const FAQPage = () => {
@@ -90,6 +89,9 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     cursor: pointer;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 1.8rem;
+    }
     :hover {
       color: rgb(70, 2, 2);
     }
@@ -105,7 +107,6 @@ const Wrapper = styled.div`
   }
   .main-section {
     margin-top: -10vh;
-    /* height: 100vh; */
     width: 100vw;
     background-color: rgb(30, 2, 2);
     background-image: url(${questionMark1});
@@ -143,6 +144,11 @@ const Wrapper = styled.div`
     justify-content: space-around;
     width: 80vw;
     padding: 5vh 0;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+      flex-direction: column;
+      margin: 0 auto;
+    }
   }
   video {
     margin-top: 5vh;
@@ -151,6 +157,10 @@ const Wrapper = styled.div`
     box-shadow: 0 0 10px 5px black;
     opacity: 0.8;
     border-radius: 10px;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+      height: auto;
+    }
   }
   .questions {
     color: rgb(70, 2, 2);
@@ -161,6 +171,11 @@ const Wrapper = styled.div`
     align-items: center;
     font-size: 0.9rem;
     width: 40%;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+      font-size: 0.8rem;
+      margin-top: 10vh;
+    }
   }
   .singleQuestion {
     margin: 2vh auto;

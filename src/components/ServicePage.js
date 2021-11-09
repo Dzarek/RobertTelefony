@@ -111,6 +111,9 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    @media (orientation: portrait) and (max-width: 800px) {
+      height: 30vh;
+    }
   }
 
   .infoBarContainer {
@@ -119,12 +122,32 @@ const Wrapper = styled.div`
     align-items: center;
     width: 100vw;
     animation: moveBar 5s infinite linear;
+    @media (orientation: portrait) and (max-width: 800px) {
+      animation: none;
+      flex-wrap: wrap;
+      /* margin: 3vh; */
+      justify-content: center;
+      height: 28vh;
+    }
     h5 {
       color: white;
       font-size: 1.3rem;
       letter-spacing: 1px;
       font-family: "Teko", sans-serif;
       text-transform: uppercase;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        width: 50%;
+        text-align: center;
+        opacity: 0;
+        animation: h5animate 2s infinite alternate;
+      }
+    }
+  }
+  @keyframes h5animate {
+    100% {
+      opacity: 1;
     }
   }
 
@@ -171,6 +194,9 @@ const Wrapper = styled.div`
     font-size: 2rem;
     margin-top: 2vh;
     color: rgb(120, 2, 2);
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 1.4rem;
+    }
   }
   .main-section {
     background-image: url(${tech1});
@@ -193,18 +219,33 @@ const Wrapper = styled.div`
       border-radius: 3px;
       color: white;
       padding: 5vh 2vw;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 95vw;
+        flex-direction: column;
+      }
       h3 {
         font-size: 1.3rem;
         text-align: center;
         width: 25%;
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 90%;
+          font-size: 1.2rem;
+        }
       }
       .serviceImg {
         width: 40%;
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 90%;
+          margin: 3vh auto;
+        }
         img {
           height: 50vh;
           width: 90%;
           border: 2px solid rgb(70, 2, 2);
           border-radius: 10px;
+          @media (orientation: portrait) and (max-width: 800px) {
+            height: 40vh;
+          }
         }
       }
     }
@@ -219,6 +260,9 @@ const Wrapper = styled.div`
     font-style: italic;
     font-family: "Stick No Bills", sans-serif;
     letter-spacing: 2px;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 2rem;
+    }
   }
   .serviceSteps {
     display: flex;
@@ -228,6 +272,10 @@ const Wrapper = styled.div`
     text-align: center;
     width: 80vw;
     margin: 0 auto 5vh;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100vw;
+      flex-wrap: wrap;
+    }
     section {
       width: 15vw;
       height: 35vh;
@@ -243,6 +291,12 @@ const Wrapper = styled.div`
       font-family: "Teko", sans-serif;
       letter-spacing: 1px;
       transition: 0.3s;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 45vw;
+        height: 25vh;
+        margin: 2vh auto;
+        padding: 0px;
+      }
       :hover {
         background: rgba(0, 0, 0, 1);
         border: white 2px solid;
@@ -250,10 +304,16 @@ const Wrapper = styled.div`
 
       h1 {
         font-size: 2rem;
+        @media (orientation: portrait) and (max-width: 800px) {
+          font-size: 1.3rem;
+        }
       }
       p {
         font-size: 1.3rem;
         text-transform: uppercase;
+        @media (orientation: portrait) and (max-width: 800px) {
+          font-size: 0.9rem;
+        }
       }
     }
   }

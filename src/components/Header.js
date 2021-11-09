@@ -17,8 +17,8 @@ const Header = () => {
           slidesPerPage={1}
         >
           <h1>
-            Szukasz nowego telefonu ? <br /> A może chcesz jakiś sprzedać i
-            zarobić ?
+            Szukasz nowego telefonu? <br /> A może chcesz jakiś sprzedać i
+            zarobić?
           </h1>
           <h1>
             Słuchawki, Ładowarki, Powerbanki, Szkła Ochronne, <br />
@@ -28,7 +28,7 @@ const Header = () => {
             Pęknięta szybka? <br /> Spokojnie, dopasuje i założę Ci nową ;)
           </h1>
           <h1>
-            Twój telefon wymaga serwisu ? <br /> Postaram się Ci pomóc !
+            Twój telefon wymaga serwisu? <br /> Postaram się Ci pomóc!
           </h1>
         </Carousel>
       </div>
@@ -67,15 +67,19 @@ const Wrapper = styled.div`
     position: absolute;
     width: 100%;
     color: whitesmoke;
-    font-size: 0.9rem;
     font-size: 1.2rem;
     line-height: 3;
     text-align: center;
-    font-family: "Cairo", sans-serif;
     font-family: "Teko", sans-serif;
     letter-spacing: 2px;
     h1 {
       width: 70%;
+    }
+
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 0.8rem;
+      line-height: 2;
+      letter-spacing: 1px;
     }
   }
 `;

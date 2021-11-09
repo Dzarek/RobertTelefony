@@ -107,6 +107,10 @@ const Wrapper = styled.div`
       font-size: 2rem;
       letter-spacing: 2px;
       font-family: "Teko", sans-serif;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+      }
     }
   }
   .icon {
@@ -118,11 +122,22 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+      flex-direction: column;
+      justify-content: space-around;
+    }
     div {
       width: 55%;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 100%;
+      }
     }
     ul {
       width: 40%;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 100%;
+      }
     }
     @keyframes showItemA {
       0% {
@@ -145,19 +160,28 @@ const Wrapper = styled.div`
         font-family: "Cairo", sans-serif;
         font-style: italic;
         text-align: justify;
+        @media (orientation: portrait) and (max-width: 800px) {
+          font-size: 1rem;
+          margin-top: 0vh;
+        }
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        flex-direction: column-reverse;
       }
     }
     .accessoriesItems {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      flex-wrap: wrap;
       width: 100%;
+
       .oneItem {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-
+        flex-wrap: wrap;
         img {
           border: 2px solid rgb(70, 2, 2);
           border-radius: 10px;
@@ -165,6 +189,13 @@ const Wrapper = styled.div`
           height: 10vw;
           margin-bottom: 2vh;
           box-shadow: 0 0 2px 1px rgb(70, 2, 2);
+          @media (orientation: portrait) and (max-width: 800px) {
+            border: 1px solid rgb(70, 2, 2);
+            border-radius: 5px;
+            width: 70vw;
+            height: 70vw;
+            margin: 5vh 3vw;
+          }
         }
         h5 {
           font-family: "Teko", sans-serif;
@@ -185,9 +216,11 @@ const Wrapper = styled.div`
       justify-content: space-around;
       padding-left: 10vw;
       min-height: 50vh;
+      @media (orientation: portrait) and (max-width: 800px) {
+        min-height: 40vh;
+      }
       li {
         font-size: 1.8rem;
-        /* letter-spacing: 0px; */
         list-style: none;
         display: flex;
         align-items: center;
@@ -195,6 +228,9 @@ const Wrapper = styled.div`
         text-transform: uppercase;
         cursor: pointer;
         transition: 0.5s;
+        @media (orientation: portrait) and (max-width: 800px) {
+          font-size: 1.6rem;
+        }
         :hover {
           color: rgb(120, 2, 2);
           margin-left: 2vw;
@@ -203,9 +239,17 @@ const Wrapper = styled.div`
       .activeItem {
         margin-left: 4vw;
         color: rgb(2, 7, 70);
+        @media (orientation: portrait) and (max-width: 800px) {
+          margin-left: 10vw;
+          color: rgb(120, 2, 2);
+        }
         :hover {
           color: rgb(2, 7, 70);
           margin-left: 5vw;
+          @media (orientation: portrait) and (max-width: 800px) {
+            margin-left: 10vw;
+            color: rgb(120, 2, 2);
+          }
         }
       }
     }
@@ -214,10 +258,21 @@ const Wrapper = styled.div`
       width: 5px;
       height: 50vh;
       animation: borderBig 2s infinite alternate;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 80vw;
+        height: 3px;
+        animation: borderBig2 2s infinite alternate;
+        margin: 7vh auto;
+      }
     }
     @keyframes borderBig {
       100% {
         height: 10vh;
+      }
+    }
+    @keyframes borderBig2 {
+      100% {
+        width: 10vw;
       }
     }
   }

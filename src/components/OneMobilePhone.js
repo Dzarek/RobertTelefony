@@ -26,11 +26,9 @@ const OneMobilePhone = ({
           <Carousel
             className="imgAAA"
             infinite
-            // autoPlay={4000}
             animationSpeed={2000}
             slidesPerPage={1}
             addArrowClickHandler
-            // stopAutoPlayOnHover
             arrowRight={<IoMdArrowDropright className="arrowrRightFeaturesO" />}
             arrowLeft={<IoMdArrowDropleft className="arrowrLeftFeaturesO" />}
           >
@@ -94,7 +92,6 @@ const Wrapper = styled.div`
   font-family: "Cairo", sans-serif;
 
   .oneMobilePhone {
-    background: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -105,9 +102,13 @@ const Wrapper = styled.div`
     position: relative;
     background: rgb(50, 2, 2);
     margin: 15vh 5vw;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 70vw;
+      margin: 15vh auto;
+    }
 
     .mobilePhoneImg {
-      width: 20vw;
+      width: 100%;
       height: 48vh;
       position: relative;
       top: 0;
@@ -119,22 +120,18 @@ const Wrapper = styled.div`
       justify-content: space-between;
       color: white;
       border-radius: 10px;
+
       .imgAAA {
         border-radius: 10px 10px 0 0;
-        width: 20vw;
+        width: 100%;
         height: 48vh;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 0;
         img {
-          /* border-radius: 10px 10px 0 0; */
-          width: 20vw;
+          width: 100%;
           height: 48vh;
-          /* position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 0; */
         }
       }
     }
@@ -146,6 +143,9 @@ const Wrapper = styled.div`
       font-size: 1rem;
       height: 7vh;
       letter-spacing: 1px;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 0.8rem;
+      }
       .detailsBtn {
         background: transparent;
         border: none;
@@ -155,8 +155,14 @@ const Wrapper = styled.div`
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        @media (orientation: portrait) and (max-width: 800px) {
+          font-size: 1.3rem;
+        }
         :hover {
           font-size: 1.6rem;
+          @media (orientation: portrait) and (max-width: 800px) {
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -179,6 +185,9 @@ const Wrapper = styled.div`
       border-radius: 10px 10px 0 0;
       display: none;
       transition: 0.5s;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1.1rem;
+      }
       span {
         color: rgb(120, 2, 2);
         text-shadow: none;

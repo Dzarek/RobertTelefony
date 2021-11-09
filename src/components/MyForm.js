@@ -82,6 +82,12 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+    }
+    @media (orientation: landscape) and (max-width: 500px) {
+      width: 95vw;
+    }
 
     button {
       width: 35%;
@@ -133,6 +139,9 @@ const Wrapper = styled.div`
     }
     label {
       margin: 3vh auto;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1rem;
+      }
       input {
         margin-right: 10px;
       }

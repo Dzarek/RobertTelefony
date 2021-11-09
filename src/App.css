@@ -13,11 +13,6 @@
   box-sizing: border-box;
 }
 
-/* 
-html {
-  scroll-behavior: smooth;
-} */
-
 .App {
   background: #eee;
   min-height: 100vh;
@@ -37,9 +32,13 @@ html {
   text-align: center;
   font-size: 4rem;
   font-family: "Stick No Bills", sans-serif;
-  /* margin: 10vh auto 5vh; */
   color: rgb(70, 2, 2);
+}
 
+@media (orientation: portrait) and (max-width: 800px) {
+  .title {
+    font-size: 3rem;
+  }
 }
 
 a {
@@ -51,22 +50,21 @@ a {
 
 h2 {
   text-shadow: 0px 0px 5px white;
-  font-family: 'Lemonada', cursive;
 }
 
 span {
   text-shadow: 2px 2px 2px black;
 }
 
-.logoUsb img {
+/* .logoUsb img {
   height: 50px;
   width: 150px;
   margin: 0 90px;
   animation: usbSize 3s ease infinite alternate;
   z-index: 20;
-}
+} */
 
-@keyframes usbSize {
+/* @keyframes usbSize {
   90% {
     width: 150px;
   }
@@ -74,7 +72,7 @@ span {
   100% {
     width: 200px;
   }
-}
+} */
 
 /* Navbar */
 /* Header */
@@ -83,7 +81,6 @@ span {
 .smartphone-modal {
   background: rgba(0, 0, 0);
   position: fixed;
-  /* position: relative; */
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -101,23 +98,27 @@ span {
   width: 25vw;
   height: 25vw;
   z-index: 1;
-
-  /* animation: smartfonCircle 1s linear infinite alternate; */
   animation: smartfonCircle 3s linear infinite;
+}
+
+@media (orientation: portrait) and (max-width: 800px) {
+  .smartfonCircle {
+    width: 55vw;
+    height: 55vw;
+  }
 }
 
 @keyframes smartfonCircle {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
-    /* transform: translate(-50%, -50%) scale(1); */
   }
 
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
-    /* transform: translate(-50%, -50%) scale(1.1); */
   }
 }
 
+/* 
 .smartphone-btnR {
   animation: smartphoneBtnR 2s 1 forwards;
 }
@@ -145,18 +146,16 @@ span {
   100% {
     left: 20%;
   }
-}
+} */
 
 /* FAQ */
 .singleQuestion {
   background-color: #fff;
   border: rgb(70, 2, 2) 2px solid;
   border-radius: 10px;
-  /* margin: 3vh auto; */
   padding: 0px 20px;
   width: 40vw;
   transition: 1s;
-
 }
 
 
@@ -165,6 +164,13 @@ span {
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+@media (orientation: portrait) and (max-width: 800px) {
+  .arrowrRightLeftFeatures {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .arrowrRightLeftFeatures:hover {
@@ -191,14 +197,4 @@ span {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-}
-
-.aaaa {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 10vh;
-  background: red;
-  z-index: 999999;
 }

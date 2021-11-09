@@ -45,7 +45,7 @@ const ContactPage = () => {
 };
 
 const Wrapper = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
   padding-bottom: 5vh;
   .borderBetween {
     display: flex;
@@ -55,10 +55,21 @@ const Wrapper = styled.div`
     background: rgb(120, 2, 2);
     height: 20vh;
     animation: borderBigger 1s infinite alternate;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 20vw;
+      height: 2px;
+      animation: borderBigger2 1s infinite alternate;
+      margin: 5vh auto 0;
+    }
   }
   @keyframes borderBigger {
     100% {
       height: 60vh;
+    }
+  }
+  @keyframes borderBigger2 {
+    100% {
+      width: 80vw;
     }
   }
   .contactContainer {
@@ -66,10 +77,13 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     font-family: "Cairo", sans-serif;
-    /* letter-spacing: 2px; */
     font-size: 1.2rem;
     width: 100vw;
     margin-top: -3vh;
+    @media (orientation: portrait) and (max-width: 800px) {
+      flex-direction: column;
+      margin-top: 5vh;
+    }
   }
   .contactMedia {
     width: 45%;
@@ -78,6 +92,9 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+    }
   }
   .formik {
     width: 45%;
@@ -85,6 +102,9 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+    }
   }
   .address {
     padding-bottom: 3vh;
@@ -93,6 +113,10 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    @media (orientation: portrait) and (max-width: 800px) {
+      height: 50vh;
+      width: 90%;
+    }
     h1 {
       font-family: "Teko", sans-serif;
       text-align: center;
@@ -100,9 +124,15 @@ const Wrapper = styled.div`
       font-size: 2rem;
       margin: 5vh auto;
       letter-spacing: 2px;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1.8rem;
+      }
     }
     h3 {
-      /* margin-bottom: 1vh; */
+      @media (orientation: portrait) and (max-width: 800px) {
+        margin-bottom: 2vh;
+        text-align: center;
+      }
     }
     span {
       color: rgb(120, 2, 2);
@@ -115,7 +145,9 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    /* border-top: 2px solid rgb(120, 2, 2); */
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100%;
+    }
 
     .mapContact {
       margin-top: 3vh;

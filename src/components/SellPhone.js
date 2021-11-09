@@ -63,6 +63,9 @@ const Wrapper = styled.div`
     font-size: 3rem;
     font-family: "Stick No Bills", sans-serif;
     letter-spacing: 2px;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 2.5rem;
+    }
   }
   .modalContentSell {
     position: absolute;
@@ -76,11 +79,22 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+      height: 90vh;
+      top: 15vh;
+      justify-content: center;
+    }
 
     .part1 {
       width: 50vw;
       text-align: center;
       height: 20vh;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 95vw;
+        height: 25vh;
+        font-size: 0.8rem;
+      }
     }
     .part2 {
       display: flex;
@@ -88,17 +102,31 @@ const Wrapper = styled.div`
       margin: 0 auto 10vh;
       width: 60vw;
       height: 30vh;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 95vw;
+        height: auto;
+        margin: 3vh auto 1vh;
+        flex-direction: column;
+        justify-content: center;
+      }
       .fromMeYou {
         width: 25vw;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 90vw;
+        }
         h3 {
           color: rgb(120, 2, 2);
           font-size: 2.5rem;
           font-family: "Teko", sans-serif;
           margin-bottom: 3vh;
+          @media (orientation: portrait) and (max-width: 800px) {
+            font-size: 1.5rem;
+            margin-bottom: 1vh;
+          }
         }
         ul {
           display: flex;
@@ -108,6 +136,10 @@ const Wrapper = styled.div`
           height: 50vh;
           list-style: none;
           font-size: 1.2rem;
+          @media (orientation: portrait) and (max-width: 800px) {
+            height: auto;
+            font-size: 1rem;
+          }
         }
       }
     }

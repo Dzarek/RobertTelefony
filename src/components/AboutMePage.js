@@ -13,8 +13,8 @@ const AboutMePage = () => {
         <div className="aboutMeInfo">
           <h1>Cześć ! </h1>
           <div className="aboutMeWrapper">
+            <img src={robertImg} alt="" />
             <h3>
-              <img src={robertImg} alt="" />
               Nazywam się Robert Kamiński i od x lat prowadzę jeden z oddziałów{" "}
               <span>AktivGSM</span>. Mój sklep zlokalizowany jest w samym
               centrum miasta Gorlice, przy <span>ul. Adama Mickiewicza 3</span>.{" "}
@@ -41,17 +41,26 @@ const Wrapper = styled.div`
   .title {
     margin: 0 3vw;
     width: 14vw;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: auto;
+    }
   }
   .titleLine {
     width: 30vw;
     height: 3px;
     background: rgb(70, 2, 2);
+    @media (orientation: portrait) and (max-width: 800px) {
+      display: none;
+    }
   }
   .endLine {
     width: 80vw;
     height: 3px;
     background: rgb(70, 2, 2);
     margin: 10vh auto 0;
+    @media (orientation: portrait) and (max-width: 800px) {
+      display: none;
+    }
   }
 
   .aboutMeInfo {
@@ -63,6 +72,11 @@ const Wrapper = styled.div`
     font-family: "Cairo", sans-serif;
     border-left: 3px solid rgb(70, 2, 2);
     border-right: 3px solid rgb(70, 2, 2);
+    @media (orientation: portrait) and (max-width: 800px) {
+      border: none;
+      width: 90vw;
+      font-size: 1rem;
+    }
     span {
       color: rgb(70, 2, 2);
       text-shadow: 0 0 2px black;
@@ -70,22 +84,30 @@ const Wrapper = styled.div`
   }
   .aboutMeWrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 60vw;
     margin: 0 auto;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90vw;
+      justify-content: space-between;
+      flex-direction: column;
+    }
     img {
-      border: 4px solid rgb(70, 2, 2);
+      border: 2px solid rgb(70, 2, 2);
       border-radius: 50%;
       width: 200px;
       height: 200px;
       margin: 10px;
       box-shadow: 0 0 15px 2px black;
       float: left;
+      @media (orientation: portrait) and (max-width: 800px) {
+        float: none;
+        margin: 5vh auto;
+      }
     }
-
     h3 {
-      text-align: right;
+      text-align: center;
     }
   }
 `;

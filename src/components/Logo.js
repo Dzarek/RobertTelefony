@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import aktivGSMimg from "../images/logo_aktiv.png";
-// import usbImg from "../images/usb.png";
 
 const Logo = () => {
   return (
@@ -9,9 +8,6 @@ const Logo = () => {
         <div className="logo1">
           <img src={aktivGSMimg} alt="logo" />
         </div>
-        {/* <div className="logoUsb">
-          <img src={usbImg} alt="usb" />
-        </div> */}
         <div className="logo2">
           <h2>
             Robert Kamiński - <span>TELEFONY KOMÓRKOWE</span>
@@ -37,6 +33,10 @@ const Wrapper = styled.div`
     align-items: center;
     width: 70%;
     height: 12vh;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100%;
+      /* justify-content: space-between; */
+    }
     .logo1 {
       padding: 0vh 2vw 0vh 2vw;
       background: rgb(160, 64, 64, 0.5);
@@ -48,11 +48,21 @@ const Wrapper = styled.div`
     }
     .logo2 {
       font-size: 1.3rem;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1rem;
+      }
       h2 {
         text-shadow: none;
         font-family: "Teko", sans-serif;
         color: rgb(140, 64, 64);
         letter-spacing: 2px;
+        @media (orientation: portrait) and (max-width: 800px) {
+          letter-spacing: 1px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+        }
       }
       span {
         color: #fff;

@@ -6,6 +6,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { BsFillArrowUpSquareFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import Logo from "./Logo";
+import aktivGSMimg from "../images/logo_aktiv.png";
 
 const Navbar = () => {
   const [offset, setOffset] = useState(0);
@@ -73,7 +74,19 @@ const Navbar = () => {
           </div>
           <div className="nav-container2">
             <div className="nav-header">
-              <h3>MENU</h3>
+              <div
+                onClick={() => {
+                  scroll.scrollToTop();
+                }}
+                className="logo1"
+              >
+                <img src={aktivGSMimg} alt="logo" />
+              </div>
+              <div className="logo2">
+                <h2>
+                  Robert Kamiński - <span>TELEFONY KOMÓRKOWE</span>
+                </h2>
+              </div>
               <button className="nav-toggle" onClick={toggleLinks}>
                 <FaBars />
               </button>
@@ -81,36 +94,62 @@ const Navbar = () => {
             <div className="links-container" ref={linksContainerRef}>
               <ul className="links" ref={linksRef}>
                 <Link
+                  onClick={toggleLinks}
                   to="smartfony"
                   smooth={true}
-                  offset={-300}
+                  offset={-550}
                   duration={1000}
                 >
                   Smartfony
                 </Link>
 
                 <Link
+                  onClick={toggleLinks}
                   to="akcesoria"
                   smooth={true}
-                  offset={-250}
+                  offset={-450}
                   duration={1000}
                 >
                   Akcesoria
                 </Link>
 
-                <Link to="serwis" smooth={true} offset={-250} duration={1500}>
+                <Link
+                  onClick={toggleLinks}
+                  to="serwis"
+                  smooth={true}
+                  offset={-450}
+                  duration={1500}
+                >
                   Serwis
                 </Link>
 
-                <Link to="o_mnie" smooth={true} offset={-300} duration={1500}>
+                <Link
+                  onClick={toggleLinks}
+                  to="o_mnie"
+                  smooth={true}
+                  offset={-550}
+                  duration={1500}
+                >
                   O mnie
                 </Link>
 
-                <Link to="faq" smooth={true} offset={-250} duration={2000}>
+                <Link
+                  onClick={toggleLinks}
+                  to="faq"
+                  smooth={true}
+                  offset={-450}
+                  duration={2000}
+                >
                   FAQ
                 </Link>
 
-                <Link to="kontakt" smooth={true} offset={-300} duration={2000}>
+                <Link
+                  onClick={toggleLinks}
+                  to="kontakt"
+                  smooth={true}
+                  offset={-550}
+                  duration={2000}
+                >
                   Kontakt
                 </Link>
               </ul>
@@ -155,6 +194,89 @@ const Navbar = () => {
               Kontakt
             </Link>
           </div>
+          <div className="nav-container2">
+            <div className="nav-header">
+              <div
+                onClick={() => {
+                  scroll.scrollToTop();
+                }}
+                className="logo1"
+              >
+                <img src={aktivGSMimg} alt="logo" />
+              </div>
+              <div className="logo2">
+                <h2>
+                  Robert Kamiński - <span>TELEFONY KOMÓRKOWE</span>
+                </h2>
+              </div>
+              <button className="nav-toggle" onClick={toggleLinks}>
+                <FaBars />
+              </button>
+            </div>
+            <div className="links-container" ref={linksContainerRef}>
+              <ul className="links" ref={linksRef}>
+                <Link
+                  onClick={toggleLinks}
+                  to="smartfony"
+                  smooth={true}
+                  offset={-100}
+                  duration={1000}
+                >
+                  Smartfony
+                </Link>
+
+                <Link
+                  onClick={toggleLinks}
+                  to="akcesoria"
+                  smooth={true}
+                  offset={-50}
+                  duration={1000}
+                >
+                  Akcesoria
+                </Link>
+
+                <Link
+                  onClick={toggleLinks}
+                  to="serwis"
+                  smooth={true}
+                  offset={-50}
+                  duration={1500}
+                >
+                  Serwis
+                </Link>
+
+                <Link
+                  onClick={toggleLinks}
+                  to="o_mnie"
+                  smooth={true}
+                  offset={-100}
+                  duration={1500}
+                >
+                  O mnie
+                </Link>
+
+                <Link
+                  onClick={toggleLinks}
+                  to="faq"
+                  smooth={true}
+                  offset={-50}
+                  duration={2000}
+                >
+                  FAQ
+                </Link>
+
+                <Link
+                  onClick={toggleLinks}
+                  to="kontakt"
+                  smooth={true}
+                  offset={-100}
+                  duration={2000}
+                >
+                  Kontakt
+                </Link>
+              </ul>
+            </div>
+          </div>
           <button
             className="upBtn"
             onClick={() => {
@@ -180,9 +302,14 @@ const Wrapper = styled.nav`
   position: relative;
   box-sizing: border-box;
   background: #000;
-  border-bottom: 4px solid rgba(100, 47, 47);
+  /* border-bottom: 4px solid rgba(100, 47, 47); */
   opacity: 0;
   animation: showWrapper 1s 1 forwards;
+  @media screen and (max-width: 800px) {
+    margin-top: -12vh;
+    height: auto;
+  }
+
   @keyframes showWrapper {
     100% {
       opacity: 1;
@@ -192,60 +319,116 @@ const Wrapper = styled.nav`
   video {
     object-fit: cover;
     width: 100vw;
-    height: 24vh;
+    /* height: 24vh; */
+    height: 100%;
     z-index: -2;
     opacity: 0.9;
   }
   .video-container {
     opacity: 1;
     width: 100vw;
-    height: 24vh;
+    /* height: 24vh; */
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
   }
   .nav-container2 {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    @media screen and (min-width: 801px) {
+      display: none;
+    }
+
+    .logo1 {
+      padding: 0vh 1vw 0vh 1vw;
+      background: rgb(160, 64, 64, 0.5);
+      height: 12vh;
+      img {
+        margin: 3.5vh auto;
+        height: 5vh;
+        width: 20vw;
+      }
+    }
+    .logo2 {
+      font-size: 1.3rem;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 0.9rem;
+      }
+      h2 {
+        text-shadow: none;
+        font-family: "Teko", sans-serif;
+        color: rgb(140, 64, 64);
+        letter-spacing: 2px;
+        @media (orientation: portrait) and (max-width: 800px) {
+          letter-spacing: 1px;
+          display: flex;
+          flex-direction: column;
+          /* align-items: center; */
+          justify-content: center;
+        }
+      }
+      span {
+        color: #fff;
+      }
+    }
+
     .nav-header {
       display: flex;
       align-items: center;
+      justify-content: space-around;
       justify-content: space-between;
-      padding: 1rem;
+      /* justify-content: center; */
+      /* padding: 1rem; */
+      width: 100%;
+      color: white;
     }
     .nav-toggle {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: white;
       background: transparent;
       border-color: transparent;
       transition: 0.5s;
       cursor: pointer;
+      margin: 0 8vw;
     }
-    .nav-toggle:hover {
-      color: rgb(120, 2, 2);
-      transform: rotate(90deg);
+
+    .links-container {
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      /* background: rgba(0, 0, 0, 0.8); */
+    }
+    .show-container {
+      height: 10rem;
     }
     .links a {
       color: white;
       font-size: 1rem;
-      text-transform: capitalize;
-      letter-spacing: 1px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
       display: block;
-      padding: 0.5rem 1rem;
-      /* transition: 0.5s; */
+      padding: 1rem;
+      text-align: center;
+      font-family: "Stick No Bills", sans-serif;
+      font-size: 1.3rem;
+      width: 100vw;
     }
     .links a:hover {
       background: var(--clr-primary-8);
       color: var(--clr-primary-5);
       padding-left: 1.5rem;
-    }
-    .links-container {
-      height: 0;
-      overflow: hidden;
-      transition: 0.5s;
-      background: #111;
-    }
-    .show-container {
-      height: 10rem;
     }
   }
   .nav-container {
@@ -255,7 +438,7 @@ const Wrapper = styled.nav`
     align-items: center;
     width: 65vw;
     height: 100%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
     a {
@@ -299,6 +482,9 @@ const Wrapper2 = styled.nav`
   margin-top: -12vh;
   opacity: 0;
   animation: showWrapper 1s 1 forwards;
+  @media screen and (max-width: 800px) {
+    height: auto;
+  }
   @keyframes showWrapper {
     100% {
       opacity: 1;
@@ -308,18 +494,116 @@ const Wrapper2 = styled.nav`
   video {
     object-fit: cover;
     width: 100vw;
-    height: 22vh;
+    /* height: 24vh; */
+    height: 100%;
     z-index: -2;
-    opacity: 0.2;
+    opacity: 0.9;
   }
   .video-container {
     opacity: 1;
     width: 100vw;
-    height: 24vh;
+    /* height: 24vh; */
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+  }
+  .nav-container2 {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    @media screen and (min-width: 801px) {
+      display: none;
+    }
+    .logo1 {
+      padding: 0vh 1vw 0vh 1vw;
+      background: rgb(160, 64, 64, 0.5);
+      height: 12vh;
+      img {
+        margin: 3.5vh auto;
+        height: 5vh;
+        width: 20vw;
+      }
+    }
+    .logo2 {
+      font-size: 1.3rem;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 0.9rem;
+      }
+      h2 {
+        text-shadow: none;
+        font-family: "Teko", sans-serif;
+        color: rgb(140, 64, 64);
+        letter-spacing: 2px;
+        @media (orientation: portrait) and (max-width: 800px) {
+          letter-spacing: 1px;
+          display: flex;
+          flex-direction: column;
+          /* align-items: center; */
+          justify-content: center;
+        }
+      }
+      span {
+        color: #fff;
+      }
+    }
+
+    .nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      justify-content: space-between;
+      /* justify-content: center; */
+      /* padding: 1rem; */
+      width: 100%;
+      color: white;
+    }
+    .nav-toggle {
+      font-size: 1.8rem;
+      color: white;
+      background: transparent;
+      border-color: transparent;
+      transition: 0.5s;
+      cursor: pointer;
+      margin: 0 8vw;
+    }
+
+    .links-container {
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      /* background: rgba(0, 0, 0, 0.8); */
+    }
+    .show-container {
+      height: 10rem;
+    }
+    .links a {
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      display: block;
+      padding: 1rem;
+      text-align: center;
+      font-family: "Stick No Bills", sans-serif;
+      font-size: 1.3rem;
+      width: 100vw;
+    }
+    .links a:hover {
+      background: var(--clr-primary-8);
+      color: var(--clr-primary-5);
+      padding-left: 1.5rem;
+    }
   }
   .nav-container {
     margin: 0 auto;
@@ -328,6 +612,9 @@ const Wrapper2 = styled.nav`
     align-items: center;
     width: 65vw;
     height: 100%;
+    @media (orientation: portrait) and (max-width: 800px) {
+      display: none;
+    }
     a {
       font-size: 1.3rem;
       color: whitesmoke;

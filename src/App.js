@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Navbar />
         <Header />
-        <Smartfony id="test1" />
+        <Smartfony />
         <AccessoriesPage />
         <ServicePage />
         <AboutMePage />

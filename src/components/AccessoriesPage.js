@@ -182,6 +182,7 @@ const Wrapper = styled.div`
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        width: 30%;
         img {
           border: 2px solid rgb(70, 2, 2);
           border-radius: 10px;

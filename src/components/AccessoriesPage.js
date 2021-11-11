@@ -183,6 +183,9 @@ const Wrapper = styled.div`
         align-items: center;
         flex-wrap: wrap;
         width: 30%;
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 100%;
+        }
         img {
           border: 2px solid rgb(70, 2, 2);
           border-radius: 10px;

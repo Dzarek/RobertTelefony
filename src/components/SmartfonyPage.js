@@ -250,13 +250,13 @@ const Wrapper = styled.div`
     top: 5vh;
     left: 5vw;
     font-size: 5rem;
-    color: #bbb;
+    color: #eee;
     background: transparent;
     border: none;
     cursor: pointer;
     transition: 0.5s;
     transform: rotateY(180deg);
-    animation: btnExit 1s infinite alternate;
+    /* animation: btnExit 1s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
       font-size: 3rem;
     }
@@ -267,12 +267,12 @@ const Wrapper = styled.div`
     top: 5vh;
     right: 5vw;
     font-size: 5rem;
-    color: #bbb;
+    color: #eee;
     background: transparent;
     border: none;
     cursor: pointer;
     transition: 0.5s;
-    animation: btnExit 1s infinite alternate;
+    /* animation: btnExit 1s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
       font-size: 3rem;
     }
@@ -292,7 +292,9 @@ const Wrapper = styled.div`
     left: 22%;
     width: 15vw;
     transform: rotate(-30deg);
-    animation: arrowColor 3s infinite alternate;
+    filter: grayscale(0.6);
+
+    /* animation: arrowColor 3s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
       top: 28%;
       left: 15%;
@@ -306,7 +308,9 @@ const Wrapper = styled.div`
     right: 22%;
     width: 15vw;
     transform: rotate(-30deg);
-    animation: arrowColor 3s infinite alternate-reverse;
+    /* animation: arrowColor 3s infinite alternate-reverse; */
+    filter: grayscale(0.6);
+
     @media (orientation: portrait) and (max-width: 800px) {
       bottom: 28%;
       right: 15%;
@@ -458,8 +462,12 @@ const Wrapper = styled.div`
     padding: 20px;
     border-radius: 10px;
     color: rgb(120, 2, 2);
-    box-shadow: 0 0 15px 2px white;
+    box-shadow: 0 0 5px 1px white;
+    cursor: pointer;
     animation: buyBtnAnimation 1s linear infinite alternate;
+    :hover {
+      animation: none;
+    }
     @media (orientation: portrait) and (max-width: 800px) {
       top: 100%;
       font-size: 1.1rem;

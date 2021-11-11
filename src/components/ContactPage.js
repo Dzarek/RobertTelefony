@@ -53,12 +53,14 @@ const Wrapper = styled.div`
     align-items: center;
     width: 2px;
     background: rgb(120, 2, 2);
-    height: 20vh;
-    animation: borderBigger 1s infinite alternate;
+    /* height: 20vh; */
+    height: 50vh;
+    /* animation: borderBigger 1s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
-      width: 20vw;
+      /* width: 20vw; */
+      width: 80vw;
       height: 2px;
-      animation: borderBigger2 1s infinite alternate;
+      /* animation: borderBigger2 1s infinite alternate; */
       margin: 5vh auto 0;
     }
   }
@@ -154,6 +156,7 @@ const Wrapper = styled.div`
       width: 100%;
       height: 40vh;
       border: rgb(120, 2, 2) 2px solid;
+      border-radius: 10px;
     }
   }
 `;

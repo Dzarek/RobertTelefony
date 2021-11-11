@@ -121,7 +121,7 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    animation: moveBar 5s infinite linear;
+    /* animation: moveBar 5s infinite linear; */
     @media (orientation: portrait) and (max-width: 800px) {
       animation: none;
       flex-wrap: wrap;
@@ -179,10 +179,11 @@ const Wrapper = styled.div`
   }
 
   .titleLine {
-    width: 5vw;
+    /* width: 5vw; */
+    width: 20vw;
     height: 5px;
     background: white;
-    animation: lineBigger 1s infinite alternate;
+    /* animation: lineBigger 1s infinite alternate; */
     border-bottom: 2px solid black;
   }
   @keyframes lineBigger {

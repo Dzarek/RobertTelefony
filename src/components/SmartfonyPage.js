@@ -350,8 +350,8 @@ const Wrapper = styled.div`
       letter-spacing: 1px;
       filter: saturate(0);
       @media (orientation: portrait) and (max-width: 800px) {
-        width: 30vw;
-        height: 10vh;
+        width: 35vw;
+        height: 12vh;
         border-radius: 10px;
         border: 2px solid white;
         font-size: 1.3rem;

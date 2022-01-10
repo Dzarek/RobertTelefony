@@ -181,12 +181,16 @@ const Wrapper = styled.div`
   .singleQuestion {
     margin: 2vh auto;
     padding: 10px 20px;
-    /* width: 90%; */
-    width: 30vw;
+    width: 90%;
     background: rgba(0, 0, 0, 0.9);
     color: white;
-    /* box-shadow: 0 0 5px 1px whitesmoke; */
     @media (orientation: portrait) and (max-width: 800px) {
+      width: 100%;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
     }
     p {

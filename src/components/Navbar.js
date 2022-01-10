@@ -305,6 +305,7 @@ const Wrapper = styled.nav`
   /* border-bottom: 4px solid rgba(100, 47, 47); */
   opacity: 0;
   animation: showWrapper 1s 1 forwards;
+
   @media screen and (max-width: 800px) {
     margin-top: -12vh;
     height: auto;
@@ -342,6 +343,7 @@ const Wrapper = styled.nav`
     align-items: center;
     width: 100vw;
     background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 1);
     @media screen and (min-width: 801px) {
       display: none;
     }
@@ -349,6 +351,7 @@ const Wrapper = styled.nav`
     .logo1 {
       padding: 0vh 1vw 0vh 1vw;
       background: rgb(160, 64, 64, 0.5);
+      background: rgb(160, 64, 64, 1);
       height: 12vh;
       img {
         margin: 3.5vh auto;
@@ -438,6 +441,7 @@ const Wrapper = styled.nav`
     align-items: center;
     width: 65vw;
     height: 100%;
+
     @media screen and (max-width: 800px) {
       display: none;
     }
@@ -523,6 +527,7 @@ const Wrapper2 = styled.nav`
     .logo1 {
       padding: 0vh 1vw 0vh 1vw;
       background: rgb(160, 64, 64, 0.5);
+      background: rgb(160, 64, 64, 1);
       height: 12vh;
       img {
         margin: 3.5vh auto;

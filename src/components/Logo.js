@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
-  opacity: 0.8;
+  opacity: 0.9;
   background: #000;
   .logo-wrapper {
     display: flex;
@@ -40,6 +40,7 @@ const Wrapper = styled.div`
     .logo1 {
       padding: 0vh 2vw 0vh 2vw;
       background: rgb(160, 64, 64, 0.5);
+      background: rgb(100, 34, 34, 1);
       height: 12vh;
       img {
         margin: 3vh auto;
@@ -55,6 +56,7 @@ const Wrapper = styled.div`
         text-shadow: none;
         font-family: "Teko", sans-serif;
         color: rgb(140, 64, 64);
+        color: rgb(120, 34, 34);
         letter-spacing: 2px;
         @media (orientation: portrait) and (max-width: 800px) {
           letter-spacing: 1px;

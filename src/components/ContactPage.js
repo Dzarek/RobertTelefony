@@ -21,6 +21,7 @@ const ContactPage = () => {
             <p>
               <span>Adres:</span> ul.Adama Mickiewicza 3, 38-300 Gorlice
             </p>
+
             <p>
               <span>Telefon:</span> 791 838 332
             </p>
@@ -47,6 +48,7 @@ const ContactPage = () => {
 const Wrapper = styled.div`
   /* height: 100vh; */
   padding-bottom: 5vh;
+
   .borderBetween {
     display: flex;
     justify-content: center;

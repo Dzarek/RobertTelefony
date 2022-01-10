@@ -99,6 +99,7 @@ span {
   height: 25vw;
   z-index: 1;
   animation: smartfonCircle 3s linear infinite;
+  /* filter: saturate(0); */
 }
 
 @media (orientation: portrait) and (max-width: 800px) {

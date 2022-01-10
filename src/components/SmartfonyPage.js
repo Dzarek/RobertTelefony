@@ -1,16 +1,18 @@
 import styled from "styled-components";
-import { useState } from "react";
-import Carousel from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
-import { IoIosArrowDropleftCircle } from "react-icons/io";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { useState, useEffect } from "react";
+// import Carousel from "@brainhubeu/react-carousel";
+// import "@brainhubeu/react-carousel/lib/style.css";
+// import { IoIosArrowDropleftCircle } from "react-icons/io";
+// import { IoIosArrowDroprightCircle } from "react-icons/io";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-import { smartphonesData } from "../data";
-import OneMobilePhone from "./OneMobilePhone";
+// import { smartphonesData } from "../data";
+// import OneMobilePhone from "./OneMobilePhone";
 import SellPhone from "./SellPhone";
 
 import { GiExitDoor } from "react-icons/gi";
-import { GiEntryDoor } from "react-icons/gi";
+// import { GiEntryDoor } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { ImMobile } from "react-icons/im";
 import { IoArrowUpCircle } from "react-icons/io5";
@@ -26,12 +28,15 @@ const Smartfony = () => {
   const [showModal2, setShowModal2] = useState(false);
   const [showBuyNowMobile, setShowBuyNowMobile] = useState(false);
   // const [data, setData] = useState(smartphonesData);
-
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Wrapper id="smartfony">
       <div className="main-section smartfon-section">
         <h2 className="title">Smartfony</h2>
         <img
+          // data-aos="zoom-in"
           className="smartfonCircle"
           src={smartfonCircle}
           alt="smartfon circle"
@@ -52,7 +57,7 @@ const Smartfony = () => {
               onClick={() => setShowModal1(true)}
               className="smartphone-btnL"
             >
-              SPRZEDAŻ <br /> <GiEntryDoor />
+              SPRZEDAŻ <br /> <GiExitDoor />
             </button>
           </div>
           <div className="buy-section">
@@ -60,7 +65,7 @@ const Smartfony = () => {
               onClick={() => setShowModal2(true)}
               className="smartphone-btnR"
             >
-              SKUP <br /> <GiEntryDoor />
+              SKUP <br /> <GiExitDoor />
             </button>
           </div>
         </div>
@@ -115,14 +120,14 @@ const Smartfony = () => {
                   </div>
                 </div>
               </section>
-              <button
+              {/* <button
                 onClick={() => setShowBuyNowMobile(true)}
                 className="buyNowBtn"
               >
                 Zobacz aktualne promocje
-              </button>
+              </button> */}
             </div>
-            <div className="buyNowMobile">
+            {/* <div className="buyNowMobile">
               <Carousel
                 infinite
                 autoPlay={3000}
@@ -146,7 +151,7 @@ const Smartfony = () => {
                   return <OneMobilePhone key={item.id} {...item} />;
                 })}
               </Carousel>
-            </div>
+            </div> */}
           </div>
         </div>
         <div
@@ -170,7 +175,7 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
   margin-top: 10vh;
-
+  /* max-width: 1360px; */
   .modalContentTitle {
     font-family: "Stick No Bills", sans-serif;
     font-size: 3rem;
@@ -211,7 +216,7 @@ const Wrapper = styled.div`
 
   .buyNowMobile {
     height: 100vh;
-    width: 90vw;
+    width: 90%;
     margin: 20vh auto 0;
     text-align: center;
     display: flex;
@@ -292,7 +297,7 @@ const Wrapper = styled.div`
     left: 22%;
     width: 15vw;
     transform: rotate(-30deg);
-    filter: grayscale(0.6);
+    /* filter: grayscale(0.6); */
 
     /* animation: arrowColor 3s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
@@ -309,7 +314,7 @@ const Wrapper = styled.div`
     width: 15vw;
     transform: rotate(-30deg);
     /* animation: arrowColor 3s infinite alternate-reverse; */
-    filter: grayscale(0.6);
+    /* filter: grayscale(0.6); */
 
     @media (orientation: portrait) and (max-width: 800px) {
       bottom: 28%;
@@ -334,7 +339,8 @@ const Wrapper = styled.div`
       height: 8vw;
       font-size: 2rem;
       border-radius: 20px;
-      background: rgba(3, 31, 63, 0.8);
+      /* background: rgba(3, 31, 63, 0.8); */
+      background: rgba(200, 21, 21, 1);
       color: white;
       position: absolute;
       font-family: "Teko", sans-serif;
@@ -342,6 +348,7 @@ const Wrapper = styled.div`
       border: 4px solid white;
       transition: 0.3s;
       letter-spacing: 1px;
+      filter: saturate(0);
       @media (orientation: portrait) and (max-width: 800px) {
         width: 30vw;
         height: 10vh;
@@ -352,7 +359,8 @@ const Wrapper = styled.div`
     }
     button:hover {
       font-size: 2.2rem;
-      background: rgba(3, 31, 63, 1);
+      background: rgba(120, 21, 21, 1);
+      filter: saturate(1);
       @media (orientation: portrait) and (max-width: 800px) {
         font-size: 1.5rem;
       }
@@ -390,7 +398,8 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     color: white;
-    height: 200vh;
+    /* height: 200vh; */
+    height: 100vh;
     overflow: hidden;
     position: relative;
     .modalContentOne {

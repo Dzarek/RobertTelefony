@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import robertImg from "../images/robertImg.jpg";
+import robertImg from "../images/robertImg.png";
 
 const AboutMePage = () => {
   return (
@@ -79,7 +79,7 @@ const Wrapper = styled.div`
     }
     span {
       color: rgb(70, 2, 2);
-      text-shadow: 0 0 2px black;
+      text-shadow: 0 0 1px black;
     }
   }
   .aboutMeWrapper {
@@ -95,12 +95,13 @@ const Wrapper = styled.div`
     }
     img {
       border: 2px solid rgb(70, 2, 2);
-      border-radius: 50%;
+      border-radius: 10%;
       width: 200px;
       height: 200px;
-      margin: 10px;
-      box-shadow: 0 0 15px 2px black;
+      margin: 20px;
+      box-shadow: 0 0 10px 1px black;
       float: left;
+      filter: saturate(0.5);
       @media (orientation: portrait) and (max-width: 800px) {
         float: none;
         margin: 5vh auto;

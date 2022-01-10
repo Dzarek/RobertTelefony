@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { BsFillEmojiWinkFill } from "react-icons/bs";
 import { BsFillEmojiDizzyFill } from "react-icons/bs";
 import { FaWalking } from "react-icons/fa";
@@ -15,6 +18,9 @@ import service5 from "../images/service5.jpg";
 import tech1 from "../images/tech1.jpg";
 
 const ServicePage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Wrapper id="serwis">
       <div className="main-section">
@@ -62,7 +68,7 @@ const ServicePage = () => {
         </div>
         <h1 className="serviceStepsTitle">krok po kroku</h1>
         <div className="serviceSteps">
-          <section>
+          <section data-aos="flip-right" data-aos-duration="1000">
             <h1>
               <FaWalking />
             </h1>
@@ -72,21 +78,33 @@ const ServicePage = () => {
             </p>
             <h1>01.</h1>
           </section>
-          <section>
+          <section
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             <h1>
               <FiBox />
             </h1>
             <p>Wysyłka telefonu do serwisantów</p>
             <h1>02.</h1>
           </section>
-          <section>
+          <section
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             <h1>
               <MdOutlineMiscellaneousServices />
             </h1>
             <p>Naprawa</p>
             <h1>03.</h1>
           </section>
-          <section>
+          <section
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
             <h1>
               <MdMobileFriendly />
             </h1>

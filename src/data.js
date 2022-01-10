@@ -39,23 +39,24 @@ export const questionsData = [
   },
   {
     id: 2,
-    title: "How do I change my My Page password?",
-    info: "Coloring book forage photo booth gentrify lumbersexual. Migas chillwave poutine synth shoreditch, enamel pin thundercats fashion axe roof party polaroid chartreuse.",
+    title: "Czy dostanę telefon zastępczy na czas naprawy?",
+    info: "Nie, nie daję telefonu zastępczego. Dobrze byś przygotował/przygotowała sobie jakiś stary telefon na okres naprawy.",
   },
   {
     id: 3,
-    title: "What is BankID?",
-    info: "Enamel pin fam sustainable woke whatever venmo. Authentic asymmetrical put a bird on it, lumbersexual activated charcoal kinfolk banjo cred pickled sartorial.",
+    title: "Czy moje pliki w telefonie zostaną utracone w trakcie naprawy?",
+    info: "Bardzo możliwe, ale zależy to od typu naprawy. W wielu przypadkach wiąże się to z aktualizowaniem oprogramowania i Twoje dane mogą zostać utracone. Przed oddaniem urządzenia do naprawy postaraj się zrobić sobie kopię zapasową swoich zdjęć i innych danych.",
   },
   {
     id: 4,
-    title: "Whose birth number can I use?",
-    info: "Edison bulb direct trade gentrify beard lo-fi seitan sustainable roof party franzen occupy squid. Knausgaard cronut succulents, scenester readymade shabby chic lyft. Copper mug meh vegan gentrify.",
+    title: "Czy należy formatować baterię w nowym telefonie?",
+    info: "Kiedyś tak się robiło ale był wtedy inny typ baterii. Dzisiaj stosuje się baterie typu  Li-Ion (litowo-jonowe), które działają inaczej. W tego rodzaju bateriach nie zaleca się rozładowywania ich całkowicie gdyż skutkuje to skróceniem ich żywotności.",
   },
   {
     id: 5,
-    title: "When do I recieve a password ordered by letter?",
-    info: "Locavore franzen fashion axe live-edge neutra irony synth af tilde shabby chic man braid chillwave waistcoat copper mug messenger bag. Banjo snackwave blog, microdosing thundercats migas vaporware viral lo-fi seitan ",
+    title:
+      "Czy można wymienić tylko pękniętą szybkę w telefonie bez wymiany całego wyświetlacza?",
+    info: "To zależy od modelu telefonu i stopnia uszkodzenia. W większości przypadków jest to możliwe jednak że, nie we szystkich jest to opłacalne. Czasami lepiej zapłacić ciut więcej i wymienić cały wyświetlacz.",
   },
 ];
 

@@ -170,7 +170,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     width: 40%;
     @media (orientation: portrait) and (max-width: 800px) {
       width: 95vw;
@@ -181,16 +181,12 @@ const Wrapper = styled.div`
   .singleQuestion {
     margin: 2vh auto;
     padding: 10px 20px;
-    width: 90%;
+    /* width: 90%; */
+    width: 35vw;
     background: rgba(0, 0, 0, 0.9);
     color: white;
+    /* box-shadow: 0 0 5px 1px whitesmoke; */
     @media (orientation: portrait) and (max-width: 800px) {
-      width: 100%;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
     }
     p {

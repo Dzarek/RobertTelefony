@@ -2,20 +2,26 @@ import styled from "styled-components";
 import { AiOutlineFieldTime } from "react-icons/ai";
 import { GiReceiveMoney } from "react-icons/gi";
 import { BsFillPersonCheckFill } from "react-icons/bs";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const GeneralInfo = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Wrapper>
       <div className="main-section">
-        <div className="oneGeneralInfo">
+        <div data-aos="fade-right" className="oneGeneralInfo">
           <BsFillPersonCheckFill className="icon" />
           <h4>DOŚWIADCZENIE</h4>
         </div>
-        <div className="oneGeneralInfo">
+        <div data-aos="fade-top" className="oneGeneralInfo">
           <GiReceiveMoney className="icon" />
           <h4>UCZCIWOŚĆ</h4>
         </div>
-        <div className="oneGeneralInfo">
+        <div data-aos="fade-left" className="oneGeneralInfo">
           <AiOutlineFieldTime className="icon" />
           <h4>SZYBKOŚĆ</h4>
         </div>

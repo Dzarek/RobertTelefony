@@ -324,6 +324,8 @@ const Wrapper = styled.nav`
     height: 100%;
     z-index: -2;
     opacity: 0.9;
+    filter: brightness(0.8);
+    /* filter: saturate(0); */
   }
   .video-container {
     opacity: 1;
@@ -343,15 +345,15 @@ const Wrapper = styled.nav`
     align-items: center;
     width: 100vw;
     background: rgba(0, 0, 0, 0.6);
-    background: rgba(0, 0, 0, 1);
+    /* background: rgba(0, 0, 0, 1); */
     @media screen and (min-width: 801px) {
       display: none;
     }
 
     .logo1 {
       padding: 0vh 1vw 0vh 1vw;
-      background: rgb(160, 64, 64, 0.5);
-      background: rgb(160, 64, 64, 1);
+      /* background: rgb(160, 64, 64, 0.5); */
+      background: rgba(100, 24, 24, 1);
       height: 12vh;
       img {
         margin: 3.5vh auto;
@@ -418,7 +420,6 @@ const Wrapper = styled.nav`
     }
     .links a {
       color: white;
-      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 3px;
       display: block;
@@ -427,6 +428,13 @@ const Wrapper = styled.nav`
       font-family: "Stick No Bills", sans-serif;
       font-size: 1.3rem;
       width: 100vw;
+      font-weight: bold;
+    }
+    .links a:nth-last-of-type(1) {
+      padding-bottom: 2rem;
+    }
+    .links a:nth-of-type(1) {
+      padding-top: 2rem;
     }
     .links a:hover {
       background: var(--clr-primary-8);
@@ -456,13 +464,16 @@ const Wrapper = styled.nav`
       font-weight: 700;
       letter-spacing: 2px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: 0.2s;
       :hover {
         margin-top: 10px;
       }
     }
     h2 {
       font-family: arial;
+      color: white;
+      text-shadow: none;
+      margin-bottom: 5px;
     }
   }
   .icons-down {
@@ -502,6 +513,7 @@ const Wrapper2 = styled.nav`
     height: 100%;
     z-index: -2;
     opacity: 0.9;
+    filter: brightness(0.8);
   }
   .video-container {
     opacity: 1;
@@ -526,8 +538,7 @@ const Wrapper2 = styled.nav`
     }
     .logo1 {
       padding: 0vh 1vw 0vh 1vw;
-      background: rgb(160, 64, 64, 0.5);
-      background: rgb(160, 64, 64, 1);
+      background: rgba(100, 24, 24, 1);
       height: 12vh;
       img {
         margin: 3.5vh auto;
@@ -603,6 +614,13 @@ const Wrapper2 = styled.nav`
       font-family: "Stick No Bills", sans-serif;
       font-size: 1.3rem;
       width: 100vw;
+      font-weight: bold;
+    }
+    .links a:nth-last-of-type(1) {
+      padding-bottom: 2rem;
+    }
+    .links a:nth-of-type(1) {
+      padding-top: 2rem;
     }
     .links a:hover {
       background: var(--clr-primary-8);
@@ -631,13 +649,16 @@ const Wrapper2 = styled.nav`
       font-weight: 700;
       letter-spacing: 2px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: 0.2s;
       :hover {
         margin-top: 10px;
       }
     }
     h2 {
       font-family: arial;
+      color: white;
+      text-shadow: none;
+      margin-bottom: 5px;
     }
   }
   .icons-down {

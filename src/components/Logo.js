@@ -25,8 +25,9 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
-  opacity: 0.9;
-  background: #000;
+  /* opacity: 0.8; */
+  /* background: #000; */
+  background: rgba(0, 0, 0, 0.8);
   .logo-wrapper {
     display: flex;
     justify-content: space-around;

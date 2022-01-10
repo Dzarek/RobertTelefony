@@ -85,7 +85,11 @@ const AccessoriesPage = () => {
           ) : (
             <div className="accessoriesContent">
               <section className="accessoriesItems">
-                <h3>WYBIERZ KATEGORIE</h3>
+                <h3>
+                  {" "}
+                  <TiArrowRightOutline className="icon iconTwist" />
+                  WYBIERZ KATEGORIE
+                </h3>
               </section>
             </div>
           )}
@@ -115,6 +119,7 @@ const Wrapper = styled.div`
   }
   .icon {
     margin-right: 10px;
+    margin-bottom: 6px;
   }
   .accessoriesWrapper {
     margin: 10vh auto;
@@ -212,6 +217,15 @@ const Wrapper = styled.div`
       }
       h3 {
         color: rgb(120, 2, 2);
+        display: flex;
+        align-items: center;
+      }
+      .iconTwist {
+        transform: rotate(-180deg);
+
+        @media (orientation: portrait) and (max-width: 800px) {
+          transform: rotate(-90deg);
+        }
       }
     }
     .accessoriesList {

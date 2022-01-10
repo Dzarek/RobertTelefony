@@ -110,32 +110,34 @@ const Wrapper = styled.div`
         justify-content: center;
       }
       .fromMeYou {
-        width: 25vw;
+        width: 35vw;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
         @media (orientation: portrait) and (max-width: 800px) {
           width: 90vw;
+          align-items: flex-start;
         }
         h3 {
           color: rgb(120, 2, 2);
-          font-size: 2.5rem;
+          font-size: 3rem;
           font-family: "Teko", sans-serif;
           margin-bottom: 3vh;
           @media (orientation: portrait) and (max-width: 800px) {
             font-size: 1.5rem;
             margin-bottom: 1vh;
+            align-self: center;
           }
         }
         ul {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          align-items: center;
+          align-items: flex-start;
           height: 50vh;
           list-style: none;
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           @media (orientation: portrait) and (max-width: 800px) {
             height: auto;
             font-size: 1rem;

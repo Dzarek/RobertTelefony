@@ -97,6 +97,9 @@ const Wrapper = styled.div`
         width: 95vw;
         height: 25vh;
         font-size: 0.8rem;
+        h3 {
+          font-weight: bold;
+        }
       }
     }
     .part2 {

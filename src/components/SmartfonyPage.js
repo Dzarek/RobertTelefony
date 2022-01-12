@@ -385,7 +385,7 @@ const Wrapper = styled.div`
       margin-top: 30vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       width: 100vw;
       font-family: "Cairo", sans-serif;
@@ -405,7 +405,8 @@ const Wrapper = styled.div`
         margin-bottom: 10vh;
         @media (orientation: portrait) and (max-width: 800px) {
           width: 90%;
-          margin-bottom: 3vh;
+          margin-bottom: 5vh;
+          font-weight: bold;
         }
       }
       .marksAndContact {
@@ -434,10 +435,11 @@ const Wrapper = styled.div`
         align-items: center;
         height: 40vh;
         @media (orientation: portrait) and (max-width: 800px) {
-          margin-bottom: 2vh;
+          margin-bottom: 5vh;
           width: 100%;
           height: auto;
           font-size: 1rem;
+          padding: 0 5%;
         }
         img {
           width: 20vw;

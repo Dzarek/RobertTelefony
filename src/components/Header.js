@@ -21,6 +21,9 @@ const Header = () => {
             zarobić?
           </h1>
           <h1>
+            W mojej ofercie znajdziesz również <br /> TELEFONY DLA SENIORA !{" "}
+          </h1>
+          <h1>
             Słuchawki, Ładowarki, Powerbanki, Szkła Ochronne, <br />
             Głośniki Bluetooth i wiele innych...
           </h1>
@@ -76,7 +79,7 @@ const Wrapper = styled.div`
       width: 70%;
     }
 
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 0.8rem;
       line-height: 2;
       letter-spacing: 1px;

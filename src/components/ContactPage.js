@@ -55,7 +55,7 @@ const Wrapper = styled.div`
     width: 2px;
     background: rgb(120, 2, 2);
     height: 50vh;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 80vw;
       height: 2px;
       margin: 5vh auto 0;
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
     width: 100vw;
     margin-top: -3vh;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column;
       margin-top: 5vh;
     }
@@ -81,7 +81,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
     }
   }
@@ -91,7 +91,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
     }
   }
@@ -102,7 +102,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       height: 50vh;
       width: 90%;
     }
@@ -113,12 +113,12 @@ const Wrapper = styled.div`
       font-size: 2rem;
       margin: 5vh auto;
       letter-spacing: 2px;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 1.8rem;
       }
     }
     h3 {
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         margin-bottom: 2vh;
         text-align: center;
       }
@@ -134,7 +134,7 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
     }
 

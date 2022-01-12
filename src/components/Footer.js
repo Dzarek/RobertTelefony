@@ -31,11 +31,11 @@ const Footer = () => {
           </section>
           <section className="footerNav">
             <h3>Oferta :</h3>
-            <Link to="smartfony" smooth={true} offset={-100} duration={1000}>
+            <Link to="smartfony" smooth={true} offset={-30} duration={1000}>
               <FaLongArrowAltRight className="icon" />
-              Smartfony
+              Telefony
             </Link>
-            <Link to="akcesoria" smooth={true} offset={-50} duration={1000}>
+            <Link to="akcesoria" smooth={true} offset={-100} duration={1000}>
               {" "}
               <FaLongArrowAltRight className="icon" />
               Akcesoria
@@ -119,7 +119,7 @@ const Wrapper = styled.div`
     font-family: "Stick No Bills", sans-serif;
     letter-spacing: 2px;
     font-size: 1.1rem;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1rem;
     }
   }
@@ -142,7 +142,7 @@ const Wrapper = styled.div`
     text-align: center;
     margin-bottom: 3vh;
     margin-top: 3vh;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1.3rem;
     }
   }
@@ -156,7 +156,7 @@ const Wrapper = styled.div`
     align-items: flex-start;
     width: 80vw;
     padding: 3vh 0;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column;
     }
     section {
@@ -165,12 +165,12 @@ const Wrapper = styled.div`
       justify-content: space-between;
       align-items: flex-start;
       width: 25%;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 100%;
         margin: 1vh auto;
       }
       h3 {
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           width: 100%;
         }
       }
@@ -178,6 +178,8 @@ const Wrapper = styled.div`
   }
   .footerNav a {
     margin-top: 2vh;
+    display: flex;
+    align-items: center;
   }
   .openHours {
     display: flex;
@@ -195,6 +197,11 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-bottom: 1vh;
+    p {
+      display: flex;
+      align-items: center;
+    }
   }
   .footerCopyrights {
     border-top: 2px solid rgb(120, 2, 2);
@@ -203,7 +210,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 3vh 0;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       text-align: center;
       font-size: 1rem;
     }

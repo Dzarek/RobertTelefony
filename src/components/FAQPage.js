@@ -87,7 +87,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     cursor: pointer;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1.8rem;
     }
     :hover {
@@ -137,7 +137,7 @@ const Wrapper = styled.div`
     justify-content: space-around;
     width: 80vw;
     padding: 5vh 0;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
       flex-direction: column;
       margin: 0 auto;
@@ -164,7 +164,7 @@ const Wrapper = styled.div`
     align-items: center;
     font-size: 1rem;
     width: 40%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
       font-size: 0.8rem;
       margin-top: 10vh;
@@ -176,7 +176,7 @@ const Wrapper = styled.div`
     width: 35vw;
     background: rgba(0, 0, 0, 0.9);
     color: white;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
     }
     p {

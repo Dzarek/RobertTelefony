@@ -59,6 +59,11 @@ export const questionsData = [
       "Czy można wymienić tylko pękniętą szybkę w telefonie bez wymiany całego wyświetlacza?",
     info: "To zależy od modelu telefonu i stopnia uszkodzenia. W większości przypadków jest to możliwe jednak że, nie we szystkich jest to opłacalne. Czasami lepiej zapłacić ciut więcej i wymienić cały wyświetlacz.",
   },
+  {
+    id: 6,
+    title: "Czy znajdę tutaj jakiś telefon odpowiedni dla seniora?",
+    info: "Tak, w mojej ofercie są również telefony dla seniorów! Wiele starszych osób ma problemy z obsługą nowych smartfonów i czują się niekomfortowo używając ich. W moim sklepie pomogę dobrać odpowiedni telefon, który będzie funkcjonalny i jednocześnie łatwy w obsłudze.",
+  },
 ];
 
 export const accessoriesData = {

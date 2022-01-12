@@ -25,6 +25,7 @@ import OPPOMark from "../images/marks/OPPO.png";
 import SamsungMark from "../images/marks/Samsung.png";
 import VivoMark from "../images/marks/Vivo.png";
 import XiaomiMark from "../images/marks/Xiaomi.png";
+import MaxcomMark from "../images/marks/Maxcom.png";
 
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
@@ -39,12 +40,13 @@ const Smartfony = () => {
     SamsungMark,
     VivoMark,
     XiaomiMark,
+    MaxcomMark,
   ];
 
   return (
     <Wrapper id="smartfony">
       <div className="main-section smartfon-section">
-        <h2 className="title">Smartfony</h2>
+        <h2 className="title">Telefony</h2>
         <img
           className="smartfonCircle"
           src={smartfonCircle}
@@ -111,6 +113,14 @@ const Smartfony = () => {
                     używane, z wyższych i niższych półek cenowych, a więc każdy
                     znajdzie coś dla siebie.
                   </p>
+                  <p>
+                    Obok najnowszych modeli smartfonów nie zabrakło również
+                    miejsca dla telefonów przeznaczonych dla seniorów. Starszym
+                    klientom oferuje komórki, które posiadają optymalny dla ich
+                    możliwości interfejs. Taki telefon powinien mieć większe
+                    przyciski i ikony na ekranie aby łatwiej było z niego
+                    korzystać
+                  </p>
                 </div>
                 <div className="marksAndContact">
                   <div className="modal-marks">
@@ -143,7 +153,7 @@ const Smartfony = () => {
                     <h3>Odwiedź mój sklep i wybierz swój nowy telefon!</h3>
                     <h4>
                       <FaMapMarkerAlt className="modalIcon" />
-                      Adama Mickiewicza 3, <br /> 38-300 Gorlice
+                      Adama Mickiewicza 3, 38-300 Gorlice
                     </h4>
                     <h4>
                       <ImMobile className="modalIcon" /> 791 838 332
@@ -186,7 +196,7 @@ const Wrapper = styled.div`
     top: 10vh;
     left: 50%;
     transform: translateX(-50%);
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 2.5rem;
     }
   }
@@ -224,7 +234,7 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
     }
   }
@@ -262,7 +272,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     transition: 0.5s;
     transform: rotateY(180deg);
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 3rem;
     }
   }
@@ -277,7 +287,7 @@ const Wrapper = styled.div`
     border: none;
     cursor: pointer;
     transition: 0.5s;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 3rem;
     }
   }
@@ -378,9 +388,9 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     color: #111;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+    min-height: 100vh;
+    /* overflow: hidden; */
+    position: absolute;
     .modalContentOne {
       margin-top: 30vh;
       display: flex;
@@ -389,24 +399,30 @@ const Wrapper = styled.div`
       align-items: center;
       width: 100vw;
       font-family: "Cairo", sans-serif;
+
       div {
         text-align: center;
         font-size: 1.5rem;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           font-size: 1rem;
         }
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         margin-top: 25vh;
       }
 
       .modal-info {
-        width: 60%;
-        margin-bottom: 10vh;
-        @media (orientation: portrait) and (max-width: 800px) {
+        width: 80%;
+        margin-bottom: 3vh;
+        margin-top: -7vh;
+        @media screen and (max-width: 800px) {
           width: 90%;
           margin-bottom: 5vh;
+          margin-top: 0;
           font-weight: bold;
+          p:nth-of-type(2) {
+            margin-top: 3vh;
+          }
         }
       }
       .marksAndContact {
@@ -415,13 +431,13 @@ const Wrapper = styled.div`
         align-items: flex-start;
         justify-content: space-between;
 
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           width: 100%;
           flex-direction: column;
         }
       }
       .modal-marks {
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           background: #eee;
           padding: 15px;
         }
@@ -434,16 +450,16 @@ const Wrapper = styled.div`
         justify-content: space-around;
         align-items: center;
         height: 40vh;
-        @media (orientation: portrait) and (max-width: 800px) {
-          margin-bottom: 5vh;
+        @media screen and (max-width: 800px) {
+          margin-bottom: 10vh;
           width: 100%;
           height: auto;
           font-size: 1rem;
-          padding: 0 5%;
+          padding: 15px 5%;
         }
         img {
           width: 20vw;
-          @media (orientation: portrait) and (max-width: 800px) {
+          @media screen and (max-width: 800px) {
             width: 70%;
           }
         }
@@ -451,13 +467,21 @@ const Wrapper = styled.div`
           color: rgb(120, 2, 2);
           font-size: 2.5rem;
           font-family: "Teko", sans-serif;
-          margin-bottom: 2vh;
+          margin-bottom: 0vh;
           text-transform: uppercase;
-          @media (orientation: portrait) and (max-width: 800px) {
+          @media screen and (max-width: 800px) {
             font-size: 1.5rem;
-            margin-bottom: 1vh;
+            margin-bottom: 3vh;
             align-self: center;
           }
+        }
+        h4 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          font-size: 1.2rem;
+          margin-bottom: 3vh;
         }
       }
     }
@@ -468,6 +492,8 @@ const Wrapper = styled.div`
 
   .modalIcon {
     margin-right: 1vw;
+    font-size: 2rem;
+    color: rgb(120, 2, 2);
   }
 `;
 

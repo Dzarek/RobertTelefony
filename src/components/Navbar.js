@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
           <div className="nav-container">
             <Link to="smartfony" smooth={true} offset={-210} duration={1000}>
-              Smartfony
+              Telefony
             </Link>
             <h2>|</h2>
             <Link to="akcesoria" smooth={true} offset={-300} duration={1000}>
@@ -100,7 +100,7 @@ const Navbar = () => {
                   offset={-490}
                   duration={1000}
                 >
-                  Smartfony
+                  Telefony
                 </Link>
 
                 <Link
@@ -171,7 +171,7 @@ const Navbar = () => {
           </div>
           <div className="nav-container">
             <Link to="smartfony" smooth={true} offset={-30} duration={1000}>
-              Smartfony
+              Telefony
             </Link>
             <h2>|</h2>
             <Link to="akcesoria" smooth={true} offset={-100} duration={1000}>
@@ -222,9 +222,9 @@ const Navbar = () => {
                   offset={-30}
                   duration={1000}
                 >
-                  Smartfony
+                  Telefony
                 </Link>
-
+                {/* telefony dla seniora */}
                 <Link
                   onClick={toggleLinks}
                   to="akcesoria"
@@ -346,18 +346,22 @@ const Wrapper = styled.nav`
     }
 
     .logo1 {
-      padding: 0vh 1vw 0vh 1vw;
-      background: rgba(100, 24, 24, 1);
+      /* padding: 0vh 1vw 0vh 1vw; */
+      /* background: rgba(100, 24, 24, 1); */
       height: 12vh;
       img {
-        margin: 3.5vh auto;
-        height: 5vh;
-        width: 20vw;
+        /* margin: 3.5vh auto;
+        height: 5vh; */
+        width: 24vw;
+        height: 12vh;
+        filter: brightness(1) saturate(0.1);
+        transform: rotateY(180deg);
+        border-radius: 5px 0 0 5px;
       }
     }
     .logo2 {
       font-size: 1.3rem;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 0.9rem;
       }
       h2 {
@@ -365,7 +369,7 @@ const Wrapper = styled.nav`
         font-family: "Teko", sans-serif;
         color: rgb(140, 64, 64);
         letter-spacing: 2px;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           letter-spacing: 1px;
           display: flex;
           flex-direction: column;
@@ -524,18 +528,22 @@ const Wrapper2 = styled.nav`
       display: none;
     }
     .logo1 {
-      padding: 0vh 1vw 0vh 1vw;
-      background: rgba(100, 24, 24, 1);
+      /* padding: 0vh 1vw 0vh 1vw; */
+      /* background: rgba(100, 24, 24, 1); */
       height: 12vh;
       img {
-        margin: 3.5vh auto;
-        height: 5vh;
-        width: 20vw;
+        /* margin: 3.5vh auto;
+        height: 5vh; */
+        width: 24vw;
+        height: 12vh;
+        filter: brightness(1) saturate(0.1);
+        transform: rotateY(180deg);
+        border-radius: 5px 0 0 5px;
       }
     }
     .logo2 {
       font-size: 1.3rem;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 0.9rem;
       }
       h2 {
@@ -543,7 +551,7 @@ const Wrapper2 = styled.nav`
         font-family: "Teko", sans-serif;
         color: rgb(140, 64, 64);
         letter-spacing: 2px;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           letter-spacing: 1px;
           display: flex;
           flex-direction: column;
@@ -617,7 +625,7 @@ const Wrapper2 = styled.nav`
     align-items: center;
     width: 65vw;
     height: 100%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
     a {

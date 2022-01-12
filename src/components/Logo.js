@@ -32,21 +32,27 @@ const Wrapper = styled.div`
     align-items: center;
     width: 70%;
     height: 12vh;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
     }
     .logo1 {
       padding: 0vh 2vw 0vh 2vw;
-      background: rgb(100, 34, 34, 1);
+      /* background: rgb(100, 34, 34, 1); */
+      /* background: #eee; */
       height: 12vh;
       img {
-        margin: 3vh auto;
-        height: 5vh;
+        /* width: 24vw; */
+        height: 12vh;
+        /* filter: brightness(1) saturate(0.3); */
+        filter: brightness(1) saturate(0.1);
+        transform: rotateY(180deg);
+        border-radius: 5px;
+        opacity: 0.7;
       }
     }
     .logo2 {
       font-size: 1.3rem;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 1rem;
       }
       h2 {
@@ -54,7 +60,7 @@ const Wrapper = styled.div`
         font-family: "Teko", sans-serif;
         color: rgb(120, 34, 34);
         letter-spacing: 2px;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           letter-spacing: 1px;
           display: flex;
           flex-direction: column;

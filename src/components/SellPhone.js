@@ -50,7 +50,7 @@ const SellPhone = () => {
 };
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   color: #111;
   position: relative;
   font-family: "Cairo", sans-serif;
@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     font-size: 3rem;
     font-family: "Stick No Bills", sans-serif;
     letter-spacing: 2px;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 2.5rem;
     }
   }
@@ -79,10 +79,10 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    @media (orientation: portrait) and (max-width: 800px) {
-      width: 95vw;
-      height: 90vh;
-      top: 15vh;
+    @media screen and (max-width: 800px) {
+      width: 90vw;
+      height: auto;
+      top: 20vh;
       justify-content: center;
     }
 
@@ -92,11 +92,13 @@ const Wrapper = styled.div`
       height: 20vh;
       h3 {
         font-weight: normal;
+        font-size: 1.5rem;
       }
-      @media (orientation: portrait) and (max-width: 800px) {
-        width: 95vw;
-        height: 25vh;
-        font-size: 0.8rem;
+      @media screen and (max-width: 800px) {
+        width: 90vw;
+        height: auto;
+        font-size: 0.9rem;
+        margin-bottom: 3vh;
         h3 {
           font-weight: bold;
         }
@@ -108,7 +110,7 @@ const Wrapper = styled.div`
       margin: 0 auto 10vh;
       width: 70vw;
       height: 30vh;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 95vw;
         height: auto;
         margin: 3vh auto 1vh;
@@ -121,7 +123,7 @@ const Wrapper = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           width: 90vw;
           align-items: flex-start;
         }
@@ -131,7 +133,7 @@ const Wrapper = styled.div`
           font-family: "Teko", sans-serif;
           margin-bottom: 3vh;
           text-transform: uppercase;
-          @media (orientation: portrait) and (max-width: 800px) {
+          @media screen and (max-width: 800px) {
             font-size: 1.5rem;
             margin-bottom: 1vh;
             align-self: center;
@@ -146,9 +148,9 @@ const Wrapper = styled.div`
           list-style: none;
           font-size: 1.4rem;
           font-weight: bold;
-          @media (orientation: portrait) and (max-width: 800px) {
+          @media screen and (max-width: 800px) {
             height: auto;
-            font-size: 1rem;
+            font-size: 1.1rem;
           }
         }
       }

@@ -126,7 +126,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
     }
     @media (orientation: landscape) and (max-width: 500px) {
@@ -183,7 +183,7 @@ const Wrapper = styled.div`
     }
     label {
       margin: 3vh auto;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 1rem;
       }
       input {

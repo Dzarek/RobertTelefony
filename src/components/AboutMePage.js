@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import robertImg from "../images/robertImg.png";
+import robertImg from "../images/robertImg.jpg";
 
 const AboutMePage = () => {
   return (
@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   .title {
     margin: 0 3vw;
     width: 14vw;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: auto;
     }
   }
@@ -49,7 +49,7 @@ const Wrapper = styled.div`
     width: 30vw;
     height: 3px;
     background: rgb(70, 2, 2);
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   }
@@ -58,7 +58,7 @@ const Wrapper = styled.div`
     height: 3px;
     background: rgb(70, 2, 2);
     margin: 10vh auto 0;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   }
@@ -72,7 +72,7 @@ const Wrapper = styled.div`
     font-family: "Cairo", sans-serif;
     border-left: 3px solid rgb(70, 2, 2);
     border-right: 3px solid rgb(70, 2, 2);
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       border: none;
       width: 90vw;
       font-size: 1rem;
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
     align-items: center;
     width: 60vw;
     margin: 0 auto;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 90vw;
       justify-content: space-between;
       flex-direction: column;
@@ -102,7 +102,7 @@ const Wrapper = styled.div`
       box-shadow: 0 0 10px 1px black;
       float: left;
       filter: saturate(0.5);
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         float: none;
         margin: 5vh auto;
       }

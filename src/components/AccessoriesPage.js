@@ -110,7 +110,7 @@ const Wrapper = styled.div`
       font-size: 2rem;
       letter-spacing: 2px;
       font-family: "Teko", sans-serif;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 1.5rem;
         letter-spacing: 1px;
       }
@@ -126,20 +126,20 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
       flex-direction: column;
       justify-content: space-around;
     }
     div {
       width: 55%;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 100%;
       }
     }
     ul {
       width: 40%;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 100%;
       }
     }
@@ -165,12 +165,12 @@ const Wrapper = styled.div`
         font-style: italic;
         text-align: justify;
         font-weight: bold;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           font-size: 1rem;
           margin-top: 0vh;
         }
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         flex-direction: column-reverse;
       }
     }
@@ -188,7 +188,7 @@ const Wrapper = styled.div`
         align-items: center;
         flex-wrap: wrap;
         width: 30%;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           width: 100%;
         }
         img {
@@ -222,7 +222,7 @@ const Wrapper = styled.div`
       .iconTwist {
         transform: rotate(-180deg);
 
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           transform: rotate(-90deg);
         }
       }
@@ -233,7 +233,7 @@ const Wrapper = styled.div`
       justify-content: space-around;
       padding-left: 10vw;
       min-height: 50vh;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         min-height: 40vh;
       }
       li {
@@ -245,7 +245,7 @@ const Wrapper = styled.div`
         text-transform: uppercase;
         cursor: pointer;
         transition: 0.5s;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           font-size: 1.6rem;
         }
         :hover {
@@ -256,14 +256,14 @@ const Wrapper = styled.div`
       .activeItem {
         margin-left: 4vw;
         color: rgb(2, 7, 70);
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           margin-left: 10vw;
           color: rgb(120, 2, 2);
         }
         :hover {
           color: rgb(2, 7, 70);
           margin-left: 5vw;
-          @media (orientation: portrait) and (max-width: 800px) {
+          @media screen and (max-width: 800px) {
             margin-left: 10vw;
             color: rgb(120, 2, 2);
           }
@@ -275,7 +275,7 @@ const Wrapper = styled.div`
       width: 5px;
       height: 50vh;
       animation: borderBig 2s infinite alternate;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 80vw;
         height: 3px;
         animation: borderBig2 2s infinite alternate;

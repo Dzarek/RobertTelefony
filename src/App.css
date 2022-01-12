@@ -35,7 +35,7 @@
   color: rgb(70, 2, 2);
 }
 
-@media (orientation: portrait) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .title {
     font-size: 3rem;
   }
@@ -56,30 +56,10 @@ span {
   text-shadow: 2px 2px 2px black;
 }
 
-/* .logoUsb img {
-  height: 50px;
-  width: 150px;
-  margin: 0 90px;
-  animation: usbSize 3s ease infinite alternate;
-  z-index: 20;
-} */
 
-/* @keyframes usbSize {
-  90% {
-    width: 150px;
-  }
-
-  100% {
-    width: 200px;
-  }
-} */
-
-/* Navbar */
-/* Header */
 /* SmartfonPage */
 
 .smartphone-modal {
-  /* background: rgba(0, 0, 0); */
   background: rgba(255, 255, 255, 0.99);
   position: fixed;
   width: 100vw;
@@ -88,6 +68,8 @@ span {
   left: 0;
   z-index: 999;
   transition: 1s;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
@@ -100,10 +82,9 @@ span {
   height: 25vw;
   z-index: 1;
   animation: smartfonCircle 3s linear infinite;
-  /* filter: saturate(0); */
 }
 
-@media (orientation: portrait) and (max-width: 800px) {
+@media (orientation:portrait) and (max-width: 800px) {
   .smartfonCircle {
     width: 55vw;
     height: 55vw;
@@ -120,35 +101,6 @@ span {
   }
 }
 
-/* 
-.smartphone-btnR {
-  animation: smartphoneBtnR 2s 1 forwards;
-}
-
-@keyframes smartphoneBtnR {
-  0% {
-    left: 50%;
-  }
-
-  100% {
-    left: 80%;
-  }
-}
-
-.smartphone-btnL {
-  animation: smartphoneBtnL 2s 1 forwards;
-
-}
-
-@keyframes smartphoneBtnL {
-  0% {
-    left: 50%;
-  }
-
-  100% {
-    left: 20%;
-  }
-} */
 
 /* FAQ */
 .singleQuestion {
@@ -168,7 +120,7 @@ span {
   cursor: pointer;
 }
 
-@media (orientation: portrait) and (max-width: 800px) {
+@media (orientation:portrait) and (max-width: 800px) {
   .arrowrRightLeftFeatures {
     width: 30px;
     height: 30px;

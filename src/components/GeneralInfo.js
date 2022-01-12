@@ -40,7 +40,7 @@ const Wrapper = styled.div`
     width: 60vw;
     margin-top: -25vh;
     padding-bottom: 20vh;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       margin: 10vh auto;
       width: 100vw;
       height: auto;
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
       font-size: 1.8rem;
       font-family: "Stick No Bills", sans-serif;
       width: 20vw;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 1rem;
         width: 25vw;
       }
@@ -63,12 +63,12 @@ const Wrapper = styled.div`
         font-size: 6rem;
         margin-bottom: 3vh;
         transition: 0.5s;
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           font-size: 3rem;
         }
         :hover {
           font-size: 7rem;
-          @media (orientation: portrait) and (max-width: 800px) {
+          @media screen and (max-width: 800px) {
             font-size: 3rem;
           }
         }

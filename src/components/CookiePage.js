@@ -206,7 +206,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     padding: 10px;
   }
-  @media (orientation: portrait) and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     width: 100vw;
     height: 100vh;
     box-shadow: none;

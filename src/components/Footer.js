@@ -4,7 +4,6 @@ import { ImMobile } from "react-icons/im";
 import { GoMail } from "react-icons/go";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { BiTime } from "react-icons/bi";
-// import { BsFillArrowUpSquareFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 
 const Footer = () => {

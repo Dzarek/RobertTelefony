@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
+import Cookie from "./CookiePage";
+import CookieConsent from "react-cookie-consent";
 
 class MyForm extends Component {
   state = {
     status: "",
+    visibleCookie: false,
   };
 
   sendEmail = (e) => {
@@ -28,49 +30,91 @@ class MyForm extends Component {
         }
       );
   };
+
   render() {
     const { status } = this.state;
+    const handleVisibleCookie = () => {
+      this.setState({
+        visibleCookie: false,
+      });
+    };
     return (
-      <Wrapper>
-        <form onSubmit={this.sendEmail}>
-          <h1>Jeśli masz jakieś pytania, śmiało napisz do mnie!</h1>
-          <div className="inputs">
-            <input
-              type="text"
-              name="name"
-              placeholder="Imię i nazwisko"
+      <>
+        <Wrapper>
+          <form onSubmit={this.sendEmail}>
+            <h1>Jeśli masz jakieś pytania, śmiało napisz do mnie!</h1>
+            <div className="inputs">
+              <input
+                type="text"
+                name="name"
+                placeholder="Imię i nazwisko"
+                required
+              />
+              <input type="email" name="email" placeholder="E-mail" required />
+            </div>
+            <br />
+            <textarea
+              placeholder="Twoja wiadomość..."
+              name="message"
               required
-            />
-            <input type="email" name="email" placeholder="E-mail" required />
-          </div>
-          <br />
-          <textarea
-            placeholder="Twoja wiadomość..."
-            name="message"
-            required
-          ></textarea>
+            ></textarea>
 
-          <label className="labelCheck" htmlFor="accept">
-            <p>
-              <input type="checkbox" id="accept" name="accept" required />
-              Wyrażam zgodę na przetwarzanie danych osobowych w celu odpowiedzi
-              na mojego e-maila{" "}
-              <span>
-                {" "}
-                <NavLink className="cookieLink" to="/cookie">
+            <label className="labelCheck" htmlFor="accept">
+              <p>
+                <input type="checkbox" id="accept" name="accept" required />
+                Wyrażam zgodę na przetwarzanie danych osobowych w celu
+                odpowiedzi na mojego e-maila{" "}
+                <span
+                  onClick={() => this.setState({ visibleCookie: true })}
+                  className="cookieLink"
+                >
                   (Polityka Prywatności)
-                </NavLink>
-              </span>
-            </p>
-          </label>
-          {status === "SUCCESS" ? (
-            <p>Wiadomość wysłana! </p>
-          ) : (
-            <button>Wyślij</button>
+                </span>
+              </p>
+            </label>
+            {status === "SUCCESS" ? (
+              <p>Wiadomość wysłana! </p>
+            ) : (
+              <button>Wyślij</button>
+            )}
+            {status === "ERROR" && <p>ups... coś poszło nie tak!</p>}
+          </form>
+          {this.state.visibleCookie && (
+            <Cookie handleVisibleCookie={handleVisibleCookie} />
           )}
-          {status === "ERROR" && <p>ups... coś poszło nie tak!</p>}
-        </form>
-      </Wrapper>
+        </Wrapper>
+        <CookieConsent
+          buttonText="Akceptuje"
+          cookieName="myAwesomeCookieName2"
+          className="cookieInfo"
+          style={{
+            background: "rgba(0,0,0, .8)",
+            fontSize: "18px",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}
+          buttonStyle={{
+            color: "white",
+            fontSize: "18px",
+            backgroundColor: "rgb(120, 2, 2)",
+            padding: "10px",
+            borderRadius: "5px",
+          }}
+          expires={7}
+        >
+          Strona korzysta z plików cookies. Pozostając na niej wyrażasz zgodę na
+          ich używanie. <br /> Ze szczegółowymi informacjami dotyczącymi cookies
+          na tej stronie można się zapoznać tutaj:
+          <span
+            onClick={() => this.setState({ visibleCookie: true })}
+            className="cookieLink"
+          >
+            (Polityka Prywatności)
+          </span>
+          .
+        </CookieConsent>
+      </>
     );
   }
 }
@@ -145,11 +189,15 @@ const Wrapper = styled.div`
       input {
         margin-right: 10px;
       }
-      span a {
+      span {
         color: rgb(120, 2, 2);
         text-shadow: none;
+        cursor: pointer;
       }
     }
+  }
+  .cookie {
+    width: 100vw;
   }
 `;
 

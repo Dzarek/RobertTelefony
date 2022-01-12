@@ -48,11 +48,11 @@ const Navbar = () => {
             ></video>
           </div>
           <div className="nav-container">
-            <Link to="smartfony" smooth={true} offset={-300} duration={1000}>
+            <Link to="smartfony" smooth={true} offset={-210} duration={1000}>
               Smartfony
             </Link>
             <h2>|</h2>
-            <Link to="akcesoria" smooth={true} offset={-250} duration={1000}>
+            <Link to="akcesoria" smooth={true} offset={-300} duration={1000}>
               Akcesoria
             </Link>
             <h2>|</h2>
@@ -97,7 +97,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="smartfony"
                   smooth={true}
-                  offset={-550}
+                  offset={-490}
                   duration={1000}
                 >
                   Smartfony
@@ -107,7 +107,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="akcesoria"
                   smooth={true}
-                  offset={-450}
+                  offset={-550}
                   duration={1000}
                 >
                   Akcesoria
@@ -117,7 +117,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="serwis"
                   smooth={true}
-                  offset={-450}
+                  offset={-500}
                   duration={1500}
                 >
                   Serwis
@@ -127,7 +127,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="o_mnie"
                   smooth={true}
-                  offset={-550}
+                  offset={-600}
                   duration={1500}
                 >
                   O mnie
@@ -137,7 +137,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="faq"
                   smooth={true}
-                  offset={-450}
+                  offset={-500}
                   duration={2000}
                 >
                   FAQ
@@ -147,7 +147,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="kontakt"
                   smooth={true}
-                  offset={-550}
+                  offset={-600}
                   duration={2000}
                 >
                   Kontakt
@@ -170,11 +170,11 @@ const Navbar = () => {
             ></video>
           </div>
           <div className="nav-container">
-            <Link to="smartfony" smooth={true} offset={-100} duration={1000}>
+            <Link to="smartfony" smooth={true} offset={-30} duration={1000}>
               Smartfony
             </Link>
             <h2>|</h2>
-            <Link to="akcesoria" smooth={true} offset={-50} duration={1000}>
+            <Link to="akcesoria" smooth={true} offset={-100} duration={1000}>
               Akcesoria
             </Link>
             <h2>|</h2>
@@ -219,7 +219,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="smartfony"
                   smooth={true}
-                  offset={-100}
+                  offset={-30}
                   duration={1000}
                 >
                   Smartfony
@@ -229,7 +229,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="akcesoria"
                   smooth={true}
-                  offset={-50}
+                  offset={-100}
                   duration={1000}
                 >
                   Akcesoria
@@ -302,7 +302,6 @@ const Wrapper = styled.nav`
   position: relative;
   box-sizing: border-box;
   background: #000;
-  /* border-bottom: 4px solid rgba(100, 47, 47); */
   opacity: 0;
   animation: showWrapper 1s 1 forwards;
 
@@ -320,17 +319,14 @@ const Wrapper = styled.nav`
   video {
     object-fit: cover;
     width: 100vw;
-    /* height: 24vh; */
     height: 100%;
     z-index: -2;
     opacity: 0.9;
     filter: brightness(0.8);
-    /* filter: saturate(0); */
   }
   .video-container {
     opacity: 1;
     width: 100vw;
-    /* height: 24vh; */
     height: 100%;
     position: absolute;
     top: 0;
@@ -345,14 +341,12 @@ const Wrapper = styled.nav`
     align-items: center;
     width: 100vw;
     background: rgba(0, 0, 0, 0.6);
-    /* background: rgba(0, 0, 0, 1); */
     @media screen and (min-width: 801px) {
       display: none;
     }
 
     .logo1 {
       padding: 0vh 1vw 0vh 1vw;
-      /* background: rgb(160, 64, 64, 0.5); */
       background: rgba(100, 24, 24, 1);
       height: 12vh;
       img {
@@ -375,7 +369,6 @@ const Wrapper = styled.nav`
           letter-spacing: 1px;
           display: flex;
           flex-direction: column;
-          /* align-items: center; */
           justify-content: center;
         }
       }
@@ -387,10 +380,7 @@ const Wrapper = styled.nav`
     .nav-header {
       display: flex;
       align-items: center;
-      justify-content: space-around;
       justify-content: space-between;
-      /* justify-content: center; */
-      /* padding: 1rem; */
       width: 100%;
       color: white;
     }
@@ -413,7 +403,6 @@ const Wrapper = styled.nav`
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      /* background: rgba(0, 0, 0, 0.8); */
     }
     .show-container {
       height: 10rem;
@@ -509,7 +498,6 @@ const Wrapper2 = styled.nav`
   video {
     object-fit: cover;
     width: 100vw;
-    /* height: 24vh; */
     height: 100%;
     z-index: -2;
     opacity: 0.9;
@@ -518,7 +506,6 @@ const Wrapper2 = styled.nav`
   .video-container {
     opacity: 1;
     width: 100vw;
-    /* height: 24vh; */
     height: 100%;
     position: absolute;
     top: 0;
@@ -560,7 +547,6 @@ const Wrapper2 = styled.nav`
           letter-spacing: 1px;
           display: flex;
           flex-direction: column;
-          /* align-items: center; */
           justify-content: center;
         }
       }
@@ -572,10 +558,7 @@ const Wrapper2 = styled.nav`
     .nav-header {
       display: flex;
       align-items: center;
-      justify-content: space-around;
       justify-content: space-between;
-      /* justify-content: center; */
-      /* padding: 1rem; */
       width: 100%;
       color: white;
     }
@@ -598,7 +581,6 @@ const Wrapper2 = styled.nav`
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      /* background: rgba(0, 0, 0, 0.8); */
     }
     .show-container {
       height: 10rem;

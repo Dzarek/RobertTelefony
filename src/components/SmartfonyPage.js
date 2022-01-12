@@ -1,18 +1,13 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
-// import Carousel from "@brainhubeu/react-carousel";
-// import "@brainhubeu/react-carousel/lib/style.css";
-// import { IoIosArrowDropleftCircle } from "react-icons/io";
-// import { IoIosArrowDroprightCircle } from "react-icons/io";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import { useState } from "react";
+import Carousel from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
+import { IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-// import { smartphonesData } from "../data";
-// import OneMobilePhone from "./OneMobilePhone";
 import SellPhone from "./SellPhone";
 
 import { GiExitDoor } from "react-icons/gi";
-// import { GiEntryDoor } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { ImMobile } from "react-icons/im";
 import { IoArrowUpCircle } from "react-icons/io5";
@@ -21,22 +16,36 @@ import smartfonCircle from "../images/smartphoneCircle.png";
 import arrowSmartfon from "../images/arrowSmartfone.png";
 import arrowSmartfonR from "../images/arrowSmartfoneR.png";
 import shakingHands from "../images/shaking-hands.jpg";
-import mobileMarks from "../images/MobileMarks.png";
+
+import AppleMark from "../images/marks/Apple.png";
+import HuaweiMark from "../images/marks/Huawei.png";
+import LGMark from "../images/marks/LG.png";
+import NokiaMark from "../images/marks/Nokia.png";
+import OPPOMark from "../images/marks/OPPO.png";
+import SamsungMark from "../images/marks/Samsung.png";
+import VivoMark from "../images/marks/Vivo.png";
+import XiaomiMark from "../images/marks/Xiaomi.png";
 
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showBuyNowMobile, setShowBuyNowMobile] = useState(false);
-  // const [data, setData] = useState(smartphonesData);
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
+  const phoneMarks = [
+    AppleMark,
+    HuaweiMark,
+    LGMark,
+    NokiaMark,
+    OPPOMark,
+    SamsungMark,
+    VivoMark,
+    XiaomiMark,
+  ];
+
   return (
     <Wrapper id="smartfony">
       <div className="main-section smartfon-section">
         <h2 className="title">Smartfony</h2>
         <img
-          // data-aos="zoom-in"
           className="smartfonCircle"
           src={smartfonCircle}
           alt="smartfon circle"
@@ -105,11 +114,33 @@ const Smartfony = () => {
                 </div>
                 <div className="marksAndContact">
                   <div className="modal-marks">
-                    <p>Różnorodność marek telefonów.</p>
-                    <img src={mobileMarks} alt="" />
+                    <h3>Różnorodność marek telefonów!</h3>
+                    <Carousel
+                      infinite
+                      autoPlay={3000}
+                      animationSpeed={2000}
+                      slidesPerPage={1}
+                      breakpoints={{
+                        900: {
+                          slidesPerPage: 1,
+                        },
+                      }}
+                      addArrowClickHandler
+                      stopAutoPlayOnHover
+                      arrowLeft={
+                        <IoIosArrowDropleftCircle className="arrowrRightLeftFeatures" />
+                      }
+                      arrowRight={
+                        <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
+                      }
+                    >
+                      {phoneMarks.map((item, index) => {
+                        return <img key={index} src={item} alt={index + 1} />;
+                      })}
+                    </Carousel>
                   </div>
                   <div className="modal-contact">
-                    <p>Odwiedź mój sklep i wybierz swój nowy telefon!</p>
+                    <h3>Odwiedź mój sklep i wybierz swój nowy telefon!</h3>
                     <h4>
                       <FaMapMarkerAlt className="modalIcon" />
                       Adama Mickiewicza 3, <br /> 38-300 Gorlice
@@ -120,38 +151,7 @@ const Smartfony = () => {
                   </div>
                 </div>
               </section>
-              {/* <button
-                onClick={() => setShowBuyNowMobile(true)}
-                className="buyNowBtn"
-              >
-                Zobacz aktualne promocje
-              </button> */}
             </div>
-            {/* <div className="buyNowMobile">
-              <Carousel
-                infinite
-                autoPlay={3000}
-                animationSpeed={2000}
-                slidesPerPage={3}
-                breakpoints={{
-                  900: {
-                    slidesPerPage: 1,
-                  },
-                }}
-                addArrowClickHandler
-                stopAutoPlayOnHover
-                arrowLeft={
-                  <IoIosArrowDropleftCircle className="arrowrRightLeftFeatures" />
-                }
-                arrowRight={
-                  <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
-                }
-              >
-                {smartphonesData.map((item) => {
-                  return <OneMobilePhone key={item.id} {...item} />;
-                })}
-              </Carousel>
-            </div> */}
           </div>
         </div>
         <div
@@ -174,12 +174,13 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  margin-top: 10vh;
-  /* max-width: 1360px; */
+  padding-top: 10vh;
+  background: #fff;
   .modalContentTitle {
     font-family: "Stick No Bills", sans-serif;
     font-size: 3rem;
     color: white;
+    color: #111;
     position: absolute;
     z-index: 999;
     top: 10vh;
@@ -255,13 +256,12 @@ const Wrapper = styled.div`
     top: 5vh;
     left: 5vw;
     font-size: 5rem;
-    color: #eee;
+    color: #111;
     background: transparent;
     border: none;
     cursor: pointer;
     transition: 0.5s;
     transform: rotateY(180deg);
-    /* animation: btnExit 1s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
       font-size: 3rem;
     }
@@ -272,19 +272,13 @@ const Wrapper = styled.div`
     top: 5vh;
     right: 5vw;
     font-size: 5rem;
-    color: #eee;
+    color: #111;
     background: transparent;
     border: none;
     cursor: pointer;
     transition: 0.5s;
-    /* animation: btnExit 1s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
       font-size: 3rem;
-    }
-  }
-  @keyframes btnExit {
-    100% {
-      color: #fff;
     }
   }
   .btn-exit:hover {
@@ -297,9 +291,6 @@ const Wrapper = styled.div`
     left: 22%;
     width: 15vw;
     transform: rotate(-30deg);
-    /* filter: grayscale(0.6); */
-
-    /* animation: arrowColor 3s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
       top: 28%;
       left: 15%;
@@ -313,8 +304,6 @@ const Wrapper = styled.div`
     right: 22%;
     width: 15vw;
     transform: rotate(-30deg);
-    /* animation: arrowColor 3s infinite alternate-reverse; */
-    /* filter: grayscale(0.6); */
 
     @media (orientation: portrait) and (max-width: 800px) {
       bottom: 28%;
@@ -323,11 +312,7 @@ const Wrapper = styled.div`
       transform: rotate(75deg);
     }
   }
-  @keyframes arrowColor {
-    100% {
-      filter: grayscale(0.6);
-    }
-  }
+
   .smartphone-container {
     display: flex;
     justify-content: space-between;
@@ -339,7 +324,6 @@ const Wrapper = styled.div`
       height: 8vw;
       font-size: 2rem;
       border-radius: 20px;
-      /* background: rgba(3, 31, 63, 0.8); */
       background: rgba(200, 21, 21, 1);
       color: white;
       position: absolute;
@@ -358,12 +342,8 @@ const Wrapper = styled.div`
       }
     }
     button:hover {
-      font-size: 2.2rem;
       background: rgba(120, 21, 21, 1);
-      filter: saturate(1);
-      @media (orientation: portrait) and (max-width: 800px) {
-        font-size: 1.5rem;
-      }
+      filter: none;
     }
     .buy-section {
       width: 50%;
@@ -397,8 +377,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: white;
-    /* height: 200vh; */
+    color: #111;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -417,78 +396,74 @@ const Wrapper = styled.div`
           font-size: 1rem;
         }
       }
+      @media (orientation: portrait) and (max-width: 800px) {
+        margin-top: 25vh;
+      }
+
       .modal-info {
         width: 60%;
         margin-bottom: 10vh;
         @media (orientation: portrait) and (max-width: 800px) {
           width: 90%;
-          margin-bottom: 2vh;
+          margin-bottom: 3vh;
         }
       }
       .marksAndContact {
         width: 80%;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
+
         @media (orientation: portrait) and (max-width: 800px) {
-          width: 90%;
+          width: 100%;
           flex-direction: column;
+        }
+      }
+      .modal-marks {
+        @media (orientation: portrait) and (max-width: 800px) {
+          background: #eee;
+          padding: 15px;
         }
       }
       .modal-contact,
       .modal-marks {
-        width: 30%;
+        width: 45%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         height: 40vh;
         @media (orientation: portrait) and (max-width: 800px) {
-          margin-bottom: 3vh;
-          width: 90%;
-          height: 20vh;
+          margin-bottom: 2vh;
+          width: 100%;
+          height: auto;
           font-size: 1rem;
         }
         img {
           width: 20vw;
-          height: 15vw;
           @media (orientation: portrait) and (max-width: 800px) {
-            width: 40vw;
-            height: 20vw;
+            width: 70%;
+          }
+        }
+        h3 {
+          color: rgb(120, 2, 2);
+          font-size: 2.5rem;
+          font-family: "Teko", sans-serif;
+          margin-bottom: 2vh;
+          text-transform: uppercase;
+          @media (orientation: portrait) and (max-width: 800px) {
+            font-size: 1.5rem;
+            margin-bottom: 1vh;
+            align-self: center;
           }
         }
       }
     }
   }
-  .buyNowBtn {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: "Teko", sans-serif;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    padding: 20px;
-    border-radius: 10px;
-    color: rgb(120, 2, 2);
-    box-shadow: 0 0 5px 1px white;
-    cursor: pointer;
-    animation: buyBtnAnimation 1s linear infinite alternate;
-    :hover {
-      animation: none;
-    }
-    @media (orientation: portrait) and (max-width: 800px) {
-      top: 100%;
-      font-size: 1.1rem;
-      padding: 10px;
-      box-shadow: 0 0 5px 1px white;
-    }
+  .arrowrRightLeftFeatures {
+    color: rgba(120, 21, 21, 1);
   }
-  @keyframes buyBtnAnimation {
-    100% {
-      box-shadow: none;
-    }
-  }
+
   .modalIcon {
     margin-right: 1vw;
   }

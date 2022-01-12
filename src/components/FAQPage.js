@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { BsFillQuestionOctagonFill } from "react-icons/bs";
 import {
@@ -14,7 +13,6 @@ import questionMark1 from "../images/questionMark1.jpg";
 import Student from "../images/Student.mp4";
 
 const FAQPage = () => {
-  // const [questions, setQuestions] = useState(questionsData);
   return (
     <Wrapper id="faq">
       <div className="main-section">
@@ -127,18 +125,12 @@ const Wrapper = styled.div`
     text-shadow: 0 0 6px black;
   }
   .titleLine {
-    /* width: 5vw; */
     width: 20vw;
     height: 5px;
     background: whitesmoke;
-    /* animation: lineBigger 1s infinite alternate; */
     border-bottom: 2px solid black;
   }
-  @keyframes lineBigger {
-    100% {
-      width: 20vw;
-    }
-  }
+
   .faqContent {
     margin: 5vh auto;
     display: flex;
@@ -181,11 +173,9 @@ const Wrapper = styled.div`
   .singleQuestion {
     margin: 2vh auto;
     padding: 10px 20px;
-    /* width: 90%; */
     width: 35vw;
     background: rgba(0, 0, 0, 0.9);
     color: white;
-    /* box-shadow: 0 0 5px 1px whitesmoke; */
     @media (orientation: portrait) and (max-width: 800px) {
       width: 100%;
     }

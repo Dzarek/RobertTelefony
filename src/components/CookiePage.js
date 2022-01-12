@@ -1,9 +1,14 @@
 import React from "react";
+import styled from "styled-components";
+import { ImCross } from "react-icons/im";
 
-const Cookie = () => {
+const Cookie = ({ handleVisibleCookie }) => {
   return (
     <>
-      <div className="privateCookie">
+      <Wrapper>
+        <button onClick={handleVisibleCookie}>
+          <ImCross />
+        </button>
         <h1>Polityka Prywatności i Cookies</h1>
         <h2>Polityka Prywatności</h2>
         <p>
@@ -15,8 +20,8 @@ const Cookie = () => {
         </p>
         <p>
           {" "}
-          Administratorem Pani/Pana danych osobowych jest Dorota Janas, 31-222
-          Kraków, adres e-mail: stepiendorota18@gmail.com tel. 512 235 727.{" "}
+          Administratorem Pani/Pana danych osobowych jest Robert Kamiński,
+          38-300 Gorlice, adres e-mail: aaaaa@gmail.com tel. 791 838 332.{" "}
         </p>
         <p>
           {" "}
@@ -29,12 +34,12 @@ const Cookie = () => {
           nazwisko, adres korespondencyjny, mail, numer telefonu, adres
           rozliczeniowy, NIP) mogą być przekazane Administratorowi za pomocą
           podanego numeru telefonu, adresu e-mail, oraz formularza dostępnego na
-          stronie internetowej dorotaszydelkuje.com. Dane mogą być zbierane
-          także podczas firmowych eventów jak wystawy, targi, pokazy.{" "}
+          stronie internetowej robert-telefony.pl. Dane mogą być zbierane także
+          podczas firmowych eventów jak wystawy, targi, pokazy.{" "}
         </p>
         <p>
           {" "}
-          Nasza strona internetowa dorotaszydelkuje.pl nie zbiera w sposób
+          Nasza strona internetowa robert-telefony.pl nie zbiera w sposób
           automatyczny żadnych informacji, z wyjątkiem informacji zawartych w
           plikach cookies. Więcej o plikach cookies (tzw. „ciasteczka”) w naszej
           Polityce cookies.{" "}
@@ -44,7 +49,7 @@ const Cookie = () => {
           Przetwarzanie Pani/Pana danych osobowych będzie się odbywać na
           podstawie art. 6 RODO. Administrator powołuje się na prawnie
           uzasadniony interes, którym jest zbieranie danych statystycznych i
-          analizowanie ruchu na stronie internetowej.Państwa dane zbierane są w
+          analizowanie ruchu na stronie internetowej. Państwa dane zbierane są w
           celu:{" "}
           <li>
             prowadzenie korespondencji z Klientami, w tym udzielania odpowiedzi
@@ -110,7 +115,7 @@ const Cookie = () => {
         <h2>Polityka Cookies</h2>
         <p>
           Serwis nie zbiera w sposób automatyczny żadnych informacji, z
-          wyjątkiem informacji zawartych w plikach cookies.Pliki cookies (tzw.
+          wyjątkiem informacji zawartych w plikach cookies. Pliki cookies (tzw.
           „ciasteczka”) stanowią dane informatyczne, w szczególności pliki
           tekstowe, które przechowywane są w urządzeniu końcowym Użytkownika
           Serwisu i przeznaczone są do korzystania ze stron internetowych
@@ -121,7 +126,7 @@ const Cookie = () => {
         <p>
           Podmiotem zamieszczającym na urządzeniu końcowym Użytkownika Serwisu
           pliki cookies oraz uzyskującym do nich dostęp jest operator Serwisu –
-          Dorota Janas.
+          Robert Kamiński.
         </p>
         <p>
           Pliki cookies wykorzystywane są w celu: <br /> 1. Dostosowania
@@ -160,9 +165,60 @@ const Cookie = () => {
           Polska, które udostępniło jej wzór (© IAB Polska) na stronie
           www.wszystkoociasteczkach.pl.
         </span>
-      </div>
+        {/* </div> */}
+      </Wrapper>
     </>
   );
 };
+
+const Wrapper = styled.div`
+  background-color: #111;
+  width: 90vw;
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  color: white;
+  overflow: auto;
+  padding: 30px;
+  border-radius: 5px;
+  border: 5px solid rgba(120, 10, 10, 1);
+  box-shadow: 0 0 8vw 5vw white;
+  h2,
+  h1 {
+    text-align: center;
+    text-shadow: none;
+  }
+  h2 {
+    color: rgba(120, 10, 10, 1);
+    text-transform: uppercase;
+  }
+  button {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: rgba(120, 10, 10, 1);
+    cursor: pointer;
+    padding: 10px;
+  }
+  @media (orientation: portrait) and (max-width: 800px) {
+    width: 100vw;
+    height: 100vh;
+    box-shadow: none;
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 10vh;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+`;
 
 export default Cookie;

@@ -29,7 +29,6 @@ const ServicePage = () => {
           <h2 className="title">Serwis</h2>
           <div className="titleLine"></div>
         </div>
-        {/* <h2 className="title">Serwis</h2> */}
         <div className="serviceWrapper">
           <h3>
             Twój telefon się zepsuł? Wyświetlacz jest wylany? Nie ładuje? NIE
@@ -139,11 +138,9 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    /* animation: moveBar 5s infinite linear; */
     @media (orientation: portrait) and (max-width: 800px) {
       animation: none;
       flex-wrap: wrap;
-      /* margin: 3vh; */
       justify-content: center;
       height: 28vh;
     }
@@ -169,21 +166,6 @@ const Wrapper = styled.div`
     }
   }
 
-  @keyframes moveBar {
-    0% {
-      transform: translateX(100vw);
-    }
-    15% {
-      transform: translateX(0vw);
-    }
-    85% {
-      transform: translateX(0vw);
-    }
-
-    100% {
-      transform: translateX(-100vw);
-    }
-  }
   .titleContainer {
     display: flex;
     justify-content: center;
@@ -197,18 +179,12 @@ const Wrapper = styled.div`
   }
 
   .titleLine {
-    /* width: 5vw; */
     width: 20vw;
     height: 5px;
     background: white;
-    /* animation: lineBigger 1s infinite alternate; */
     border-bottom: 2px solid black;
   }
-  @keyframes lineBigger {
-    100% {
-      width: 20vw;
-    }
-  }
+
   .serviceIcon {
     font-size: 2rem;
     margin-top: 2vh;

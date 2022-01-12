@@ -79,7 +79,8 @@ span {
 /* SmartfonPage */
 
 .smartphone-modal {
-  background: rgba(0, 0, 0);
+  /* background: rgba(0, 0, 0); */
+  background: rgba(255, 255, 255, 0.99);
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -198,4 +199,10 @@ span {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+}
+
+.cookieLink {
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(200, 2, 2);
 }

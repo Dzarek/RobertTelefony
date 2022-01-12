@@ -9,7 +9,7 @@ const AccessoriesPage = () => {
   const powerbanki = accessoriesData.powerbanki;
   const głośniki = accessoriesData.głośniki;
   const memoriesCard = accessoriesData.memoriesCard;
-  const słuchawki = accessoriesData.słuchawki;
+  const others = accessoriesData.others;
   const [showAccessories, setShowAccessories] = useState(false);
 
   return (
@@ -31,7 +31,7 @@ const AccessoriesPage = () => {
               onClick={() => setShowAccessories(szkła)}
             >
               <TiArrowRightOutline className="icon" />
-              Szkła
+              Szkła i Folie
             </li>
             <li
               className={showAccessories === powerbanki && "activeItem"}
@@ -47,7 +47,7 @@ const AccessoriesPage = () => {
             >
               {" "}
               <TiArrowRightOutline className="icon" />
-              Głośniki Bluetooth
+              Głośniki i Słuchawki
             </li>
             <li
               className={showAccessories === memoriesCard && "activeItem"}
@@ -58,8 +58,8 @@ const AccessoriesPage = () => {
               Karty Pamięci
             </li>
             <li
-              className={showAccessories === słuchawki && "activeItem"}
-              onClick={() => setShowAccessories(słuchawki)}
+              className={showAccessories === others && "activeItem"}
+              onClick={() => setShowAccessories(others)}
             >
               {" "}
               <TiArrowRightOutline className="icon" />
@@ -101,8 +101,7 @@ const AccessoriesPage = () => {
 
 const Wrapper = styled.div`
   .main-section {
-    background: #fff;
-    padding: 10vh 0;
+    padding-bottom: 10vh;
     h3 {
       text-transform: uppercase;
       color: #222;
@@ -165,6 +164,7 @@ const Wrapper = styled.div`
         font-family: "Cairo", sans-serif;
         font-style: italic;
         text-align: justify;
+        font-weight: bold;
         @media (orientation: portrait) and (max-width: 800px) {
           font-size: 1rem;
           margin-top: 0vh;
@@ -177,7 +177,7 @@ const Wrapper = styled.div`
     .accessoriesItems {
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
       width: 100%;
 
@@ -210,7 +210,6 @@ const Wrapper = styled.div`
           font-family: "Teko", sans-serif;
           letter-spacing: 2px;
           color: rgb(120, 2, 2);
-          text-transform: uppercase;
           font-size: 1.5rem;
           text-align: center;
         }

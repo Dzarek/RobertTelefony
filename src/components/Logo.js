@@ -25,8 +25,6 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
-  /* opacity: 0.8; */
-  /* background: #000; */
   background: rgba(0, 0, 0, 0.8);
   .logo-wrapper {
     display: flex;
@@ -36,11 +34,9 @@ const Wrapper = styled.div`
     height: 12vh;
     @media (orientation: portrait) and (max-width: 800px) {
       width: 100%;
-      /* justify-content: space-between; */
     }
     .logo1 {
       padding: 0vh 2vw 0vh 2vw;
-      background: rgb(160, 64, 64, 0.5);
       background: rgb(100, 34, 34, 1);
       height: 12vh;
       img {
@@ -56,7 +52,6 @@ const Wrapper = styled.div`
       h2 {
         text-shadow: none;
         font-family: "Teko", sans-serif;
-        color: rgb(140, 64, 64);
         color: rgb(120, 34, 34);
         letter-spacing: 2px;
         @media (orientation: portrait) and (max-width: 800px) {

@@ -46,7 +46,6 @@ const ContactPage = () => {
 };
 
 const Wrapper = styled.div`
-  /* height: 100vh; */
   padding-bottom: 5vh;
 
   .borderBetween {
@@ -55,25 +54,11 @@ const Wrapper = styled.div`
     align-items: center;
     width: 2px;
     background: rgb(120, 2, 2);
-    /* height: 20vh; */
     height: 50vh;
-    /* animation: borderBigger 1s infinite alternate; */
     @media (orientation: portrait) and (max-width: 800px) {
-      /* width: 20vw; */
       width: 80vw;
       height: 2px;
-      /* animation: borderBigger2 1s infinite alternate; */
       margin: 5vh auto 0;
-    }
-  }
-  @keyframes borderBigger {
-    100% {
-      height: 60vh;
-    }
-  }
-  @keyframes borderBigger2 {
-    100% {
-      width: 80vw;
     }
   }
   .contactContainer {

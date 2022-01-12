@@ -51,7 +51,7 @@ const SellPhone = () => {
 const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  color: white;
+  color: #111;
   position: relative;
   font-family: "Cairo", sans-serif;
 
@@ -87,9 +87,12 @@ const Wrapper = styled.div`
     }
 
     .part1 {
-      width: 50vw;
+      width: 60vw;
       text-align: center;
       height: 20vh;
+      h3 {
+        font-weight: normal;
+      }
       @media (orientation: portrait) and (max-width: 800px) {
         width: 95vw;
         height: 25vh;
@@ -100,7 +103,7 @@ const Wrapper = styled.div`
       display: flex;
       justify-content: space-between;
       margin: 0 auto 10vh;
-      width: 60vw;
+      width: 70vw;
       height: 30vh;
       @media (orientation: portrait) and (max-width: 800px) {
         width: 95vw;
@@ -124,6 +127,7 @@ const Wrapper = styled.div`
           font-size: 3rem;
           font-family: "Teko", sans-serif;
           margin-bottom: 3vh;
+          text-transform: uppercase;
           @media (orientation: portrait) and (max-width: 800px) {
             font-size: 1.5rem;
             margin-bottom: 1vh;
@@ -138,6 +142,7 @@ const Wrapper = styled.div`
           height: 50vh;
           list-style: none;
           font-size: 1.4rem;
+          font-weight: bold;
           @media (orientation: portrait) and (max-width: 800px) {
             height: auto;
             font-size: 1rem;
@@ -148,7 +153,7 @@ const Wrapper = styled.div`
   }
   .icon {
     margin-right: 1vw;
-    color: rgb(120, 2, 2);
+    color: rgb(200, 2, 2);
   }
 `;
 export default SellPhone;

@@ -97,9 +97,9 @@ const Wrapper = styled.div`
       @media screen and (max-width: 800px) {
         width: 90vw;
         height: auto;
-        font-size: 0.9rem;
         margin-bottom: 3vh;
         h3 {
+          font-size: 1.1rem;
           font-weight: bold;
         }
       }

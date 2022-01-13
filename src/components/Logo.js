@@ -44,10 +44,10 @@ const Wrapper = styled.div`
         /* width: 24vw; */
         height: 12vh;
         /* filter: brightness(1) saturate(0.3); */
-        filter: brightness(1) saturate(0.1);
+        filter: brightness(1) saturate(0.3);
         transform: rotateY(180deg);
         border-radius: 5px;
-        opacity: 0.7;
+        /* opacity: 0.7; */
       }
     }
     .logo2 {

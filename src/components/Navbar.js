@@ -354,7 +354,7 @@ const Wrapper = styled.nav`
         height: 5vh; */
         width: 24vw;
         height: 12vh;
-        filter: saturate(0.5);
+        filter: saturate(0.2) brightness(1);
 
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
@@ -537,7 +537,7 @@ const Wrapper2 = styled.nav`
         height: 5vh; */
         width: 24vw;
         height: 12vh;
-        filter: saturate(0.5);
+        filter: saturate(0.2) brightness(1);
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
       }

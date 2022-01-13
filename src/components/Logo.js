@@ -41,13 +41,10 @@ const Wrapper = styled.div`
       /* background: #eee; */
       height: 12vh;
       img {
-        /* width: 24vw; */
+        width: 15vh;
         height: 12vh;
-        /* filter: brightness(1) saturate(0.3); */
-        filter: brightness(1) saturate(0.3);
-        transform: rotateY(180deg);
+        filter: brightness(0.6) saturate(0.5);
         border-radius: 5px;
-        /* opacity: 0.7; */
       }
     }
     .logo2 {

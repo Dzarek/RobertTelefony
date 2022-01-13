@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
             <p>
               {" "}
-              <GoMail className="icon" /> sprzedajtelefon@gmail.com
+              <GoMail className="icon" /> komisgorlice@wp.pl
             </p>
           </section>
           <section className="footerNav">
@@ -94,7 +94,7 @@ const Footer = () => {
         </div>
         <div className="footerCopyrights">
           <p>
-            &copy; {new Date().getFullYear()} Kamiński Robert - Telefony
+            &copy; 2003 - {new Date().getFullYear()} Kamiński Robert - Telefony
             Komórkowe. Wszelkie prawa zastrzeżone.
           </p>
         </div>

@@ -7,7 +7,7 @@ const AboutMePage = () => {
       <div className="main-section">
         <div className="titleContainer">
           <div className="titleLine"></div>
-          <h2 className="title">O mnie</h2>
+          <h2 className="title">O nas</h2>
           <div className="titleLine"></div>
         </div>
         <div className="aboutMeInfo">
@@ -15,13 +15,14 @@ const AboutMePage = () => {
           <div className="aboutMeWrapper">
             <img src={robertImg} alt="" />
             <h3>
-              Nazywam się Robert Kamiński i od x lat prowadzę jeden z oddziałów{" "}
-              <span>AktivGSM</span>. Mój sklep zlokalizowany jest w samym
-              centrum miasta Gorlice, przy <span>ul. Adama Mickiewicza 3</span>.{" "}
-              Zawsze interesowałem się nowościami technologicznymi i swoją uwagę
-              skupiłem na telefonach. Mam nadzieję że moją wiedzą i
-              doświadczeniem pomogę Ci w doborze odpowiedniego{" "}
-              <span>telefonu</span>.
+              Jesteśmy serwisem komórkowym który funkcjonuje już od{" "}
+              <span>2003</span> roku. U nas <span>kupisz, sprzedasz</span> lub{" "}
+              <span>naprawisz</span> telefon jak również <span>akcesoria</span>{" "}
+              do niego. Nasz sklep zlokalizowany jest w samym centrum miasta
+              Gorlice, przy <span>ul. Adama Mickiewicza 3</span>. Uwielbiamy
+              nowości technologiczne a naszą uwagę skupiliśmy na telefonach.
+              Mamy nadzieję że naszą wiedzą i doświadczeniem pomożemy Ci w
+              doborze odpowiedniego <span>telefonu</span>.
             </h3>
           </div>
         </div>

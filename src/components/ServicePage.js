@@ -50,8 +50,8 @@ const ServicePage = () => {
           </section>
           <h3>
             UWAGA !!! <br /> Może nie musisz już kupować nowego. Przyjdź do
-            mojego sklepu, a ja sprawdzę czy można go jeszcze oddać do serwisu i
-            skutecznie naprawić. <br />{" "}
+            naszego sklepu, a my sprawdzimy czy można go jeszcze oddać do
+            serwisu i skutecznie naprawić. <br />{" "}
             <BsFillEmojiWinkFill className="serviceIcon" />
           </h3>
         </div>
@@ -72,7 +72,7 @@ const ServicePage = () => {
               <FaWalking />
             </h1>
             <p>
-              Odwiedź mój sklep: <br /> Adama Mickiewicza 3, <br /> 38-300
+              Odwiedź nasz sklep: <br /> Adama Mickiewicza 3, <br /> 38-300
               Gorlice
             </p>
             <h1>01.</h1>

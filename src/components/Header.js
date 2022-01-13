@@ -21,17 +21,20 @@ const Header = () => {
             zarobić?
           </h1>
           <h1>
-            W mojej ofercie znajdziesz również <br /> TELEFONY DLA SENIORA !{" "}
+            W naszej ofercie znajdziesz również <br /> TELEFONY DLA SENIORA !{" "}
           </h1>
           <h1>
             Słuchawki, Ładowarki, Powerbanki, Szkła Ochronne, <br />
             Głośniki Bluetooth i wiele innych...
           </h1>
           <h1>
-            Pęknięta szybka? <br /> Spokojnie, dopasuje i założę Ci nową ;)
+            Pęknięta szybka? <br /> Spokojnie, dopasujemy i założymy Ci nową ;)
           </h1>
           <h1>
-            Twój telefon wymaga serwisu? <br /> Postaram się Ci pomóc!
+            Twój telefon wymaga serwisu? <br /> Postaramy się Ci pomóc!
+          </h1>
+          <h1>
+            Punkt DPD <br /> Tutaj nadasz i odbierzesz paczkę!
           </h1>
         </Carousel>
       </div>

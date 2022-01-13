@@ -26,7 +26,7 @@ const ContactPage = () => {
               <span>Telefon:</span> 791 838 332
             </p>
             <p>
-              <span>E-mail:</span> sprzedajtelefon@gmail.com
+              <span>E-mail:</span> komisgorlice@wp.pl
             </p>
           </div>
           <div className="mapsgo">

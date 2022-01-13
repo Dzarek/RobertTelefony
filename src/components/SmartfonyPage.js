@@ -109,17 +109,17 @@ const Smartfony = () => {
               <section className="modalContentOne">
                 <div className="modal-info">
                   <p>
-                    W mojej ofercie znajdują się zarówno telefony nowe jak i
+                    W naszej ofercie znajdują się zarówno telefony nowe jak i
                     używane, z wyższych i niższych półek cenowych, a więc każdy
                     znajdzie coś dla siebie.
                   </p>
                   <p>
                     Obok najnowszych modeli smartfonów nie zabrakło również
                     miejsca dla telefonów przeznaczonych dla seniorów. Starszym
-                    klientom oferuje komórki, które posiadają optymalny dla ich
-                    możliwości interfejs. Taki telefon powinien mieć większe
+                    klientom oferujemy komórki, które posiadają optymalny dla
+                    ich możliwości interfejs. Taki telefon powinien mieć większe
                     przyciski i ikony na ekranie aby łatwiej było z niego
-                    korzystać
+                    korzystać.
                   </p>
                 </div>
                 <div className="marksAndContact">
@@ -150,7 +150,7 @@ const Smartfony = () => {
                     </Carousel>
                   </div>
                   <div className="modal-contact">
-                    <h3>Odwiedź mój sklep i wybierz swój nowy telefon!</h3>
+                    <h3>Odwiedź nasz sklep i wybierz swój nowy telefon!</h3>
                     <h4>
                       <FaMapMarkerAlt className="modalIcon" />
                       Adama Mickiewicza 3, 38-300 Gorlice

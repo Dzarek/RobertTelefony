@@ -36,17 +36,17 @@ export const questionsData = [
   {
     id: 1,
     title: "Czy można płacić kartą?",
-    info: "Niestety nie posiadam terminala w swoim sklepie. Ale spokojnie, bankomat znajduje się 100m od sklepu.",
+    info: "Niestety nie posiadamy terminala w naszym sklepie. Ale spokojnie, bankomat znajduje się 100m od nas.",
   },
   {
     id: 2,
     title: "Czy dostanę telefon zastępczy na czas naprawy?",
-    info: "Nie, nie daję telefonu zastępczego. Dobrze byś przygotował/przygotowała sobie jakiś stary telefon na okres naprawy.",
+    info: "Nie, nie dajemy telefonu zastępczego. Dobrze byś przygotował/przygotowała sobie jakiś stary telefon na okres naprawy.",
   },
   {
     id: 3,
     title: "Czy moje pliki w telefonie zostaną utracone w trakcie naprawy?",
-    info: "Bardzo możliwe, ale zależy to od typu naprawy. W wielu przypadkach wiąże się to z aktualizowaniem oprogramowania i Twoje dane mogą zostać utracone. Przed oddaniem urządzenia do naprawy postaraj się zrobić sobie kopię zapasową swoich zdjęć i innych danych.",
+    info: "Bardzo możliwe, ale zależy to od typu naprawy. W wielu przypadkach wiąże się to z aktualizowaniem oprogramowania i Twoje dane mogą zostać utracone. Przed oddaniem urządzenia do naprawy postaraj się zrobić kopię zapasową swoich zdjęć i innych danych.",
   },
   {
     id: 4,
@@ -57,12 +57,12 @@ export const questionsData = [
     id: 5,
     title:
       "Czy można wymienić tylko pękniętą szybkę w telefonie bez wymiany całego wyświetlacza?",
-    info: "To zależy od modelu telefonu i stopnia uszkodzenia. W większości przypadków jest to możliwe jednak że, nie we szystkich jest to opłacalne. Czasami lepiej zapłacić ciut więcej i wymienić cały wyświetlacz.",
+    info: "To zależy od modelu telefonu i stopnia uszkodzenia. W większości przypadków jest to możliwe jednak że, nie we wszystkich jest to opłacalne. Czasami lepiej zapłacić ciut więcej i wymienić cały wyświetlacz.",
   },
   {
     id: 6,
     title: "Czy znajdę tutaj jakiś telefon odpowiedni dla seniora?",
-    info: "Tak, w mojej ofercie są również telefony dla seniorów! Wiele starszych osób ma problemy z obsługą nowych smartfonów i czują się niekomfortowo używając ich. W moim sklepie pomogę dobrać odpowiedni telefon, który będzie funkcjonalny i jednocześnie łatwy w obsłudze.",
+    info: "Tak, w naszej ofercie są również telefony dla seniorów! Wiele starszych osób ma problemy z obsługą nowych smartfonów i czują się niekomfortowo używając ich. W naszym sklepie pomożemy dobrać odpowiedni telefon, który będzie funkcjonalny i jednocześnie łatwy w obsłudze.",
   },
 ];
 

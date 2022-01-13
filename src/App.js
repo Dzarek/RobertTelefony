@@ -10,6 +10,7 @@ import FAQPage from "./components/FAQPage";
 import ContactPage from "./components/ContactPage";
 import Footer from "./components/Footer";
 import GeneralInfo from "./components/GeneralInfo";
+import DPD from "./components/DPD";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <AboutMePage />
         <GeneralInfo />
         <FAQPage />
+        <DPD />
         <ContactPage />
         <Footer />
       </Router>

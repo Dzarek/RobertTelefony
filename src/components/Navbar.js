@@ -61,11 +61,15 @@ const Navbar = () => {
             </Link>
             <h2>|</h2>
             <Link to="o_mnie" smooth={true} offset={-300} duration={1500}>
-              O mnie
+              O nas
             </Link>
             <h2>|</h2>
             <Link to="faq" smooth={true} offset={-250} duration={2000}>
               FAQ
+            </Link>
+            <h2>|</h2>
+            <Link to="dpd" smooth={true} offset={-250} duration={2000}>
+              Punkt DPD
             </Link>
             <h2>|</h2>
             <Link to="kontakt" smooth={true} offset={-300} duration={2000}>
@@ -130,7 +134,7 @@ const Navbar = () => {
                   offset={-600}
                   duration={1500}
                 >
-                  O mnie
+                  O nas
                 </Link>
 
                 <Link
@@ -141,6 +145,15 @@ const Navbar = () => {
                   duration={2000}
                 >
                   FAQ
+                </Link>
+                <Link
+                  onClick={toggleLinks}
+                  to="dpd"
+                  smooth={true}
+                  offset={-500}
+                  duration={2000}
+                >
+                  Punkt DPD
                 </Link>
 
                 <Link
@@ -183,11 +196,15 @@ const Navbar = () => {
             </Link>
             <h2>|</h2>
             <Link to="o_mnie" smooth={true} offset={-100} duration={1500}>
-              O mnie
+              O nas
             </Link>
             <h2>|</h2>
             <Link to="faq" smooth={true} offset={-50} duration={2000}>
               FAQ
+            </Link>
+            <h2>|</h2>
+            <Link to="dpd" smooth={true} offset={-50} duration={2000}>
+              Punkt DPD
             </Link>
             <h2>|</h2>
             <Link to="kontakt" smooth={true} offset={-100} duration={2000}>
@@ -252,7 +269,7 @@ const Navbar = () => {
                   offset={-100}
                   duration={1500}
                 >
-                  O mnie
+                  O nas
                 </Link>
 
                 <Link
@@ -263,6 +280,15 @@ const Navbar = () => {
                   duration={2000}
                 >
                   FAQ
+                </Link>
+                <Link
+                  onClick={toggleLinks}
+                  to="dpd"
+                  smooth={true}
+                  offset={-50}
+                  duration={2000}
+                >
+                  Punkt DPD
                 </Link>
 
                 <Link
@@ -352,11 +378,9 @@ const Wrapper = styled.nav`
       img {
         /* margin: 3.5vh auto;
         height: 5vh; */
-        width: 24vw;
+        width: 13vh;
         height: 12vh;
-
-        filter: saturate(0.2) brightness(1);
-
+        filter: brightness(0.6) saturate(0.5);
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
       }
@@ -442,7 +466,7 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 65vw;
+    width: 70vw;
     height: 100%;
 
     @media screen and (max-width: 800px) {
@@ -536,9 +560,9 @@ const Wrapper2 = styled.nav`
       img {
         /* margin: 3.5vh auto;
         height: 5vh; */
-        width: 24vw;
+        width: 13vh;
         height: 12vh;
-        filter: saturate(0.2) brightness(1);
+        filter: brightness(0.6) saturate(0.5);
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
       }
@@ -625,7 +649,7 @@ const Wrapper2 = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 65vw;
+    width: 70vw;
     height: 100%;
     @media screen and (max-width: 800px) {
       display: none;

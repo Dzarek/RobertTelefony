@@ -9,18 +9,18 @@ const SellPhone = () => {
         <div className="part1">
           <h3>
             Jeśli potrzebujesz szybko gotówki lub twój telefon nie spełnia już
-            twoich oczekiwań i chcesz kupić coś nowego, zapraszam do mojego
-            sklepu! Odkupie twój telefon w atrakcyjnej cenie. Możesz u mnie
+            twoich oczekiwań i chcesz kupić coś nowego, zapraszamy do naszego
+            sklepu! Odkupimy twój telefon w atrakcyjnej cenie. Możesz u nas
             sprzedać telefon zarówno z niższych półek cenowych jak i te droższe.
           </h3>
         </div>
         <div className="part2">
           <div className="fromMeYou">
-            <h3>Czego oczekuje?</h3>
+            <h3>Czego oczekujemy?</h3>
             <ul>
               <li>
                 <TiArrowRightOutline className="icon" />
-                Działającego telefonu - nie kupuje telefonów które wymagają
+                Działającego telefonu - nie kupujemy telefonów które wymagają
                 naprawy.
               </li>
               <li>

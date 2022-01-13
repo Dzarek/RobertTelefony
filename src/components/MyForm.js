@@ -42,7 +42,7 @@ class MyForm extends Component {
       <>
         <Wrapper>
           <form onSubmit={this.sendEmail}>
-            <h1>Jeśli masz jakieś pytania, śmiało napisz do mnie!</h1>
+            <h1>Jeśli masz jakieś pytania, śmiało napisz do nas!</h1>
             <div className="inputs">
               <input
                 type="text"

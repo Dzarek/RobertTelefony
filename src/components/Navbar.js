@@ -354,11 +354,8 @@ const Wrapper = styled.nav`
         height: 5vh; */
         width: 24vw;
         height: 12vh;
-<<<<<<< HEAD
+
         filter: saturate(0.2) brightness(1);
-=======
-        filter: saturate(0.5) brightless(0.7);
->>>>>>> 3df9dd311ea6d0c16d3cf180aaadf7f8acaa7509
 
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
@@ -541,11 +538,7 @@ const Wrapper2 = styled.nav`
         height: 5vh; */
         width: 24vw;
         height: 12vh;
-<<<<<<< HEAD
         filter: saturate(0.2) brightness(1);
-=======
-        filter: saturate(0.5) brightless(0.7);
->>>>>>> 3df9dd311ea6d0c16d3cf180aaadf7f8acaa7509
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
       }

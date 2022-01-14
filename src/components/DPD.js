@@ -1,12 +1,23 @@
 import styled from "styled-components";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import delivery1 from "../images/delivery1.png";
 
 const AboutMePage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Wrapper id="dpd" className="main-section">
       <h2 className="title">Punkt DPD</h2>
       <div className="infoAndImg">
-        <img src={delivery1} alt="delivery1" className="delivery1" />
+        <img
+          data-aos="zoom-in"
+          src={delivery1}
+          alt="delivery1"
+          className="delivery1"
+        />
         <p>W naszym sklepie odbierzesz i nadasz paczkę poprzez firmę DPD.</p>
       </div>
       <div className="linksDPD">
@@ -34,7 +45,6 @@ const Wrapper = styled.div`
   margin-top: -10vh;
   background: #111;
   height: 100vh;
-  min-height: 80vh;
   color: white;
   display: flex;
   flex-direction: column;

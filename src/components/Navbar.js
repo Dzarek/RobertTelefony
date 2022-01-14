@@ -150,7 +150,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="dpd"
                   smooth={true}
-                  offset={-500}
+                  offset={-600}
                   duration={2000}
                 >
                   Punkt DPD

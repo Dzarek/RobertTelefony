@@ -21,7 +21,7 @@ const Cookie = ({ handleVisibleCookie }) => {
         <p>
           {" "}
           Administratorem Pani/Pana danych osobowych jest Robert Kamiński,
-          38-300 Gorlice, adres e-mail: aaaaa@gmail.com tel. 791 838 332.{" "}
+          38-300 Gorlice, adres e-mail: komisgorlice@wp.pl tel. 791 838 332.{" "}
         </p>
         <p>
           {" "}

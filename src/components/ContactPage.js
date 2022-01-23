@@ -53,7 +53,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 2px;
-    background: rgb(120, 2, 2);
+    background: var(--mainRed);
     height: 50vh;
     @media screen and (max-width: 800px) {
       width: 80vw;
@@ -109,7 +109,7 @@ const Wrapper = styled.div`
     h1 {
       font-family: "Teko", sans-serif;
       text-align: center;
-      color: rgb(120, 2, 2);
+      color: var(--mainRed);
       font-size: 2rem;
       margin: 5vh auto;
       letter-spacing: 2px;
@@ -124,7 +124,7 @@ const Wrapper = styled.div`
       }
     }
     span {
-      color: rgb(120, 2, 2);
+      color: var(--mainRed);
       text-shadow: none;
     }
   }
@@ -142,7 +142,7 @@ const Wrapper = styled.div`
       margin-top: 3vh;
       width: 100%;
       height: 40vh;
-      border: rgb(120, 2, 2) 2px solid;
+      border: var(--mainRed) 2px solid;
       border-radius: 10px;
     }
   }

@@ -138,7 +138,7 @@ const Wrapper = styled.div`
   }
   h3 {
     font-size: 1.5rem;
-    color: rgb(120, 2, 2);
+    color: var(--mainRed);
     text-align: center;
     margin-bottom: 3vh;
     margin-top: 3vh;
@@ -148,7 +148,7 @@ const Wrapper = styled.div`
   }
   .icon {
     margin-right: 10px;
-    color: rgb(120, 2, 2);
+    color: var(--mainRed);
   }
   .footerContent {
     display: flex;
@@ -204,7 +204,7 @@ const Wrapper = styled.div`
     }
   }
   .footerCopyrights {
-    border-top: 2px solid rgb(120, 2, 2);
+    border-top: 2px solid var(--mainRed);
     width: 80vw;
     display: flex;
     justify-content: center;

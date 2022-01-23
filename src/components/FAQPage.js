@@ -91,7 +91,7 @@ const Wrapper = styled.div`
       font-size: 1.8rem;
     }
     :hover {
-      color: rgb(70, 2, 2);
+      color: var(--mainRed);
     }
   }
   .icon {

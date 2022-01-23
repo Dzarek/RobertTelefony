@@ -34,7 +34,7 @@ const Header = () => {
             Twój telefon wymaga serwisu? <br /> Postaramy się Ci pomóc!
           </h1>
           <h1>
-            Punkt DPD <br /> Tutaj nadasz i odbierzesz paczkę!
+            Punkt Pickup DPD <br /> Tutaj nadasz i odbierzesz paczkę!
           </h1>
         </Carousel>
       </div>
@@ -51,13 +51,12 @@ const Wrapper = styled.div`
   margin: 0vh auto 0vh;
   background: #000;
   position: relative;
-  border-top: 4px solid rgba(100, 47, 47);
+  border-top: 4px solid var(--mainRed);
 
   .icon {
     margin-left: 1vw;
   }
   .img-container {
-    opacity: 0.4;
     height: 88vh;
     width: 100%;
     display: flex;
@@ -65,6 +64,7 @@ const Wrapper = styled.div`
     justify-content: center;
 
     img {
+      filter: brightness(0.5);
       width: 100%;
       height: 88vh;
     }
@@ -80,12 +80,17 @@ const Wrapper = styled.div`
     letter-spacing: 2px;
     h1 {
       width: 70%;
+      text-shadow: 2px 2px 2px black;
     }
 
     @media screen and (max-width: 800px) {
-      font-size: 0.8rem;
+      font-size: 1rem;
       line-height: 2;
       letter-spacing: 1px;
+      h1 {
+        width: 85%;
+        text-shadow: 2px 2px 2px black;
+      }
     }
   }
 `;

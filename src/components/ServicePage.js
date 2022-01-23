@@ -118,7 +118,7 @@ const ServicePage = () => {
 
 const Wrapper = styled.div`
   .infoBar {
-    background-color: rgba(50, 2, 2, 0.9);
+    background-color: rgba(120, 2, 2, 0.7);
     height: 10vh;
     width: 100vw;
     margin: 10vh auto;
@@ -188,7 +188,7 @@ const Wrapper = styled.div`
   .serviceIcon {
     font-size: 2rem;
     margin-top: 2vh;
-    color: rgb(120, 2, 2);
+    color: var(--mainRed);
     @media screen and (max-width: 800px) {
       font-size: 1.4rem;
     }
@@ -236,7 +236,7 @@ const Wrapper = styled.div`
         img {
           height: 50vh;
           width: 90%;
-          border: 2px solid rgb(70, 2, 2);
+          border: 2px solid var(--mainRed);
           border-radius: 10px;
           @media screen and (max-width: 800px) {
             height: 40vh;
@@ -250,7 +250,7 @@ const Wrapper = styled.div`
     text-align: center;
     text-transform: uppercase;
     font-size: 2.5rem;
-    text-shadow: 0px 0px 3px rgb(70, 2, 2);
+    text-shadow: 0px 0px 3px var(--mainRed);
     margin: 15vh auto 5vh;
     font-style: italic;
     font-family: "Stick No Bills", sans-serif;
@@ -275,7 +275,7 @@ const Wrapper = styled.div`
       width: 15vw;
       height: 35vh;
       background: rgba(0, 0, 0, 0.9);
-      border: rgb(120, 2, 2) 2px solid;
+      border: var(--mainRed) 2px solid;
       display: flex;
       flex-direction: column;
       justify-content: space-around;

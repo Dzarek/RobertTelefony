@@ -9,6 +9,7 @@ const AccessoriesPage = () => {
   const powerbanki = accessoriesData.powerbanki;
   const głośniki = accessoriesData.głośniki;
   const memoriesCard = accessoriesData.memoriesCard;
+  const bateries = accessoriesData.bateries;
   const others = accessoriesData.others;
   const [showAccessories, setShowAccessories] = useState(false);
 
@@ -58,6 +59,14 @@ const AccessoriesPage = () => {
               Karty Pamięci
             </li>
             <li
+              className={showAccessories === bateries && "activeItem"}
+              onClick={() => setShowAccessories(bateries)}
+            >
+              {" "}
+              <TiArrowRightOutline className="icon" />
+              Baterie
+            </li>
+            <li
               className={showAccessories === others && "activeItem"}
               onClick={() => setShowAccessories(others)}
             >
@@ -96,6 +105,7 @@ const AccessoriesPage = () => {
         </div>
       </div>
     </Wrapper>
+    // baterie
   );
 };
 
@@ -192,14 +202,14 @@ const Wrapper = styled.div`
           width: 100%;
         }
         img {
-          border: 2px solid rgb(70, 2, 2);
+          border: 2px solid var(--mainRed);
           border-radius: 10px;
           width: 10vw;
           height: 10vw;
           margin-bottom: 2vh;
-          box-shadow: 0 0 2px 1px rgb(70, 2, 2);
+          box-shadow: 0 0 2px 1px var(--mainRed);
           @media (orientation: portrait) and (max-width: 800px) {
-            border: 1px solid rgb(70, 2, 2);
+            border: 1px solid var(--mainRed);
             border-radius: 5px;
             width: 70vw;
             height: 70vw;
@@ -209,13 +219,13 @@ const Wrapper = styled.div`
         h5 {
           font-family: "Teko", sans-serif;
           letter-spacing: 2px;
-          color: rgb(120, 2, 2);
+          color: var(--mainRed);
           font-size: 1.5rem;
           text-align: center;
         }
       }
       h3 {
-        color: rgb(120, 2, 2);
+        color: var(--mainRed);
         display: flex;
         align-items: center;
       }
@@ -232,9 +242,9 @@ const Wrapper = styled.div`
       flex-direction: column;
       justify-content: space-around;
       padding-left: 10vw;
-      min-height: 50vh;
+      min-height: 55vh;
       @media screen and (max-width: 800px) {
-        min-height: 40vh;
+        min-height: 50vh;
       }
       li {
         font-size: 1.8rem;
@@ -249,7 +259,7 @@ const Wrapper = styled.div`
           font-size: 1.6rem;
         }
         :hover {
-          color: rgb(120, 2, 2);
+          color: var(--mainRed);
           margin-left: 2vw;
         }
       }
@@ -258,20 +268,20 @@ const Wrapper = styled.div`
         color: rgb(2, 7, 70);
         @media screen and (max-width: 800px) {
           margin-left: 10vw;
-          color: rgb(120, 2, 2);
+          color: var(--mainRed);
         }
         :hover {
           color: rgb(2, 7, 70);
           margin-left: 5vw;
           @media screen and (max-width: 800px) {
             margin-left: 10vw;
-            color: rgb(120, 2, 2);
+            color: var(--mainRed);
           }
         }
       }
     }
     .borderAccessories {
-      background-color: rgb(70, 2, 2);
+      background-color: var(--mainRed);
       width: 5px;
       height: 50vh;
       animation: borderBig 2s infinite alternate;

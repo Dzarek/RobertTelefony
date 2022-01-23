@@ -127,7 +127,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 800px) {
-      width: 95vw;
+      width: 90vw;
     }
     @media (orientation: landscape) and (max-width: 500px) {
       width: 95vw;
@@ -141,18 +141,18 @@ const Wrapper = styled.div`
       background: #333;
       color: white;
       letter-spacing: 1px;
-      border: 2px solid rgb(120, 2, 2);
+      border: 2px solid var(--mainRed);
       border-radius: 10px;
       cursor: pointer;
       transition: 0.5s;
       :hover {
-        background: rgb(120, 2, 2);
+        background: var(--mainRed);
       }
     }
 
     h1 {
       text-align: center;
-      color: rgb(120, 2, 2);
+      color: var(--mainRed);
       font-family: "Teko", sans-serif;
       margin: 0 auto 5vh;
       font-size: 1.8rem;
@@ -167,7 +167,7 @@ const Wrapper = styled.div`
         width: 46%;
         font-size: 1rem;
         padding: 1vh 2%;
-        border: 2px solid rgb(120, 2, 2);
+        border: 2px solid var(--mainRed);
         border-radius: 10px;
         font-family: "Cairo", sans-serif;
       }
@@ -177,7 +177,7 @@ const Wrapper = styled.div`
       height: 25vh;
       padding: 2%;
       font-size: 1rem;
-      border: 2px solid rgb(120, 2, 2);
+      border: 2px solid var(--mainRed);
       border-radius: 10px;
       font-family: "Cairo", sans-serif;
     }
@@ -190,7 +190,7 @@ const Wrapper = styled.div`
         margin-right: 10px;
       }
       span {
-        color: rgb(120, 2, 2);
+        color: var(--mainRed);
         text-shadow: none;
         cursor: pointer;
       }

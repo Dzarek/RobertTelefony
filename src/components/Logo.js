@@ -43,7 +43,7 @@ const Wrapper = styled.div`
       img {
         width: 15vh;
         height: 12vh;
-        filter: brightness(0.6) saturate(0.5);
+        filter: brightness(0.8);
         border-radius: 5px;
       }
     }
@@ -55,7 +55,8 @@ const Wrapper = styled.div`
       h2 {
         text-shadow: none;
         font-family: "Teko", sans-serif;
-        color: rgb(120, 34, 34);
+        /* color: rgb(120, 34, 34); */
+        color: var(--mainRed);
         letter-spacing: 2px;
         @media screen and (max-width: 800px) {
           letter-spacing: 1px;

@@ -69,7 +69,7 @@ const Navbar = () => {
             </Link>
             <h2>|</h2>
             <Link to="dpd" smooth={true} offset={-250} duration={2000}>
-              Punkt DPD
+              Pickup DPD
             </Link>
             <h2>|</h2>
             <Link to="kontakt" smooth={true} offset={-300} duration={2000}>
@@ -150,10 +150,10 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="dpd"
                   smooth={true}
-                  offset={-600}
+                  offset={-550}
                   duration={2000}
                 >
-                  Punkt DPD
+                  Pickup DPD
                 </Link>
 
                 <Link
@@ -204,7 +204,7 @@ const Navbar = () => {
             </Link>
             <h2>|</h2>
             <Link to="dpd" smooth={true} offset={-50} duration={2000}>
-              Punkt DPD
+              Pickup DPD
             </Link>
             <h2>|</h2>
             <Link to="kontakt" smooth={true} offset={-100} duration={2000}>
@@ -288,7 +288,7 @@ const Navbar = () => {
                   offset={-50}
                   duration={2000}
                 >
-                  Punkt DPD
+                  Pickup DPD
                 </Link>
 
                 <Link
@@ -348,7 +348,7 @@ const Wrapper = styled.nav`
     height: 100%;
     z-index: -2;
     opacity: 0.9;
-    filter: brightness(0.8);
+    /* filter: brightness(0.8); */
   }
   .video-container {
     opacity: 1;
@@ -380,7 +380,7 @@ const Wrapper = styled.nav`
         height: 5vh; */
         width: 13vh;
         height: 12vh;
-        filter: brightness(0.6) saturate(0.5);
+        filter: brightness(0.8);
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
       }
@@ -393,7 +393,8 @@ const Wrapper = styled.nav`
       h2 {
         text-shadow: none;
         font-family: "Teko", sans-serif;
-        color: rgb(140, 64, 64);
+        /* color: rgb(140, 64, 64); */
+        color: var(--mainRed);
         letter-spacing: 2px;
         @media screen and (max-width: 800px) {
           letter-spacing: 1px;
@@ -511,7 +512,7 @@ const Wrapper2 = styled.nav`
   position: relative;
   box-sizing: border-box;
   background: #000;
-  border-bottom: 4px solid rgba(100, 47, 47);
+  border-bottom: 4px solid var(--mainRed);
   position: fixed;
   margin-top: -12vh;
   opacity: 0;
@@ -562,7 +563,7 @@ const Wrapper2 = styled.nav`
         height: 5vh; */
         width: 13vh;
         height: 12vh;
-        filter: brightness(0.6) saturate(0.5);
+        filter: brightness(0.8);
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
       }
@@ -575,7 +576,8 @@ const Wrapper2 = styled.nav`
       h2 {
         text-shadow: none;
         font-family: "Teko", sans-serif;
-        color: rgb(140, 64, 64);
+        /* color: rgb(140, 64, 64); */
+        color: var(--mainRed);
         letter-spacing: 2px;
         @media screen and (max-width: 800px) {
           letter-spacing: 1px;
@@ -688,7 +690,7 @@ const Wrapper2 = styled.nav`
     font-size: 2rem;
     background: transparent;
     border: none;
-    color: rgb(120, 2, 2);
+    color: var(--mainRed);
     transition: 0.5s;
     cursor: pointer;
   }

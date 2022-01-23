@@ -15,6 +15,9 @@ import memory2 from "./images/accessories/memory/sdxc.jpg";
 import inne1 from "./images/accessories/inne/uchwyt.jpg";
 import inne2 from "./images/accessories/inne/selfieSick.jpg";
 import inne3 from "./images/accessories/inne/ładowarkaSamochodowa.jpg";
+import batery1 from "./images/accessories/baterie/batery1.png";
+import batery2 from "./images/accessories/baterie/batery2.png";
+import batery3 from "./images/accessories/baterie/batery3.png";
 
 // import samsungGalaxyS20_1 from "./images/smartphones/samsungGalaxyS20-1.jpg";
 // import samsungGalaxyS20_2 from "./images/smartphones/samsungGalaxyS20-2.jpg";
@@ -162,6 +165,26 @@ export const accessoriesData = {
     ],
     info: "Karty pamięci są bardzo przydatne do: telefonów, głośników, aparatów, odtwarzaczy muzyki i wielu innych urządzeń. Im więcej pamięci posiadamy tym lepiej, jednakże przed zakupem należy sprawdzić do jakiej wielkości nasze urządzenie może obsłużyć kartę pamięci. ",
   },
+  bateries: {
+    items: [
+      {
+        id: 1,
+        name: "MAX-COM",
+        img: batery1,
+      },
+      {
+        id: 2,
+        name: "SAMSUNG",
+        img: batery2,
+      },
+      {
+        id: 2,
+        name: "NOKIA",
+        img: batery3,
+      },
+    ],
+    info: "Dla posiadaczy starszych modeli telefonów dostępne mamy nowe baterie. Jeśli szukasz baterii do konkretnego telefonu, zadzwoń do nas, a my sprawdzimy czy mamy taką w swojej ofercie.",
+  },
   others: {
     items: [
       {
@@ -180,7 +203,7 @@ export const accessoriesData = {
         img: inne3,
       },
     ],
-    info: "W moim sklepie znajdziesz również wiele innych przydatnych akcesorii jak np. uchwyty na telefon do auta, ładowarki samochodowe czy selfie sticki do robienia ładnych seflie. ",
+    info: "W moim sklepie znajdziesz również wiele innych przydatnych akcesorii jak np. uchwyty na telefon do auta, ładowarki samochodowe czy selfie sticki, które umożliwią Ci robienie efektownych zdjęć. ",
   },
 };
 

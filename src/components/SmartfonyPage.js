@@ -27,6 +27,20 @@ import VivoMark from "../images/marks/Vivo.png";
 import XiaomiMark from "../images/marks/Xiaomi.png";
 import MaxcomMark from "../images/marks/Maxcom.png";
 
+import smartphone1 from "../images/phones/smartphones/iPhone12Pro-1.jpg";
+import smartphone2 from "../images/phones/smartphones/motorolaMotoG60s-1.jpg";
+import smartphone3 from "../images/phones/smartphones/oppoReno6Pro-1.jpg";
+import smartphone4 from "../images/phones/smartphones/samsungGalaxyS20-1.jpg";
+import smartphone5 from "../images/phones/smartphones/smartfonXIAOMI11Lite-1.jpg";
+
+import oldphone1 from "../images/phones/seniorphones/maxcom-classic-mm139.jpg";
+import oldphone2 from "../images/phones/seniorphones/maxcom-classic-mm244.jpg";
+import oldphone3 from "../images/phones/seniorphones/maxcom-classic-mm320.jpg";
+import oldphone4 from "../images/phones/seniorphones/maxcom-classic-mm330-3g.jpg";
+import oldphone5 from "../images/phones/seniorphones/maxcom-comfort-mm730.jpg";
+
+import { ReactCompareSlider } from "react-compare-slider";
+
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
@@ -122,6 +136,30 @@ const Smartfony = () => {
                     korzystać.
                   </p>
                 </div>
+                <div className="phonesView">
+                  <ReactCompareSlider
+                    itemOne={
+                      <div className="phonesImages smartphonesView">
+                        <h3>Smartfony</h3>
+                        <img src={smartphone1} alt="" />
+                        <img src={smartphone2} alt="" />
+                        <img src={smartphone3} alt="" />
+                        <img src={smartphone4} alt="" />
+                        <img src={smartphone5} alt="" />
+                      </div>
+                    }
+                    itemTwo={
+                      <div className="phonesImages oldphonesView">
+                        <img src={oldphone1} alt="" />
+                        <img src={oldphone2} alt="" />
+                        <img src={oldphone3} alt="" />
+                        <img src={oldphone4} alt="" />
+                        <img src={oldphone5} alt="" />
+                        <h3>Telefony Seniorów</h3>
+                      </div>
+                    }
+                  />
+                </div>
                 <div className="marksAndContact">
                   <div className="modal-marks">
                     <h3>Różnorodność marek telefonów!</h3>
@@ -177,6 +215,7 @@ const Smartfony = () => {
         </div>
       </div>
     </Wrapper>
+    // dodać zdjęcia smartfonów i dziadofonów
   );
 };
 
@@ -186,6 +225,42 @@ const Wrapper = styled.div`
   overflow: hidden;
   padding-top: 10vh;
   background: #fff;
+  .phonesView {
+    width: 80vw;
+    height: 50vh;
+    margin: 5vh auto;
+
+    .phonesImages {
+      border-radius: 10px;
+      width: 80vw;
+      height: 50vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      overflow-x: hidden;
+      img {
+        width: 12vw;
+      }
+      h3 {
+        color: white;
+        letter-spacing: 3px;
+        font-family: "Stick No Bills", sans-serif;
+        font-size: 2rem;
+        /* transform: rotate(-90deg); */
+        background: var(--mainRed);
+        padding: 5px 10px;
+      }
+      h3:nth-child(1) {
+        border-radius: 0 10px 10px 0;
+        margin-top: 35vh;
+      }
+      h3:nth-last-child(1) {
+        border-radius: 10px 0 0 10px;
+        margin-bottom: 35vh;
+      }
+    }
+  }
   .modalContentTitle {
     font-family: "Stick No Bills", sans-serif;
     font-size: 3rem;
@@ -291,8 +366,9 @@ const Wrapper = styled.div`
       font-size: 3rem;
     }
   }
-  .btn-exit:hover {
-    color: white;
+  .btn-exit:hover,
+  .btn-exit2:hover {
+    font-size: 6rem;
   }
 
   .arrowSmartfonLeft {
@@ -334,7 +410,7 @@ const Wrapper = styled.div`
       height: 8vw;
       font-size: 2rem;
       border-radius: 20px;
-      background: rgba(200, 21, 21, 1);
+      background: var(--mainRed);
       color: white;
       position: absolute;
       font-family: "Teko", sans-serif;
@@ -464,7 +540,7 @@ const Wrapper = styled.div`
           }
         }
         h3 {
-          color: rgb(120, 2, 2);
+          color: var(--mainRed);
           font-size: 2.5rem;
           font-family: "Teko", sans-serif;
           margin-bottom: 0vh;
@@ -493,7 +569,7 @@ const Wrapper = styled.div`
   .modalIcon {
     margin-right: 1vw;
     font-size: 2rem;
-    color: rgb(120, 2, 2);
+    color: var(--mainRed);
   }
 `;
 

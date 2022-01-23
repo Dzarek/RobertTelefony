@@ -184,7 +184,7 @@ const Wrapper = styled.div`
   overflow: auto;
   padding: 30px;
   border-radius: 5px;
-  border: 5px solid rgba(120, 10, 10, 1);
+  border: 5px solid var(--mainRed);
   box-shadow: 0 0 8vw 5vw white;
   h2,
   h1 {
@@ -192,7 +192,7 @@ const Wrapper = styled.div`
     text-shadow: none;
   }
   h2 {
-    color: rgba(120, 10, 10, 1);
+    color: var(--mainRed);
     text-transform: uppercase;
   }
   button {
@@ -202,7 +202,7 @@ const Wrapper = styled.div`
     font-size: 2rem;
     background: transparent;
     border: none;
-    color: rgba(120, 10, 10, 1);
+    color: var(--mainRed);
     cursor: pointer;
     padding: 10px;
   }

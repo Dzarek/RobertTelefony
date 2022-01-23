@@ -10,7 +10,9 @@ const AboutMePage = () => {
   }, []);
   return (
     <Wrapper id="dpd" className="main-section">
-      <h2 className="title">Punkt DPD</h2>
+      <h2 className="title">
+        Punkt Pickup <span>DPD</span>
+      </h2>
       <div className="infoAndImg">
         <img
           data-aos="zoom-in"
@@ -18,9 +20,16 @@ const AboutMePage = () => {
           alt="delivery1"
           className="delivery1"
         />
-        <p>W naszym sklepie odbierzesz i nadasz paczkę poprzez firmę DPD.</p>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.dpd.com/pl/pl/cennik-przesylek-krajowych/"
+        >
+          Sprawdź cennik{" "}
+        </a>
       </div>
-      <div className="linksDPD">
+      <p>Tu nadasz i odbierzesz swoje paczki.</p>
+      {/* <div className="linksDPD">
         <a
           rel="noopener noreferrer"
           target="_blank"
@@ -35,7 +44,7 @@ const AboutMePage = () => {
         >
           Nadaj paczkę
         </a>
-      </div>
+      </div> */}
     </Wrapper>
   );
 };
@@ -44,46 +53,88 @@ const Wrapper = styled.div`
   position: relative;
   margin-top: -10vh;
   background: #111;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: "Cairo", sans-serif;
-
   .infoAndImg {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 70%;
+    justify-content: space-around;
+    width: 60vw;
+    height: 60vh;
+    margin: 5vh auto;
     img {
-      /* height: 30%; */
       width: 30%;
-      margin: 8vh auto;
+      border-radius: 10px;
+      animation: boxBigger 1s linear infinite alternate;
     }
-    p {
-      font-size: 1.8rem;
-      width: 50%;
-      text-align: left;
+    @keyframes boxBigger {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1.1);
+      }
+      30% {
+        transform: scale(1.1);
+      }
+      40% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
+    a {
+      padding: 10px 20px;
+      border: 2px solid var(--mainRed);
+      color: white;
+      font-family: "Teko", sans-serif;
+      font-size: 2rem;
+      border-radius: 5px;
+      transition: 0.4s;
+      :hover {
+        background: var(--mainRed);
+      }
+    }
+
     @media (orientation: portrait) and (max-width: 800px) {
       width: 90%;
+      height: 50vh;
+
       flex-direction: column;
-      /* margin: 10vh auto; */
+      margin: 0vh auto;
+
       margin-bottom: 10vh;
       padding-top: 5vh;
       img {
-        width: 60%;
+        width: 50%;
         margin: 5vh auto;
       }
-    }
-    @media screen and (max-width: 800px) {
-      p {
-        text-align: center;
-        width: 90%;
-        font-size: 1.4rem;
+      a {
+        font-size: 1.5rem;
       }
+    }
+  }
+  p {
+    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    color: rgb(180, 2, 2);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: 800px) {
+    p {
+      margin: -3vh auto;
+      padding-bottom: 10vh;
+      text-align: center;
+      width: 90%;
+      font-size: 1.8rem;
     }
   }
   .linksDPD {
@@ -92,15 +143,16 @@ const Wrapper = styled.div`
     align-items: center;
     width: 50vw;
     a {
+      margin: 0;
       padding: 10px 20px;
-      border: 2px solid rgba(120, 2, 2, 1);
+      border: 2px solid var(--mainRed);
       color: white;
       font-family: "Teko", sans-serif;
       font-size: 2rem;
       border-radius: 5px;
       transition: 0.4s;
       :hover {
-        background: rgba(120, 2, 2, 1);
+        background: var(--mainRed);
       }
     }
     @media (orientation: portrait) and (max-width: 800px) {
@@ -111,13 +163,15 @@ const Wrapper = styled.div`
     }
   }
   .title {
-    position: absolute;
-    top: 10vh;
-    left: 50%;
-    transform: translateX(-50%);
-    /* padding-top: 10vh; */
     text-shadow: none;
     color: white;
+    width: 80%;
+    text-align: center;
+    margin: 0vh auto -6vh;
+    padding-top: 8vh;
+    span {
+      color: var(--mainRed);
+    }
   }
 `;
 

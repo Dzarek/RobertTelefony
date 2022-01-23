@@ -51,7 +51,7 @@ const Wrapper = styled.div`
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      color: rgb(100, 2, 2);
+      color: var(--mainRed);
       font-size: 1.8rem;
       font-family: "Stick No Bills", sans-serif;
       width: 20vw;

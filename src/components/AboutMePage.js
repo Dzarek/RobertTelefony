@@ -15,14 +15,15 @@ const AboutMePage = () => {
           <div className="aboutMeWrapper">
             <img src={robertImg} alt="" />
             <h3>
-              Jesteśmy serwisem komórkowym który funkcjonuje już od{" "}
-              <span>2003</span> roku. U nas <span>kupisz, sprzedasz</span> lub{" "}
-              <span>naprawisz</span> telefon jak również <span>akcesoria</span>{" "}
-              do niego. Nasz sklep zlokalizowany jest w samym centrum miasta
-              Gorlice, przy <span>ul. Adama Mickiewicza 3</span>. Uwielbiamy
-              nowości technologiczne a naszą uwagę skupiliśmy na telefonach.
-              Mamy nadzieję że naszą wiedzą i doświadczeniem pomożemy Ci w
-              doborze odpowiedniego <span>telefonu</span>.
+              Jesteśmy na rynku już od <span>2003</span> roku. U nas{" "}
+              <span>kupisz, sprzedasz, zamienisz</span> lub{" "}
+              <span>naprawisz</span> telefon. Ponad to, znajdziesz tu wszystko
+              czego potrzebujesz do swojego smartfona. Nasz sklep zlokalizowany
+              jest w samym centrum miasta Gorlice, przy{" "}
+              <span>ul. Adama Mickiewicza 3</span>. Uwielbiamy nowości
+              technologiczne a naszą uwagę skupiliśmy na telefonach. Mamy
+              nadzieję że naszą wiedzą i doświadczeniem pomożemy Ci w doborze
+              odpowiedniego <span>telefonu</span>.
             </h3>
           </div>
         </div>
@@ -49,7 +50,7 @@ const Wrapper = styled.div`
   .titleLine {
     width: 30vw;
     height: 3px;
-    background: rgb(70, 2, 2);
+    background: var(--mainRed);
     @media screen and (max-width: 800px) {
       display: none;
     }
@@ -57,7 +58,7 @@ const Wrapper = styled.div`
   .endLine {
     width: 80vw;
     height: 3px;
-    background: rgb(70, 2, 2);
+    background: var(--mainRed);
     margin: 10vh auto 0;
     @media screen and (max-width: 800px) {
       display: none;
@@ -71,15 +72,15 @@ const Wrapper = styled.div`
     margin: 0 auto 10vh;
     color: #222;
     font-family: "Cairo", sans-serif;
-    border-left: 3px solid rgb(70, 2, 2);
-    border-right: 3px solid rgb(70, 2, 2);
+    border-left: 3px solid var(--mainRed);
+    border-right: 3px solid var(--mainRed);
     @media screen and (max-width: 800px) {
       border: none;
       width: 90vw;
       font-size: 1rem;
     }
     span {
-      color: rgb(70, 2, 2);
+      color: var(--mainRed);
       text-shadow: 0 0 1px black;
     }
   }
@@ -95,7 +96,7 @@ const Wrapper = styled.div`
       flex-direction: column;
     }
     img {
-      border: 2px solid rgb(70, 2, 2);
+      border: 2px solid var(--mainRed);
       border-radius: 10%;
       width: 200px;
       height: 200px;

@@ -128,7 +128,7 @@ const Wrapper = styled.div`
           align-items: flex-start;
         }
         h3 {
-          color: rgb(120, 2, 2);
+          color: var(--mainRed);
           font-size: 3rem;
           font-family: "Teko", sans-serif;
           margin-bottom: 3vh;
@@ -158,7 +158,7 @@ const Wrapper = styled.div`
   }
   .icon {
     margin-right: 1vw;
-    color: rgb(200, 2, 2);
+    color: var(--mainRed);
   }
 `;
 export default SellPhone;

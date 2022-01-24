@@ -382,6 +382,7 @@ const Wrapper = styled.nav`
         filter: brightness(0.8);
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
+        z-index: 999999;
       }
     }
     .logo2 {
@@ -565,6 +566,7 @@ const Wrapper2 = styled.nav`
         filter: brightness(0.8);
         transform: rotateY(180deg);
         border-radius: 5px 0 0 5px;
+        z-index: 999999;
       }
     }
     .logo2 {

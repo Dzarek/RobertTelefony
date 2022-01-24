@@ -6,6 +6,7 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 import SellPhone from "./SellPhone";
+import PhoneSlider from "./PhoneSlider";
 
 import { GiExitDoor } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -26,20 +27,6 @@ import SamsungMark from "../images/marks/Samsung.png";
 import VivoMark from "../images/marks/Vivo.png";
 import XiaomiMark from "../images/marks/Xiaomi.png";
 import MaxcomMark from "../images/marks/Maxcom.png";
-
-import smartphone1 from "../images/phones/smartphones/iPhone12Pro-1.jpg";
-import smartphone2 from "../images/phones/smartphones/motorolaMotoG60s-1.jpg";
-import smartphone3 from "../images/phones/smartphones/oppoReno6Pro-1.jpg";
-import smartphone4 from "../images/phones/smartphones/samsungGalaxyS20-1.jpg";
-import smartphone5 from "../images/phones/smartphones/smartfonXIAOMI11Lite-1.jpg";
-
-import oldphone1 from "../images/phones/seniorphones/maxcom-classic-mm139.jpg";
-import oldphone2 from "../images/phones/seniorphones/maxcom-classic-mm244.jpg";
-import oldphone3 from "../images/phones/seniorphones/maxcom-classic-mm320.jpg";
-import oldphone4 from "../images/phones/seniorphones/maxcom-classic-mm330-3g.jpg";
-import oldphone5 from "../images/phones/seniorphones/maxcom-comfort-mm730.jpg";
-
-import { ReactCompareSlider } from "react-compare-slider";
 
 const Smartfony = () => {
   const [showModal1, setShowModal1] = useState(false);
@@ -136,30 +123,7 @@ const Smartfony = () => {
                     korzystać.
                   </p>
                 </div>
-                <div className="phonesView">
-                  <ReactCompareSlider
-                    itemOne={
-                      <div className="phonesImages smartphonesView">
-                        <h3>Smartfony</h3>
-                        <img src={smartphone1} alt="" />
-                        <img src={smartphone2} alt="" />
-                        <img src={smartphone3} alt="" />
-                        <img src={smartphone4} alt="" />
-                        <img src={smartphone5} alt="" />
-                      </div>
-                    }
-                    itemTwo={
-                      <div className="phonesImages oldphonesView">
-                        <img src={oldphone1} alt="" />
-                        <img src={oldphone2} alt="" />
-                        <img src={oldphone3} alt="" />
-                        <img src={oldphone4} alt="" />
-                        <img src={oldphone5} alt="" />
-                        <h3>Telefony Seniorów</h3>
-                      </div>
-                    }
-                  />
-                </div>
+                <PhoneSlider />
                 <div className="marksAndContact">
                   <div className="modal-marks">
                     <h3>Różnorodność marek telefonów!</h3>
@@ -215,7 +179,6 @@ const Smartfony = () => {
         </div>
       </div>
     </Wrapper>
-    // dodać zdjęcia smartfonów i dziadofonów
   );
 };
 
@@ -225,42 +188,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   padding-top: 10vh;
   background: #fff;
-  .phonesView {
-    width: 80vw;
-    height: 50vh;
-    margin: 5vh auto;
 
-    .phonesImages {
-      border-radius: 10px;
-      width: 80vw;
-      height: 50vh;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: white;
-      overflow-x: hidden;
-      img {
-        width: 12vw;
-      }
-      h3 {
-        color: white;
-        letter-spacing: 3px;
-        font-family: "Stick No Bills", sans-serif;
-        font-size: 2rem;
-        /* transform: rotate(-90deg); */
-        background: var(--mainRed);
-        padding: 5px 10px;
-      }
-      h3:nth-child(1) {
-        border-radius: 0 10px 10px 0;
-        margin-top: 35vh;
-      }
-      h3:nth-last-child(1) {
-        border-radius: 10px 0 0 10px;
-        margin-bottom: 35vh;
-      }
-    }
-  }
   .modalContentTitle {
     font-family: "Stick No Bills", sans-serif;
     font-size: 3rem;
@@ -553,7 +481,7 @@ const Wrapper = styled.div`
         }
         h4 {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
           width: 100%;
           font-size: 1.2rem;
@@ -567,7 +495,7 @@ const Wrapper = styled.div`
   }
 
   .modalIcon {
-    margin-right: 1vw;
+    margin-right: 10px;
     font-size: 2rem;
     color: var(--mainRed);
   }

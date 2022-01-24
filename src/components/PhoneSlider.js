@@ -8,8 +8,8 @@ import smartphone4 from "../images/phones/smartphones/samsungGalaxyS20-1.jpg";
 import smartphone5 from "../images/phones/smartphones/smartfonXIAOMI11Lite-1.jpg";
 
 import oldphone1 from "../images/phones/seniorphones/maxcom-classic-mm139.jpg";
-import oldphone2 from "../images/phones/seniorphones/maxcom-classic-mm244.jpg";
-import oldphone3 from "../images/phones/seniorphones/maxcom-classic-mm320.jpg";
+import oldphone2 from "../images/phones/seniorphones/maxcom-comfort-mm825.png";
+import oldphone3 from "../images/phones/seniorphones/maxcom-strong-mm917.png";
 import oldphone4 from "../images/phones/seniorphones/maxcom-classic-mm330-3g.jpg";
 import oldphone5 from "../images/phones/seniorphones/maxcom-comfort-mm730.jpg";
 

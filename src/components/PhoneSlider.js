@@ -84,6 +84,7 @@ const Wrapper = styled.div`
   margin: 5vh auto;
   @media screen and (max-width: 800px) {
     height: 80vh;
+    width: 75vw;
   }
 
   .phonesImages {
@@ -116,6 +117,8 @@ const Wrapper = styled.div`
     }
     @media screen and (max-width: 800px) {
       height: 80vh;
+      width: 75vw;
+
       align-items: center;
       justify-content: space-around;
       flex-wrap: wrap;

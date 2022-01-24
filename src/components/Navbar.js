@@ -101,7 +101,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="smartfony"
                   smooth={true}
-                  offset={-490}
+                  offset={-550}
                   duration={1000}
                 >
                   Telefony
@@ -111,7 +111,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="akcesoria"
                   smooth={true}
-                  offset={-550}
+                  offset={-600}
                   duration={1000}
                 >
                   Akcesoria
@@ -121,7 +121,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="serwis"
                   smooth={true}
-                  offset={-500}
+                  offset={-550}
                   duration={1500}
                 >
                   Serwis
@@ -141,7 +141,7 @@ const Navbar = () => {
                   onClick={toggleLinks}
                   to="faq"
                   smooth={true}
-                  offset={-500}
+                  offset={-550}
                   duration={2000}
                 >
                   FAQ
@@ -241,7 +241,6 @@ const Navbar = () => {
                 >
                   Telefony
                 </Link>
-                {/* telefony dla seniora */}
                 <Link
                   onClick={toggleLinks}
                   to="akcesoria"

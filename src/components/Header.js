@@ -12,7 +12,7 @@ const Header = () => {
       <div className="header-info">
         <Carousel
           infinite
-          autoPlay={4000}
+          autoPlay={6000}
           animationSpeed={2000}
           slidesPerPage={1}
         >

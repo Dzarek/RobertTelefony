@@ -10,32 +10,34 @@ const Header = () => {
         <img src={headerBg3} alt="header-img" />
       </div>
       <div className="header-info">
+        <h1 style={{ opacity: "0", height: "0px" }}>telefony gorlice</h1>
+
         <Carousel
           infinite
           autoPlay={6000}
           animationSpeed={2000}
           slidesPerPage={1}
         >
-          <h1>
+          <h2>
             Szukasz nowego telefonu? <br /> A może chcesz jakiś sprzedać i
-            zarobić?
-          </h1>
-          <h1>
+            zarobić?{" "}
+          </h2>
+          <h2>
             W naszej ofercie znajdziesz również <br /> TELEFONY DLA SENIORA !{" "}
-          </h1>
-          <h1>
+          </h2>
+          <h2>
             Słuchawki, Ładowarki, Powerbanki, Szkła Ochronne, <br />
             Głośniki Bluetooth i wiele innych...
-          </h1>
-          <h1>
+          </h2>
+          <h2>
             Pęknięta szybka? <br /> Spokojnie, dopasujemy i założymy Ci nową ;)
-          </h1>
-          <h1>
+          </h2>
+          <h2>
             Twój telefon wymaga serwisu? <br /> Postaramy się Ci pomóc!
-          </h1>
-          <h1>
+          </h2>
+          <h2>
             Punkt Pickup DPD <br /> Tutaj nadasz i odbierzesz paczkę!
-          </h1>
+          </h2>
         </Carousel>
       </div>
     </Wrapper>
@@ -73,21 +75,21 @@ const Wrapper = styled.div`
     position: absolute;
     width: 100%;
     color: whitesmoke;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 3;
     text-align: center;
     font-family: "Teko", sans-serif;
     letter-spacing: 2px;
-    h1 {
+    h2 {
       width: 70%;
       text-shadow: 2px 2px 2px black;
     }
 
     @media screen and (max-width: 800px) {
-      font-size: 1rem;
+      font-size: 1.3rem;
       line-height: 2;
       letter-spacing: 1px;
-      h1 {
+      h2 {
         width: 85%;
         text-shadow: 2px 2px 2px black;
       }

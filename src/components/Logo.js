@@ -9,9 +9,9 @@ const Logo = () => {
           <img src={aktivGSMimg} alt="logo" />
         </div>
         <div className="logo2">
-          <h2>
+          <h1>
             Robert Kamiński - <span>TELEFONY KOMÓRKOWE</span>
-          </h2>
+          </h1>
         </div>
       </div>
     </Wrapper>
@@ -52,7 +52,7 @@ const Wrapper = styled.div`
       @media screen and (max-width: 800px) {
         font-size: 1rem;
       }
-      h2 {
+      h1 {
         text-shadow: none;
         font-family: "Teko", sans-serif;
         /* color: rgb(120, 34, 34); */

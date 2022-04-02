@@ -10,8 +10,6 @@ const Header = () => {
         <img src={headerBg3} alt="header-img" />
       </div>
       <div className="header-info">
-        <h1 style={{ opacity: "0", height: "0px" }}>telefony gorlice</h1>
-
         <Carousel
           infinite
           autoPlay={6000}
@@ -40,6 +38,7 @@ const Header = () => {
           </h2>
         </Carousel>
       </div>
+      <h1 className="googleTitle">telefony gorlice</h1>
     </Wrapper>
   );
 };
@@ -54,7 +53,20 @@ const Wrapper = styled.div`
   background: #000;
   position: relative;
   border-top: 4px solid var(--mainRed);
-
+  .googleTitle {
+    text-transform: uppercase;
+    opacity: 0.2;
+    letter-spacing: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    text-align: center;
+    @media screen and (max-width: 800px) {
+      font-size: 2rem;
+    }
+  }
   .icon {
     margin-left: 1vw;
   }

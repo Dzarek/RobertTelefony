@@ -6,6 +6,8 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { BiTime } from "react-icons/bi";
 import { Link } from "react-scroll";
 
+import logoJarek from "../images/logoJarek.png";
+
 const Footer = () => {
   return (
     <Wrapper>
@@ -93,6 +95,12 @@ const Footer = () => {
           </section>
         </div>
         <div className="footerCopyrights">
+          <span className="logoJarek">
+            <p>projekt i wykonanie</p>
+            <a href="https://www.jarekjanas.com">
+              <img src={logoJarek} alt="logo Jarosław Janas" />
+            </a>{" "}
+          </span>
           <p>
             &copy; 2003 - {new Date().getFullYear()} Kamiński Robert - Telefony
             Komórkowe. Wszelkie prawa zastrzeżone.
@@ -105,6 +113,37 @@ const Footer = () => {
 
 const Wrapper = styled.div`
   position: relative;
+  .logoJarek {
+    position: absolute;
+    top: 92%;
+    left: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      width: 25px;
+      height: 25px;
+      margin-left: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+        opacity: 0.8;
+        :hover {
+          filter: invert(100%);
+        }
+      }
+    }
+    p {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    @media screen and (max-width: 800px) {
+      top: 97%;
+      left: 3%;
+    }
+  }
 
   button:hover {
     color: white;
@@ -213,6 +252,7 @@ const Wrapper = styled.div`
     @media screen and (max-width: 800px) {
       text-align: center;
       font-size: 1rem;
+      padding: 3vh 0 10vh;
     }
   }
 `;

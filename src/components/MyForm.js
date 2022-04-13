@@ -15,10 +15,10 @@ class MyForm extends Component {
 
     emailjs
       .sendForm(
-        "service_bluxqcj",
-        "template_rxmr3mj",
+        "service_eu28q7p",
+        "template_oizztce",
         e.target,
-        "user_hMGLIzZtMljfB9Ssj5uYj"
+        "user_QPhckFRY63F4zWAKT"
       )
       .then(
         () => {
